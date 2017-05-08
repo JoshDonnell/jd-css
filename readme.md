@@ -9,7 +9,6 @@
 
 This is a lighweight SASS framework, following mutiple methodologies
 including BEM, ITCSS, OOCSS, CSS Namespacing and also flex.
-See the reasme for more info.
 
 
 
