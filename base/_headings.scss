@@ -1,0 +1,44 @@
+/* ———————————————————————————————————————— */
+/* JD - Base Headings
+/* ———————————————————————————————————————— */
+
+// Overrides 
+// $h1-heading-size: 40px;
+// $h2-heading-size: 38px;
+// $h3-heading-size: 32px;
+// $h4-heading-size: 26px;
+// $h5-heading-size: 22px;
+// $h6-heading-size: 18px;
+
+h1 {
+  font-size: $h1-heading-size;
+  color: $color-heading;
+}
+
+
+h2 {
+  font-size: $h2-heading-size;
+  color: $color-heading;
+}
+
+
+h3 {
+  font-size: $h3-heading-size;
+  color: $color-heading;
+}
+
+
+h4 {
+  font-size: $h4-heading-size;
+  color: $color-heading--alt;
+}
+
+h5 {
+  font-size: $h5-heading-size;
+  color: $color-heading--alt;
+}
+
+h6 {
+  font-size: $h6-heading-size;
+  color: $color-heading--alt;
+}

@@ -1,0 +1,9 @@
+/* ———————————————————————————————————————— */
+/* Default Links
+/* ———————————————————————————————————————— */
+
+a {
+  transition: color $transition-time ease-in-out;
+  color: $color-links;
+  text-decoration: none;
+}

@@ -1,0 +1,14 @@
+/* ———————————————————————————————————————— */
+/* Default Page
+/* ———————————————————————————————————————— */
+
+html {
+  font-size: $global-font-size;
+  line-height: $global-line-height / $global-font-size;
+  background: $global-backgroiund;
+  font-weight: $global-font-weight;
+  font-family: $global-font-family;
+  color: $global-text-color;
+  overflow-y: scroll;
+  min-height: 100%;
+}

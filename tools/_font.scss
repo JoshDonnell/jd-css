@@ -1,0 +1,57 @@
+/* ———————————————————————————————————————— */
+/* Tools - Fonts
+/* ———————————————————————————————————————— */
+
+//Primary Font
+@mixin font-primary--light() {
+  font-family: $primary-font;
+  font-weight: $font-light;
+}
+
+@mixin font-primary--normal() {
+  font-family: $primary-font;
+  font-weight: $font-normal;
+}
+
+@mixin font-primary--medium() {
+  font-family: $primary-font;
+  font-weight: $font-medium;
+}
+
+@mixin font-primary--semi() {
+  font-family: $primary-font;
+  font-weight: $font-semi;
+}
+
+@mixin font-primary--bold() {
+  font-family: $primary-font;
+  font-weight: $font-bold;
+}
+
+
+
+//Secondary Font
+@mixin font-secondary--light() {
+  font-family: $primary-secondary;
+  font-weight: $font-light;
+}
+
+@mixin font-secondary--normal() {
+  font-family: $primary-secondary;
+  font-weight: $font-normal;
+}
+
+@mixin font-secondary--medium() {
+  font-family: $primary-secondary;
+  font-weight: $font-medium;
+}
+
+@mixin font-secondary--semi() {
+  font-family: $primary-secondary;
+  font-weight: $font-semi;
+}
+
+@mixin font-secondary--bold() {
+  font-family: $primary-secondary;
+  font-weight: $font-bold;
+}

@@ -1,0 +1,31 @@
+/* ———————————————————————————————————————— */
+/* JD - Media Query
+/* ———————————————————————————————————————— */
+
+@mixin responsive($breakpoint) {
+  
+  @if $breakpoint == mobile {
+    @media (max-width: $max-w__mobile) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == tablet {
+    @media (max-width: $max-w__tablet) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == laptop {
+    @media (max-width: $max-w__laptop) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == large {
+    @media (max-width: $max-w__large) {
+      @content;
+    }
+  }
+
+}

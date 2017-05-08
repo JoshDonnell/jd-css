@@ -1,0 +1,13 @@
+/* ———————————————————————————————————————— */
+/* Tools - Images
+/* ———————————————————————————————————————— */
+
+@mixin image($size, $position: null, $repeat: no-repeat) {
+  background-size: $size;
+  background-repeat: $repeat;
+
+  @if $position != null {
+    background-position: $position;
+  }
+
+}

@@ -1,0 +1,19 @@
+/* ———————————————————————————————————————— */
+/* Object - Container
+/* ———————————————————————————————————————— */
+
+.o-container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+
+  .o-container--small {
+    padding: 0 $container-padding--small;
+  }
+
+
+  .o-container--large {
+    padding: 0 $container-padding--large;
+  }

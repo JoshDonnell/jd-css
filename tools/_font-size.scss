@@ -1,0 +1,16 @@
+/* ———————————————————————————————————————— */
+/* Tools - Font Size
+/* ———————————————————————————————————————— */
+
+@mixin font-size($font-size, $line-height: auto) {
+  font-size: $font-size;
+
+  @if $line-height == auto {
+    line-height: ceil($font-size / $global-line-height) * ($global-line-height / $font-size);
+  }
+
+  @else {
+    line-height: $line-height;
+  }
+
+}
