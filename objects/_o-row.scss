@@ -5,5 +5,25 @@
 .o-row {
   display: block;
   margin: 0;
-  padding: 0;
+  padding: 0 $spacing-base;
 }
+
+
+  .o-row--half {
+    padding: 0 $spacing-half;
+  }
+
+  
+  .o-row--dobule {
+    padding: 0 $spacing-double;
+  }
+
+
+  .o-row--tree {
+    padding: 0 $spacing-three;
+  }
+
+
+  .o-row--quad {
+    padding: 0 $spacing-quad;
+  }
