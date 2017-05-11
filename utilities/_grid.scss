@@ -127,7 +127,7 @@
 
 .g-1 { flex-basis: 100%; }
 .g-2 { flex-basis: 50%; }
-.g-3 { flex-basis: 50%; }
+.g-3 { flex-basis: 33.333%; }
 .g-4 { flex-basis: 25%; }
 .g-5 { flex-basis: 20%; }
 .g-6 { flex-basis: 16.666%; }
@@ -146,7 +146,7 @@
 @include responsive(large) {
   .g-large-1 { flex-basis: 100%; }
   .g-large-2 { flex-basis: 50%; }
-  .g-large-3 { flex-basis: 50%; }
+  .g-large-3 { flex-basis: 33.333%; }
   .g-large-4 { flex-basis: 25%; }
   .g-large-5 { flex-basis: 20%; }
   .g-large-6 { flex-basis: 16.666%; }
@@ -166,7 +166,7 @@
 @include responsive(laptop) {
   .g-laptop-1 { flex-basis: 100%; }
   .g-laptop-2 { flex-basis: 50%; }
-  .g-laptop-3 { flex-basis: 50%; }
+  .g-laptop-3 { flex-basis: 33.333%; }
   .g-laptop-4 { flex-basis: 25%; }
   .g-laptop-5 { flex-basis: 20%; }
   .g-laptop-6 { flex-basis: 16.666%; }
@@ -186,7 +186,7 @@
 @include responsive(tablet) {
   .g-tablet-1 { flex-basis: 100%; }
   .g-tablet-2 { flex-basis: 50%; }
-  .g-tablet-3 { flex-basis: 50%; }
+  .g-tablet-3 { flex-basis: 33.333%; }
   .g-tablet-4 { flex-basis: 25%; }
   .g-tablet-5 { flex-basis: 20%; }
   .g-tablet-6 { flex-basis: 16.666%; }
@@ -206,7 +206,7 @@
 @include responsive(mobile) {
   .g-mobile-1 { flex-basis: 100%; }
   .g-mobile-2 { flex-basis: 50%; }
-  .g-mobile-3 { flex-basis: 50%; }
+  .g-mobile-3 { flex-basis: 33.333%; }
   .g-mobile-4 { flex-basis: 25%; }
   .g-mobile-5 { flex-basis: 20%; }
   .g-mobile-6 { flex-basis: 16.666%; }
