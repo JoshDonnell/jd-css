@@ -10,35 +10,53 @@
 // $h5-heading-size: 22px;
 // $h6-heading-size: 18px;
 
+// $h1-line-height: 50px;
+// $h2-line-height: 48px;
+// $h3-line-height: 38px;
+// $h4-line-height: 26px;
+// $h5-line-height: 22px;
+// $h6-line-height: 18px;
+
+
 h1 {
   font-size: $h1-heading-size;
+  line-height: $h1-line-height;
   color: $color-heading;
 }
 
 
 h2 {
   font-size: $h2-heading-size;
+  line-height: $h2-line-height;
   color: $color-heading;
 }
 
 
 h3 {
   font-size: $h3-heading-size;
+  line-height: $h3-line-height;
   color: $color-heading;
 }
 
 
 h4 {
   font-size: $h4-heading-size;
+  line-height: $h4-line-height;
   color: $color-heading--alt;
 }
 
 h5 {
   font-size: $h5-heading-size;
+  line-height: $h5-line-height;
   color: $color-heading--alt;
 }
 
 h6 {
   font-size: $h6-heading-size;
+  line-height: $h6-line-height;
   color: $color-heading--alt;
 }
+
+h1,h2,h3,h4,h5,h6 {
+  margin-bottom: $spacing-base;
+} 
