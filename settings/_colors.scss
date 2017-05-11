@@ -2,6 +2,16 @@
 /* Colors
 /* ———————————————————————————————————————— */
 
+/*
+  Global color palette, set up project colors within this
+  file then call the variables across the site. 
+  Ideally, all the colors should be set in the global
+  section at the top of the settings and then the
+  global brand colors referenced for links and headings etc.
+*/
+
+
+// Global Brand Colors
 $color-primary: #000;
 $color-secondary: #000;
 

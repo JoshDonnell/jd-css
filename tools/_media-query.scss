@@ -2,7 +2,16 @@
 /* JD - Media Query
 /* ———————————————————————————————————————— */
 
+// JD media-queries are really simple they are set
+// up in the global settings and use device names
+// which are the easiest way to remember them.
+// Out of the box, this framework is not mobile
+// first but with some simple settings changes,
+// it can be very easily. Example: 
+// @include responsive(mobile) {}
+
 @mixin responsive($breakpoint) {
+
   
   @if $breakpoint == mobile {
     @media (max-width: $max-w__mobile) {
@@ -10,11 +19,13 @@
     }
   }
 
+
   @else if $breakpoint == tablet {
     @media (max-width: $max-w__tablet) {
       @content;
     }
   }
+
 
   @else if $breakpoint == laptop {
     @media (max-width: $max-w__laptop) {
@@ -22,10 +33,12 @@
     }
   }
 
+
   @else if $breakpoint == large {
     @media (max-width: $max-w__large) {
       @content;
     }
   }
+
 
 }

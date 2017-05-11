@@ -2,7 +2,13 @@
 /* Tools - Fonts
 /* ———————————————————————————————————————— */
 
-//Primary Font
+// A simple font mixin that uses the global setting
+// or the overrides set in base CSS, you may want
+// to add more if you have more fonts on your project.
+// Example: 
+// @include font-primary--light;
+
+// Primary Font
 @mixin font-primary--light() {
   font-family: $primary-font;
   font-weight: $font-light;
@@ -30,7 +36,7 @@
 
 
 
-//Secondary Font
+// Secondary Font
 @mixin font-secondary--light() {
   font-family: $primary-secondary;
   font-weight: $font-light;
