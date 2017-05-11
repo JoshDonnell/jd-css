@@ -10,36 +10,55 @@
 
 
 
+
+
 /*------------
   Fonts
 ------------*/
 
-  // FONTS
-  $primary-font: 'Roboto', sans-serif;
-  $secondary-font: 'Roboto', sans-serif;
+$primary-font: 'Roboto', sans-serif;
+$secondary-font: 'Roboto', sans-serif;
 
   
-  // FONT WEIGHTS
-  $font-light: 300;
-  $font-normal: 400;
-  $font-medium: 500;
-  $font-semi: 600;
-  $font-bold: 700;
 
 
-  // FONT SIZES
-  $h1-heading-size: 40px !default;
-  $h2-heading-size: 38px !default;
-  $h3-heading-size: 32px !default;
-  $h4-heading-size: 26px !default;
-  $h5-heading-size: 22px !default;
-  $h6-heading-size: 18px !default;
+  
+/*------------
+  Font Weight
+------------*/
+
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-semi: 600;
+$font-bold: 700;
 
 
-  // Line Heights
-  $h1-line-height: 50px !default;
-  $h2-line-height: 48px !default;
-  $h3-line-height: 38px !default;
-  $h4-line-height: 26px !default;
-  $h5-line-height: 22px !default;
-  $h6-line-height: 18px !default;
+
+
+
+/*------------
+  Font Sizes
+------------*/
+
+$h1-heading-size: 40px !default;
+$h2-heading-size: 38px !default;
+$h3-heading-size: 32px !default;
+$h4-heading-size: 26px !default;
+$h5-heading-size: 22px !default;
+$h6-heading-size: 18px !default;
+
+
+
+
+
+/*------------
+  Line Height
+------------*/
+
+$h1-line-height: 50px !default;
+$h2-line-height: 48px !default;
+$h3-line-height: 38px !default;
+$h4-line-height: 26px !default;
+$h5-line-height: 22px !default;
+$h6-line-height: 18px !default;

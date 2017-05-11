@@ -59,6 +59,9 @@
     unlikely scenario however it shows what is possible.
 */
 
+/*--------------
+  Init Grid
+--------------*/
 
 .g-init {
   list-style:none;
@@ -69,6 +72,13 @@
   flex-wrap: wrap;
 }
 
+
+
+
+
+/*--------------
+  Gutter Size
+--------------*/
 
 .g-init--no-gutter {
   margin-left: 0;
@@ -90,7 +100,14 @@
 }
 
 
-.g-init--cneter {
+
+
+
+/*--------------
+ Item Position
+--------------*/
+
+.g-init--center {
   justify-content: center;
 }  
 
@@ -100,6 +117,13 @@
     box-sizing:border-box;
   }
 
+
+
+
+
+/*--------------
+ Largest Widths
+--------------*/
 
 .g-1 { flex-basis: 100%; }
 .g-2 { flex-basis: 50%; }
@@ -111,6 +135,13 @@
 .g-9 { flex-basis: 11.111%; }
 .g-10 { flex-basis: 10%; }
 
+
+
+
+
+/*--------------
+ Large Widths
+--------------*/
 
 @include responsive(large) {
   .g-large-1 { flex-basis: 100%; }
@@ -125,6 +156,13 @@
 }
 
 
+
+
+
+/*--------------
+ Laptop Widths
+--------------*/
+
 @include responsive(laptop) {
   .g-laptop-1 { flex-basis: 100%; }
   .g-laptop-2 { flex-basis: 50%; }
@@ -138,6 +176,13 @@
 }
 
 
+
+
+
+/*--------------
+ Tablet Widths
+--------------*/
+
 @include responsive(tablet) {
   .g-tablet-1 { flex-basis: 100%; }
   .g-tablet-2 { flex-basis: 50%; }
@@ -150,6 +195,13 @@
   .g-tablet-10 { flex-basis: 10%; }
 }
 
+
+
+
+
+/*--------------
+ Mobile Widths
+--------------*/
 
 @include responsive(mobile) {
   .g-mobile-1 { flex-basis: 100%; }

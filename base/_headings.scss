@@ -19,43 +19,40 @@
 
 
 h1 {
-  font-size: $h1-heading-size;
-  line-height: $h1-line-height;
   color: $color-heading;
+  @include font-size($h1-heading-size, $h1-line-height);
 }
 
 
 h2 {
-  font-size: $h2-heading-size;
-  line-height: $h2-line-height;
   color: $color-heading;
+  @include font-size($h2-heading-size, $h2-line-height);
 }
 
 
 h3 {
-  font-size: $h3-heading-size;
-  line-height: $h3-line-height;
   color: $color-heading;
+  @include font-size($h3-heading-size, $h3-line-height);
 }
 
 
 h4 {
-  font-size: $h4-heading-size;
-  line-height: $h4-line-height;
   color: $color-heading--alt;
+  @include font-size($h4-heading-size, $h4-line-height);
 }
+
 
 h5 {
-  font-size: $h5-heading-size;
-  line-height: $h5-line-height;
   color: $color-heading--alt;
+  @include font-size($h5-heading-size, $h5-line-height);
 }
 
+
 h6 {
-  font-size: $h6-heading-size;
-  line-height: $h6-line-height;
   color: $color-heading--alt;
+  @include font-size($h6-heading-size, $h6-line-height);
 }
+
 
 h1,h2,h3,h4,h5,h6 {
   margin-bottom: $spacing-base;

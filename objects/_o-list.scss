@@ -1,17 +1,32 @@
 /* ———————————————————————————————————————— */
-/* Box Sizing
+/* Object - List
 /* ———————————————————————————————————————— */
 
-html {
-  box-sizing: border-box;
+/*--------------
+ Main List
+--------------*/
+
+.o-list {
+  margin-bottom: 0;
 }
 
-* {
+  //List Item
+  .o-list__item {
+    margin-left: 0;
+  }
 
-  &,
-  &:before,
-  &:after {
-    box-sizing: inherit;
+
+
+
+
+/*--------------
+ Inline List
+--------------*/
+
+.o-list--inline {
+
+  .o-list__item {
+    display: inline-block;
   }
 
 }

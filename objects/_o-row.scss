@@ -2,6 +2,10 @@
 /* Object - Row
 /* ———————————————————————————————————————— */
 
+/*--------------
+ Main Row
+--------------*/
+
 .o-row {
   display: block;
   margin: 0;
@@ -9,21 +13,34 @@
 }
 
 
-  .o-row--half {
-    padding: 0 $spacing-half;
-  }
-
-  
-  .o-row--dobule {
-    padding: 0 $spacing-double;
-  }
 
 
-  .o-row--tree {
-    padding: 0 $spacing-three;
-  }
+/*--------------
+ Primary bg
+--------------*/
+
+.o-row--primary {
+  background-color: $color-primary;
+}
 
 
-  .o-row--quad {
-    padding: 0 $spacing-quad;
-  }
+
+
+/*--------------
+ Secondary bg
+--------------*/
+
+.o-row--primary {
+  background-color: $color-secondary;
+}
+
+
+
+
+/*--------------
+ Image bg, Cover
+--------------*/
+
+.o-row--image-cover {
+ @include image(cover); 
+}

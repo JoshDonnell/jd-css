@@ -2,18 +2,48 @@
 /* Object - Container
 /* ———————————————————————————————————————— */
 
+/*--------------
+ Main Container
+--------------*/
+
 .o-container {
   max-width: $container-width;
   margin: 0 auto;
-  padding: 0 $container-padding;
+  padding: $container-padding $spacing-base;
 }
 
 
-  .o-container--small {
-    padding: 0 $container-padding--small;
-  }
 
 
-  .o-container--large {
-    padding: 0 $container-padding--large;
-  }
+
+/*--------------
+ No Padding
+--------------*/
+
+.o-container--none {
+  padding: 0 $spacing-base;
+}
+
+
+
+
+
+/*--------------
+ Small Padding
+--------------*/
+
+.o-container--small {
+  padding: $container-padding--small $spacing-base;
+}
+
+
+
+
+
+/*--------------
+ Large Padding
+--------------*/
+
+.o-container--large {
+  padding: $container-padding--large $spacing-base;
+}

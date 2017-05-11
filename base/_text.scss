@@ -1,11 +1,9 @@
 /* ———————————————————————————————————————— */
-/* JD - Base List
+/* JD - Base Text
 /* ———————————————————————————————————————— */
 
-ul, ol {
+p {
+  color: $color-text;
   margin-bottom: $spacing-base;
+  @include font-size($global-font-size);
 }
-
- li {
-  margin-left: $spacing-base;
- }
