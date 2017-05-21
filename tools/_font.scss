@@ -50,30 +50,30 @@
 --------------*/
 
 @mixin font-secondary--light() {
-  font-family: $primary-secondary;
+  font-family: $secondary-font;
   font-weight: $font-light;
 }
 
 
 @mixin font-secondary--normal() {
-  font-family: $primary-secondary;
+  font-family: $secondary-font--;
   font-weight: $font-normal;
 }
 
 
 @mixin font-secondary--medium() {
-  font-family: $primary-secondary;
+  font-family: $secondary-font--;
   font-weight: $font-medium;
 }
 
 
 @mixin font-secondary--semi() {
-  font-family: $primary-secondary;
+  font-family: $secondary-font--;
   font-weight: $font-semi;
 }
 
 
 @mixin font-secondary--bold() {
-  font-family: $primary-secondary;
+  font-family: $secondary-font--;
   font-weight: $font-bold;
 }
