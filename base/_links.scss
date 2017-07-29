@@ -1,6 +1,11 @@
 /* ———————————————————————————————————————— */
-/* Default Links
+/* Base - Links
 /* ———————————————————————————————————————— */
+
+/*
+  Default link styling bassed of settings
+  set in the main settings file.
+*/
 
 a {
   transition: color $transition-time ease-in-out;

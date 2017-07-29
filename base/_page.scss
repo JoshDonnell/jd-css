@@ -1,6 +1,11 @@
 /* ———————————————————————————————————————— */
-/* Default Page
+/* Base - Page
 /* ———————————————————————————————————————— */
+
+/*
+  Default link styling bassed of settings
+  set in the main settings file.
+*/
 
 html {
   font-size: $global-font-size;
@@ -11,4 +16,16 @@ html {
   color: $global-text-color;
   overflow-y: scroll;
   min-height: 100%;
+}
+
+
+
+
+
+/*
+  Default div to postion relative
+*/
+
+div {
+  position: relative;
 }

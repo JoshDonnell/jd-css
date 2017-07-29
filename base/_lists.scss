@@ -1,10 +1,16 @@
 /* ———————————————————————————————————————— */
-/* JD - Base List
+/* Base - List
 /* ———————————————————————————————————————— */
+
+/*
+  Default list styling, can be removed with
+  the list object.
+*/
 
 ul, ol {
   margin-bottom: $spacing-base;
 }
+
 
  li {
   margin-left: $spacing-base;
