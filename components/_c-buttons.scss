@@ -3,26 +3,39 @@
 /* ———————————————————————————————————————— */
 
 .c-btn {
-  display: inline-block;
-  cursor: pointer;
-  padding: $spacing-half $spacing-base;
-  transition: background $transition-time ease-in-out;
-  border-radius: $border-radius;
-  background: $color-primary;
-  color: #fff;
+    display: inline-block;
+    cursor: pointer;
+    padding: $spacing-half $spacing-base;
+    transition: background $transition-time ease-in-out;
+    border-radius: $border-radius;
+    background: $color-primary;
+    color: #fff;
 }
 
 
-  .c-btn--secondary {
+
+
+
+/*--------------
+ Colours
+--------------*/
+.c-btn--secondary {
     background: $color-secondary;
-  }
+}
 
 
-  .c-btn--small {
+
+
+
+/*--------------
+ Sizing
+--------------*/
+.c-btn--small {
     padding: $spacing-quarter $spacing-half;
-  }
-  
+}
 
-  .c-btn--large {
+
+
+.c-btn--large {
     padding: $spacing-base $spacing-double;
-  }
+}

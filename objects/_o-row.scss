@@ -7,9 +7,9 @@
 --------------*/
 
 .o-row {
-  display: block;
-  margin: 0;
-  padding: 0;
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -20,7 +20,7 @@
 --------------*/
 
 .o-row--primary {
-  background-color: $color-primary;
+    background-color: $color-primary;
 }
 
 
@@ -31,7 +31,7 @@
 --------------*/
 
 .o-row--secondary {
-  background-color: $color-secondary;
+    background-color: $color-secondary;
 }
 
 
@@ -42,5 +42,5 @@
 --------------*/
 
 .o-row--image-cover {
- @include image(cover); 
+    @include image(cover); 
 }

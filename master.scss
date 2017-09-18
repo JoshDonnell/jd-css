@@ -32,7 +32,6 @@
 @import 'tools/media-query';
 @import 'tools/clearfix';
 @import 'tools/font-size';
-@import 'tools/font';
 @import 'tools/images';
 @import 'tools/cover';
 
@@ -42,9 +41,9 @@
 /* ———————————————————————————————————————— */
 /* Generic
 /* ———————————————————————————————————————— */
-@import "generic/box-sizing";
 @import "generic/normalize";
 @import "generic/reset";
+@import "generic/box-sizing";
 
 
 
@@ -54,7 +53,6 @@
 /* ———————————————————————————————————————— */
 @import "base/page";
 @import "base/text";
-@import "base/headings";
 @import "base/links";
 @import "base/inputs";
 @import "base/lists";
@@ -76,6 +74,7 @@
 /* ———————————————————————————————————————— */
 /* Components
 /* ———————————————————————————————————————— */
+@import 'components/c-headings';
 @import 'components/c-buttons';
 
 
@@ -85,4 +84,3 @@
 /* ———————————————————————————————————————— */
 /* Utilities
 /* ———————————————————————————————————————— */
-@import 'utilities/grid';

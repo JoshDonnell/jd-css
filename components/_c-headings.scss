@@ -1,0 +1,71 @@
+/* ———————————————————————————————————————— */
+/* Components - Headings
+/* ———————————————————————————————————————— */
+
+.c-heading {
+    margin-bottom: $spacing-base;
+    color: $color-heading;
+}
+
+
+
+
+
+/*--------------
+ Sizing
+--------------*/
+
+.c-heading--largest {
+    @include font-size($heading-largest, $line-height-largest);
+}
+
+
+.c-heading--larger {
+    @include font-size($heading-larger, $line-height-larger);
+}
+
+
+.c-heading--large {
+    @include font-size($heading-large, $line-height-large);
+}
+
+
+.c-heading--small {
+    @include font-size($heading-small, $line-height-small);
+}
+
+
+.c-heading--smaller {
+    @include font-size($heading-smaller, $line-height-smaller);
+}
+
+
+.c-heading--smallest {
+    @include font-size($heading-smallest, $line-height-smallest);
+}
+
+
+
+
+/*--------------
+ Colours
+--------------*/
+.c-heading--priamary {
+    color: $color-primary;
+}
+
+
+.c-heading--secondary {
+    color: $color-secondary;
+}
+
+
+
+
+
+/*--------------
+ Font Weights
+--------------*/
+.c-heading--bold {
+    font-weight: $font-bold;
+}

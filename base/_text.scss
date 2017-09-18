@@ -7,7 +7,7 @@
 */
 
 p {
-  color: $color-text;
-  margin-bottom: $spacing-base;
-  @include font-size($global-font-size);
+    color: $color-text;
+    margin-bottom: $spacing-base;
+    @include font-size($global-font-size);
 }

@@ -7,9 +7,9 @@
 --------------*/
 
 .o-container {
-  max-width: $container-width;
-  margin: 0 auto;
-  padding: $container-padding $spacing-base;
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: $container-padding $spacing-base;
 }
 
 
@@ -21,7 +21,7 @@
 --------------*/
 
 .o-container--none {
-  padding: 0 $spacing-base;
+    padding: 0 $spacing-base;
 }
 
 
@@ -33,7 +33,7 @@
 --------------*/
 
 .o-container--small {
-  padding: $container-padding--small $spacing-base;
+    padding: $container-padding--small $spacing-base;
 }
 
 
@@ -45,5 +45,5 @@
 --------------*/
 
 .o-container--large {
-  padding: $container-padding--large $spacing-base;
+    padding: $container-padding--large $spacing-base;
 }

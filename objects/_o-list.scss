@@ -7,13 +7,17 @@
 --------------*/
 
 .o-list {
-  margin-bottom: 0;
-}
+    margin-bottom: 0;
 
-  //List Item
-  .o-list__item {
-    margin-left: 0;
-  }
+    
+
+    //List Item
+    .o-list__item {
+        margin-left: 0;
+    }
+
+
+}
 
 
 
@@ -25,8 +29,10 @@
 
 .o-list--inline {
 
-  .o-list__item {
-    display: inline-block;
-  }
+
+    .o-list__item {
+        display: inline-block;
+    }
+
 
 }

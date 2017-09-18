@@ -41,12 +41,12 @@ $font-bold: 700;
   Font Sizes
 ------------*/
 
-$h1-heading-size: 40px !default;
-$h2-heading-size: 38px !default;
-$h3-heading-size: 32px !default;
-$h4-heading-size: 26px !default;
-$h5-heading-size: 22px !default;
-$h6-heading-size: 18px !default;
+$heading-largest: 40px !default;
+$heading-larger: 38px !default;
+$heading-large: 32px !default;
+$heading-small: 26px !default;
+$heading-smaller: 22px !default;
+$heading-smallest: 18px !default;
 
 
 
@@ -56,9 +56,9 @@ $h6-heading-size: 18px !default;
   Line Height
 ------------*/
 
-$h1-line-height: 50px !default;
-$h2-line-height: 48px !default;
-$h3-line-height: 38px !default;
-$h4-line-height: 26px !default;
-$h5-line-height: 22px !default;
-$h6-line-height: 18px !default;
+$line-height-largest: 50px !default;
+$line-height-larger: 48px !default;
+$line-height-large: 38px !default;
+$line-height-small: 26px !default;
+$line-height-smaller: 22px !default;
+$line-height-smallest: 18px !default;
