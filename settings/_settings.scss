@@ -3,89 +3,93 @@
 /* ———————————————————————————————————————— */
 
 
-  /*---------------
-  Globals
-  ---------------*/
+/*---------------
+Globals
+---------------*/
 
-  $global-font-size: 16px !default;
-  $global-line-height: 24px !default;
-  $global-backgroiund: $color-page-background !default;
-  $global-font-weight: $font-normal !default;
-  $global-text-color: $color-page-color !default;
-  $global-font-family: $primary-font !default;
-  
-
-
-
-
-  /*------------
-  Breakpoints
-  ------------*/
-  
-  // MOBILE
-  $min-w__mobile: 425px;
-
-  // TABLET
-  $min-w__tablet: 768px;
-
-  // LAPTOP
-  $min-w__laptop: 1024px;
-
-  // LARGE
-  $min-w__large: 1280px;
+$global-font-size: 16px !default;
+$global-line-height: 24px !default;
+$global-backgroiund: $color-page-background !default;
+$global-font-weight: $font-normal !default;
+$global-text-color: $color-page-color !default;
+$global-font-family: $primary-font !default;
 
 
 
 
 
-  /*------------
-  Spacing
-  ------------*/
+/*------------
+Breakpoints
+------------*/
 
-  $spacing-base: 25px;
-  $spacing-half: round($spacing-base/2);
-  $spacing-quarter: round($spacing-base/4);
-  $spacing-double: round($spacing-base*2);
-  $spacing-triple: round($spacing-base*3);
-  $spacing-quad: round($spacing-base*4);
+// MOBILE
+$min-w__mobile: 425px;
 
-  
+// TABLET
+$min-w__tablet: 768px;
 
+// LAPTOP
+$min-w__laptop: 1024px;
 
-
-  /*------------
-  Grid Gutter
-  ------------*/
-
-  $gutter: 25px !default;
-  $gutter--large: 40px !default;
+// LARGE
+$min-w__large: 1280px;
 
 
 
 
 
-  /*------------
-  Container
-  ------------*/
+/*------------
+Spacing
+------------*/
 
-  $container-width: 1200px;
-  $container-padding: $spacing-base;
-  $container-padding--small: $spacing-half;
-  $container-padding--large: $spacing-double;
+$spacing-base: 25px;
+$spacing-half: round($spacing-base/2);
+$spacing-quarter: round($spacing-base/4);
+$spacing-double: round($spacing-base*2);
+$spacing-triple: round($spacing-base*3);
+$spacing-quad: round($spacing-base*4);
 
 
 
 
 
-  /*-------------
-  Other Settings
-  -------------*/
+/*------------
+Grid Settings
+------------*/
 
-  $transition-time: 300ms;
-  $transition-time--slower: 500ms;
-  
+$xy-grid: true;
+$grid-columns: 12;
+$grid-column-gutter: (
+  small: 20px,
+  medium: 30px,
+);
 
-  $border-radius: 3px;
-  $border-radius--large: round($border-radius*2);
-  $border-radius--huge: round($border-radius*4);
+
+
+
+
+/*------------
+Container
+------------*/
+
+$container-width: 1200px;
+$container-padding: $spacing-base;
+$container-padding--small: $spacing-half;
+$container-padding--large: $spacing-double;
+
+
+
+
+
+/*-------------
+Other Settings
+-------------*/
+
+$transition-time: 300ms;
+$transition-time--slower: 500ms;
+
+
+$border-radius: 3px;
+$border-radius--large: round($border-radius*2);
+$border-radius--huge: round($border-radius*4);
 
