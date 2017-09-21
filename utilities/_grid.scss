@@ -33,137 +33,139 @@
 --------------*/
 
 /* Default Gutter */
-.g-12 { flex-basis: calc(100% - #{$gutter}); }
-.g-11 { flex-basis: calc(((100% / 12) * 11) - #{$gutter}); }
-.g-10 { flex-basis: calc(((100% / 12) * 10) - #{$gutter}); }
-.g-9 { flex-basis: calc(((100% / 12) * 9) - #{$gutter}); }
-.g-8 { flex-basis: calc(((100% / 12) * 8) - #{$gutter}); }
-.g-7 { flex-basis: calc(((100% / 12) * 7) - #{$gutter}); }
-.g-6 { flex-basis: calc(((100% / 12) * 6) - #{$gutter}); }
-.g-5 { flex-basis: calc(((100% / 12) * 5) - #{$gutter}); }
-.g-4 { flex-basis: calc(((100% / 12) * 4) - #{$gutter}); }
-.g-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter}); }
-.g-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter}); }
-.g-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter}); }
-.g-offset-12 { margin-left: calc(100% - #{$gutter}); }
-.g-offset-11 { margin-left: calc(((100% / 12) * 11) - #{$gutter}); }
-.g-offset-10 { margin-left: calc(((100% / 12) * 10) - #{$gutter}); }
-.g-offset-9 { margin-left: calc(((100% / 12) * 9) - #{$gutter}); }
-.g-offset-8 { margin-left: calc(((100% / 12) * 8) - #{$gutter}); }
-.g-offset-7 { margin-left: calc(((100% / 12) * 7) - #{$gutter}); }
-.g-offset-6 { margin-left: calc(((100% / 12) * 6) - #{$gutter}); }
-.g-offset-5 { margin-left: calc(((100% / 12) * 5) - #{$gutter}); }
-.g-offset-4 { margin-left: calc(((100% / 12) * 4) - #{$gutter}); }
-.g-offset-3 { margin-left: calc(((100% / 12) * 3) - #{$gutter}); }
-.g-offset-2 { margin-left: calc(((100% / 12) * 2) - #{$gutter}); }
-.g-offset-1 { margin-left: calc(((100% / 12) * 1) - #{$gutter}); }
+.g-init {
+    .g-12 { flex-basis: calc(100% - #{$gutter}); }
+    .g-11 { flex-basis: calc(((100% / 12) * 11) - #{$gutter}); }
+    .g-10 { flex-basis: calc(((100% / 12) * 10) - #{$gutter}); }
+    .g-9 { flex-basis: calc(((100% / 12) * 9) - #{$gutter}); }
+    .g-8 { flex-basis: calc(((100% / 12) * 8) - #{$gutter}); }
+    .g-7 { flex-basis: calc(((100% / 12) * 7) - #{$gutter}); }
+    .g-6 { flex-basis: calc(((100% / 12) * 6) - #{$gutter}); }
+    .g-5 { flex-basis: calc(((100% / 12) * 5) - #{$gutter}); }
+    .g-4 { flex-basis: calc(((100% / 12) * 4) - #{$gutter}); }
+    .g-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter}); }
+    .g-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter}); }
+    .g-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter}); }
+    .g-offset-12 { margin-left: calc(100% + #{$gutter}); }
+    .g-offset-11 { margin-left: calc(((100% / 12) * 11) + #{$gutter}); }
+    .g-offset-10 { margin-left: calc(((100% / 12) * 10) + #{$gutter}); }
+    .g-offset-9 { margin-left: calc(((100% / 12) * 9) + #{$gutter}); }
+    .g-offset-8 { margin-left: calc(((100% / 12) * 8) + #{$gutter}); }
+    .g-offset-7 { margin-left: calc(((100% / 12) * 7) + #{$gutter}); }
+    .g-offset-6 { margin-left: calc(((100% / 12) * 6) + #{$gutter}); }
+    .g-offset-5 { margin-left: calc(((100% / 12) * 5) + #{$gutter}); }
+    .g-offset-4 { margin-left: calc(((100% / 12) * 4) + #{$gutter}); }
+    .g-offset-3 { margin-left: calc(((100% / 12) * 3) + #{$gutter}); }
+    .g-offset-2 { margin-left: calc(((100% / 12) * 2) + #{$gutter}); }
+    .g-offset-1 { margin-left: calc(((100% / 12) * 1) + #{$gutter}); }
 
-@include responsive(large) {
-    .g-large-12 { flex-basis: calc(100% - #{$gutter}); }
-    .g-large-11 { flex-basis: calc(((100% / 12) * 11) - #{$gutter}); }
-    .g-large-10 { flex-basis: calc(((100% / 12) * 10) - #{$gutter}); }
-    .g-large-9 { flex-basis: calc(((100% / 12) * 9) - #{$gutter}); }
-    .g-large-8 { flex-basis: calc(((100% / 12) * 8) - #{$gutter}); }
-    .g-large-7 { flex-basis: calc(((100% / 12) * 7) - #{$gutter}); }
-    .g-large-6 { flex-basis: calc(((100% / 12) * 6) - #{$gutter}); }
-    .g-large-5 { flex-basis: calc(((100% / 12) * 5) - #{$gutter}); }
-    .g-large-4 { flex-basis: calc(((100% / 12) * 4) - #{$gutter}); }
-    .g-large-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter}); }
-    .g-large-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter}); }
-    .g-large-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter}); }
-    .g-large-offset-12 { margin-left: calc(100% - #{$gutter}); }
-    .g-large-offset-11 { margin-left: calc(((100% / 12) * 11) - #{$gutter}); }
-    .g-large-offset-10 { margin-left: calc(((100% / 12) * 10) - #{$gutter}); }
-    .g-large-offset-9 { margin-left: calc(((100% / 12) * 9) - #{$gutter}); }
-    .g-large-offset-8 { margin-left: calc(((100% / 12) * 8) - #{$gutter}); }
-    .g-large-offset-7 { margin-left: calc(((100% / 12) * 7) - #{$gutter}); }
-    .g-large-offset-6 { margin-left: calc(((100% / 12) * 6) - #{$gutter}); }
-    .g-large-offset-5 { margin-left: calc(((100% / 12) * 5) - #{$gutter}); }
-    .g-large-offset-4 { margin-left: calc(((100% / 12) * 4) - #{$gutter}); }
-    .g-large-offset-3 { margin-left: calc(((100% / 12) * 3) - #{$gutter}); }
-    .g-large-offset-2 { margin-left: calc(((100% / 12) * 2) - #{$gutter}); }
-    .g-large-offset-1 { margin-left: calc(((100% / 12) * 1) - #{$gutter}); }
-}
+    @include responsive(large) {
+        .g-large-12 { flex-basis: calc(100% - #{$gutter}); }
+        .g-large-11 { flex-basis: calc(((100% / 12) * 11) - #{$gutter}); }
+        .g-large-10 { flex-basis: calc(((100% / 12) * 10) - #{$gutter}); }
+        .g-large-9 { flex-basis: calc(((100% / 12) * 9) - #{$gutter}); }
+        .g-large-8 { flex-basis: calc(((100% / 12) * 8) - #{$gutter}); }
+        .g-large-7 { flex-basis: calc(((100% / 12) * 7) - #{$gutter}); }
+        .g-large-6 { flex-basis: calc(((100% / 12) * 6) - #{$gutter}); }
+        .g-large-5 { flex-basis: calc(((100% / 12) * 5) - #{$gutter}); }
+        .g-large-4 { flex-basis: calc(((100% / 12) * 4) - #{$gutter}); }
+        .g-large-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter}); }
+        .g-large-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter}); }
+        .g-large-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter}); }
+        .g-large-offset-12 { margin-left: calc(100% + #{$gutter}); }
+        .g-large-offset-11 { margin-left: calc(((100% / 12) * 11) + #{$gutter}); }
+        .g-large-offset-10 { margin-left: calc(((100% / 12) * 10) + #{$gutter}); }
+        .g-large-offset-9 { margin-left: calc(((100% / 12) * 9) + #{$gutter}); }
+        .g-large-offset-8 { margin-left: calc(((100% / 12) * 8) + #{$gutter}); }
+        .g-large-offset-7 { margin-left: calc(((100% / 12) * 7) + #{$gutter}); }
+        .g-large-offset-6 { margin-left: calc(((100% / 12) * 6) + #{$gutter}); }
+        .g-large-offset-5 { margin-left: calc(((100% / 12) * 5) - #{$gutter}); }
+        .g-large-offset-4 { margin-left: calc(((100% / 12) * 4) - #{$gutter}); }
+        .g-large-offset-3 { margin-left: calc(((100% / 12) * 3) - #{$gutter}); }
+        .g-large-offset-2 { margin-left: calc(((100% / 12) * 2) - #{$gutter}); }
+        .g-large-offset-1 { margin-left: calc(((100% / 12) * 1) - #{$gutter}); }
+    }
 
-@include responsive(laptop) {
-    .g-laptop-12 { flex-basis: calc(100% - #{$gutter}); }
-    .g-laptop-11 { flex-basis: calc(((100% / 12) * 11) - #{$gutter}); }
-    .g-laptop-10 { flex-basis: calc(((100% / 12) * 10) - #{$gutter}); }
-    .g-laptop-9 { flex-basis: calc(((100% / 12) * 9) - #{$gutter}); }
-    .g-laptop-8 { flex-basis: calc(((100% / 12) * 8) - #{$gutter}); }
-    .g-laptop-7 { flex-basis: calc(((100% / 12) * 7) - #{$gutter}); }
-    .g-laptop-6 { flex-basis: calc(((100% / 12) * 6) - #{$gutter}); }
-    .g-laptop-5 { flex-basis: calc(((100% / 12) * 5) - #{$gutter}); }
-    .g-laptop-4 { flex-basis: calc(((100% / 12) * 4) - #{$gutter}); }
-    .g-laptop-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter}); }
-    .g-laptop-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter}); }
-    .g-laptop-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter}); }
-    .g-laptop-offset-12 { margin-left: calc(100% - #{$gutter}); }
-    .g-laptop-offset-11 { margin-left: calc(((100% / 12) * 11) - #{$gutter}); }
-    .g-laptop-offset-10 { margin-left: calc(((100% / 12) * 10) - #{$gutter}); }
-    .g-laptop-offset-9 { margin-left: calc(((100% / 12) * 9) - #{$gutter}); }
-    .g-laptop-offset-8 { margin-left: calc(((100% / 12) * 8) - #{$gutter}); }
-    .g-laptop-offset-7 { margin-left: calc(((100% / 12) * 7) - #{$gutter}); }
-    .g-laptop-offset-6 { margin-left: calc(((100% / 12) * 6) - #{$gutter}); }
-    .g-laptop-offset-5 { margin-left: calc(((100% / 12) * 5) - #{$gutter}); }
-    .g-laptop-offset-4 { margin-left: calc(((100% / 12) * 4) - #{$gutter}); }
-    .g-laptop-offset-3 { margin-left: calc(((100% / 12) * 3) - #{$gutter}); }
-    .g-laptop-offset-2 { margin-left: calc(((100% / 12) * 2) - #{$gutter}); }
-    .g-laptop-offset-1 { margin-left: calc(((100% / 12) * 1) - #{$gutter}); }
-}
+    @include responsive(laptop) {
+        .g-laptop-12 { flex-basis: calc(100% - #{$gutter}); }
+        .g-laptop-11 { flex-basis: calc(((100% / 12) * 11) - #{$gutter}); }
+        .g-laptop-10 { flex-basis: calc(((100% / 12) * 10) - #{$gutter}); }
+        .g-laptop-9 { flex-basis: calc(((100% / 12) * 9) - #{$gutter}); }
+        .g-laptop-8 { flex-basis: calc(((100% / 12) * 8) - #{$gutter}); }
+        .g-laptop-7 { flex-basis: calc(((100% / 12) * 7) - #{$gutter}); }
+        .g-laptop-6 { flex-basis: calc(((100% / 12) * 6) - #{$gutter}); }
+        .g-laptop-5 { flex-basis: calc(((100% / 12) * 5) - #{$gutter}); }
+        .g-laptop-4 { flex-basis: calc(((100% / 12) * 4) - #{$gutter}); }
+        .g-laptop-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter}); }
+        .g-laptop-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter}); }
+        .g-laptop-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter}); }
+        .g-laptop-offset-12 { margin-left: calc(100% + #{$gutter}); }
+        .g-laptop-offset-11 { margin-left: calc(((100% / 12) * 11) + #{$gutter}); }
+        .g-laptop-offset-10 { margin-left: calc(((100% / 12) * 10) + #{$gutter}); }
+        .g-laptop-offset-9 { margin-left: calc(((100% / 12) * 9) + #{$gutter}); }
+        .g-laptop-offset-8 { margin-left: calc(((100% / 12) * 8) + #{$gutter}); }
+        .g-laptop-offset-7 { margin-left: calc(((100% / 12) * 7) + #{$gutter}); }
+        .g-laptop-offset-6 { margin-left: calc(((100% / 12) * 6) + #{$gutter}); }
+        .g-laptop-offset-5 { margin-left: calc(((100% / 12) * 5) + #{$gutter}); }
+        .g-laptop-offset-4 { margin-left: calc(((100% / 12) * 4) + #{$gutter}); }
+        .g-laptop-offset-3 { margin-left: calc(((100% / 12) * 3) + #{$gutter}); }
+        .g-laptop-offset-2 { margin-left: calc(((100% / 12) * 2) + #{$gutter}); }
+        .g-laptop-offset-1 { margin-left: calc(((100% / 12) * 1) + #{$gutter}); }
+    }
 
-@include responsive(tablet) {
-    .g-tablet-12 { flex-basis: calc(100% - #{$gutter}); }
-    .g-tablet-11 { flex-basis: calc(((100% / 12) * 11) - #{$gutter}); }
-    .g-tablet-10 { flex-basis: calc(((100% / 12) * 10) - #{$gutter}); }
-    .g-tablet-9 { flex-basis: calc(((100% / 12) * 9) - #{$gutter}); }
-    .g-tablet-8 { flex-basis: calc(((100% / 12) * 8) - #{$gutter}); }
-    .g-tablet-7 { flex-basis: calc(((100% / 12) * 7) - #{$gutter}); }
-    .g-tablet-6 { flex-basis: calc(((100% / 12) * 6) - #{$gutter}); }
-    .g-tablet-5 { flex-basis: calc(((100% / 12) * 5) - #{$gutter}); }
-    .g-tablet-4 { flex-basis: calc(((100% / 12) * 4) - #{$gutter}); }
-    .g-tablet-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter}); }
-    .g-tablet-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter}); }
-    .g-tablet-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter}); }
-    .g-tablet-offset-12 { margin-left: calc(100% - #{$gutter}); }
-    .g-tablet-offset-11 { margin-left: calc(((100% / 12) * 11) - #{$gutter}); }
-    .g-tablet-offset-10 { margin-left: calc(((100% / 12) * 10) - #{$gutter}); }
-    .g-tablet-offset-9 { margin-left: calc(((100% / 12) * 9) - #{$gutter}); }
-    .g-tablet-offset-8 { margin-left: calc(((100% / 12) * 8) - #{$gutter}); }
-    .g-tablet-offset-7 { margin-left: calc(((100% / 12) * 7) - #{$gutter}); }
-    .g-tablet-offset-6 { margin-left: calc(((100% / 12) * 6) - #{$gutter}); }
-    .g-tablet-offset-5 { margin-left: calc(((100% / 12) * 5) - #{$gutter}); }
-    .g-tablet-offset-4 { margin-left: calc(((100% / 12) * 4) - #{$gutter}); }
-    .g-tablet-offset-3 { margin-left: calc(((100% / 12) * 3) - #{$gutter}); }
-    .g-tablet-offset-2 { margin-left: calc(((100% / 12) * 2) - #{$gutter}); }
-    .g-tablet-offset-1 { margin-left: calc(((100% / 12) * 1) - #{$gutter}); }
-}
+    @include responsive(tablet) {
+        .g-tablet-12 { flex-basis: calc(100% - #{$gutter}); }
+        .g-tablet-11 { flex-basis: calc(((100% / 12) * 11) - #{$gutter}); }
+        .g-tablet-10 { flex-basis: calc(((100% / 12) * 10) - #{$gutter}); }
+        .g-tablet-9 { flex-basis: calc(((100% / 12) * 9) - #{$gutter}); }
+        .g-tablet-8 { flex-basis: calc(((100% / 12) * 8) - #{$gutter}); }
+        .g-tablet-7 { flex-basis: calc(((100% / 12) * 7) - #{$gutter}); }
+        .g-tablet-6 { flex-basis: calc(((100% / 12) * 6) - #{$gutter}); }
+        .g-tablet-5 { flex-basis: calc(((100% / 12) * 5) - #{$gutter}); }
+        .g-tablet-4 { flex-basis: calc(((100% / 12) * 4) - #{$gutter}); }
+        .g-tablet-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter}); }
+        .g-tablet-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter}); }
+        .g-tablet-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter}); }
+        .g-tablet-offset-12 { margin-left: calc(100% + #{$gutter}); }
+        .g-tablet-offset-11 { margin-left: calc(((100% / 12) * 11) + #{$gutter}); }
+        .g-tablet-offset-10 { margin-left: calc(((100% / 12) * 10) + #{$gutter}); }
+        .g-tablet-offset-9 { margin-left: calc(((100% / 12) * 9) + #{$gutter}); }
+        .g-tablet-offset-8 { margin-left: calc(((100% / 12) * 8) + #{$gutter}); }
+        .g-tablet-offset-7 { margin-left: calc(((100% / 12) * 7) + #{$gutter}); }
+        .g-tablet-offset-6 { margin-left: calc(((100% / 12) * 6) + #{$gutter}); }
+        .g-tablet-offset-5 { margin-left: calc(((100% / 12) * 5) + #{$gutter}); }
+        .g-tablet-offset-4 { margin-left: calc(((100% / 12) * 4) + #{$gutter}); }
+        .g-tablet-offset-3 { margin-left: calc(((100% / 12) * 3) + #{$gutter}); }
+        .g-tablet-offset-2 { margin-left: calc(((100% / 12) * 2) + #{$gutter}); }
+        .g-tablet-offset-1 { margin-left: calc(((100% / 12) * 1) + #{$gutter}); }
+    }
 
-@include responsive(mobile) {
-    .g-mobile-12 { flex-basis: calc(100% - #{$gutter}); }
-    .g-mobile-11 { flex-basis: calc(((100% / 12) * 11) - #{$gutter}); }
-    .g-mobile-10 { flex-basis: calc(((100% / 12) * 10) - #{$gutter}); }
-    .g-mobile-9 { flex-basis: calc(((100% / 12) * 9) - #{$gutter}); }
-    .g-mobile-8 { flex-basis: calc(((100% / 12) * 8) - #{$gutter}); }
-    .g-mobile-7 { flex-basis: calc(((100% / 12) * 7) - #{$gutter}); }
-    .g-mobile-6 { flex-basis: calc(((100% / 12) * 6) - #{$gutter}); }
-    .g-mobile-5 { flex-basis: calc(((100% / 12) * 5) - #{$gutter}); }
-    .g-mobile-4 { flex-basis: calc(((100% / 12) * 4) - #{$gutter}); }
-    .g-mobile-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter}); }
-    .g-mobile-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter}); }
-    .g-mobile-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter}); }
-    .g-mobile-offset-12 { margin-left: calc(100% - #{$gutter}); }
-    .g-mobile-offset-11 { margin-left: calc(((100% / 12) * 11) - #{$gutter}); }
-    .g-mobile-offset-10 { margin-left: calc(((100% / 12) * 10) - #{$gutter}); }
-    .g-mobile-offset-9 { margin-left: calc(((100% / 12) * 9) - #{$gutter}); }
-    .g-mobile-offset-8 { margin-left: calc(((100% / 12) * 8) - #{$gutter}); }
-    .g-mobile-offset-7 { margin-left: calc(((100% / 12) * 7) - #{$gutter}); }
-    .g-mobile-offset-6 { margin-left: calc(((100% / 12) * 6) - #{$gutter}); }
-    .g-mobile-offset-5 { margin-left: calc(((100% / 12) * 5) - #{$gutter}); }
-    .g-mobile-offset-4 { margin-left: calc(((100% / 12) * 4) - #{$gutter}); }
-    .g-mobile-offset-3 { margin-left: calc(((100% / 12) * 3) - #{$gutter}); }
-    .g-mobile-offset-2 { margin-left: calc(((100% / 12) * 2) - #{$gutter}); }
-    .g-mobile-offset-1 { margin-left: calc(((100% / 12) * 1) - #{$gutter}); }
+    @include responsive(mobile) {
+        .g-mobile-12 { flex-basis: calc(100% - #{$gutter}); }
+        .g-mobile-11 { flex-basis: calc(((100% / 12) * 11) - #{$gutter}); }
+        .g-mobile-10 { flex-basis: calc(((100% / 12) * 10) - #{$gutter}); }
+        .g-mobile-9 { flex-basis: calc(((100% / 12) * 9) - #{$gutter}); }
+        .g-mobile-8 { flex-basis: calc(((100% / 12) * 8) - #{$gutter}); }
+        .g-mobile-7 { flex-basis: calc(((100% / 12) * 7) - #{$gutter}); }
+        .g-mobile-6 { flex-basis: calc(((100% / 12) * 6) - #{$gutter}); }
+        .g-mobile-5 { flex-basis: calc(((100% / 12) * 5) - #{$gutter}); }
+        .g-mobile-4 { flex-basis: calc(((100% / 12) * 4) - #{$gutter}); }
+        .g-mobile-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter}); }
+        .g-mobile-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter}); }
+        .g-mobile-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter}); }
+        .g-mobile-offset-12 { margin-left: calc(100% + #{$gutter}); }
+        .g-mobile-offset-11 { margin-left: calc(((100% / 12) * 11) + #{$gutter}); }
+        .g-mobile-offset-10 { margin-left: calc(((100% / 12) * 10) + #{$gutter}); }
+        .g-mobile-offset-9 { margin-left: calc(((100% / 12) * 9) + #{$gutter}); }
+        .g-mobile-offset-8 { margin-left: calc(((100% / 12) * 8) + #{$gutter}); }
+        .g-mobile-offset-7 { margin-left: calc(((100% / 12) * 7) + #{$gutter}); }
+        .g-mobile-offset-6 { margin-left: calc(((100% / 12) * 6) + #{$gutter}); }
+        .g-mobile-offset-5 { margin-left: calc(((100% / 12) * 5) + #{$gutter}); }
+        .g-mobile-offset-4 { margin-left: calc(((100% / 12) * 4) + #{$gutter}); }
+        .g-mobile-offset-3 { margin-left: calc(((100% / 12) * 3) + #{$gutter}); }
+        .g-mobile-offset-2 { margin-left: calc(((100% / 12) * 2) + #{$gutter}); }
+        .g-mobile-offset-1 { margin-left: calc(((100% / 12) * 1) + #{$gutter}); }
+    }
 }
 
 
@@ -333,18 +335,18 @@
     .g-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter--large}); }
     .g-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter--large}); }
     .g-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter--large}); }
-    .g-offset-12 { margin-left: calc(100% - #{$gutter--large}); }
-    .g-offset-11 { margin-left: calc(((100% / 12) * 11) - #{$gutter--large}); }
-    .g-offset-10 { margin-left: calc(((100% / 12) * 10) - #{$gutter--large}); }
-    .g-offset-9 { margin-left: calc(((100% / 12) * 9) - #{$gutter--large}); }
-    .g-offset-8 { margin-left: calc(((100% / 12) * 8) - #{$gutter--large}); }
-    .g-offset-7 { margin-left: calc(((100% / 12) * 7) - #{$gutter--large}); }
-    .g-offset-6 { margin-left: calc(((100% / 12) * 6) - #{$gutter--large}); }
-    .g-offset-5 { margin-left: calc(((100% / 12) * 5) - #{$gutter--large}); }
-    .g-offset-4 { margin-left: calc(((100% / 12) * 4) - #{$gutter--large}); }
-    .g-offset-3 { margin-left: calc(((100% / 12) * 3) - #{$gutter--large}); }
-    .g-offset-2 { margin-left: calc(((100% / 12) * 2) - #{$gutter--large}); }
-    .g-offset-1 { margin-left: calc(((100% / 12) * 1) - #{$gutter--large}); }
+    .g-offset-12 { margin-left: calc(100% + #{$gutter--large}); }
+    .g-offset-11 { margin-left: calc(((100% / 12) * 11) + #{$gutter--large}); }
+    .g-offset-10 { margin-left: calc(((100% / 12) * 10) + #{$gutter--large}); }
+    .g-offset-9 { margin-left: calc(((100% / 12) * 9) + #{$gutter--large}); }
+    .g-offset-8 { margin-left: calc(((100% / 12) * 8) + #{$gutter--large}); }
+    .g-offset-7 { margin-left: calc(((100% / 12) * 7) + #{$gutter--large}); }
+    .g-offset-6 { margin-left: calc(((100% / 12) * 6) + #{$gutter--large}); }
+    .g-offset-5 { margin-left: calc(((100% / 12) * 5) + #{$gutter--large}); }
+    .g-offset-4 { margin-left: calc(((100% / 12) * 4) + #{$gutter--large}); }
+    .g-offset-3 { margin-left: calc(((100% / 12) * 3) + #{$gutter--large}); }
+    .g-offset-2 { margin-left: calc(((100% / 12) * 2) + #{$gutter--large}); }
+    .g-offset-1 { margin-left: calc(((100% / 12) * 1) + #{$gutter--large}); }
 
     @include responsive(large) {
         .g-large-12 { flex-basis: calc(100% - #{$gutter--large}); }
@@ -359,18 +361,18 @@
         .g-large-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter--large}); }
         .g-large-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter--large}); }
         .g-large-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter--large}); }
-        .g-large-offset-12 { margin-left: calc(100% - #{$gutter--large}); }
-        .g-large-offset-11 { margin-left: calc(((100% / 12) * 11) - #{$gutter--large}); }
-        .g-large-offset-10 { margin-left: calc(((100% / 12) * 10) - #{$gutter--large}); }
-        .g-large-offset-9 { margin-left: calc(((100% / 12) * 9) - #{$gutter--large}); }
-        .g-large-offset-8 { margin-left: calc(((100% / 12) * 8) - #{$gutter--large}); }
-        .g-large-offset-7 { margin-left: calc(((100% / 12) * 7) - #{$gutter--large}); }
-        .g-large-offset-6 { margin-left: calc(((100% / 12) * 6) - #{$gutter--large}); }
-        .g-large-offset-5 { margin-left: calc(((100% / 12) * 5) - #{$gutter--large}); }
-        .g-large-offset-4 { margin-left: calc(((100% / 12) * 4) - #{$gutter--large}); }
-        .g-large-offset-3 { margin-left: calc(((100% / 12) * 3) - #{$gutter--large}); }
-        .g-large-offset-2 { margin-left: calc(((100% / 12) * 2) - #{$gutter--large}); }
-        .g-large-offset-1 { margin-left: calc(((100% / 12) * 1) - #{$gutter--large}); }
+        .g-large-offset-12 { margin-left: calc(100% + #{$gutter--large}); }
+        .g-large-offset-11 { margin-left: calc(((100% / 12) * 11) + #{$gutter--large}); }
+        .g-large-offset-10 { margin-left: calc(((100% / 12) * 10) + #{$gutter--large}); }
+        .g-large-offset-9 { margin-left: calc(((100% / 12) * 9) + #{$gutter--large}); }
+        .g-large-offset-8 { margin-left: calc(((100% / 12) * 8) + #{$gutter--large}); }
+        .g-large-offset-7 { margin-left: calc(((100% / 12) * 7) + #{$gutter--large}); }
+        .g-large-offset-6 { margin-left: calc(((100% / 12) * 6) + #{$gutter--large}); }
+        .g-large-offset-5 { margin-left: calc(((100% / 12) * 5) + #{$gutter--large}); }
+        .g-large-offset-4 { margin-left: calc(((100% / 12) * 4) + #{$gutter--large}); }
+        .g-large-offset-3 { margin-left: calc(((100% / 12) * 3) + #{$gutter--large}); }
+        .g-large-offset-2 { margin-left: calc(((100% / 12) * 2) + #{$gutter--large}); }
+        .g-large-offset-1 { margin-left: calc(((100% / 12) * 1) + #{$gutter--large}); }
     }
 
     @include responsive(laptop) {
@@ -386,18 +388,18 @@
         .g-laptop-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter--large}); }
         .g-laptop-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter--large}); }
         .g-laptop-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter--large}); }
-        .g-laptop-offset-12 { margin-left: calc(100% - #{$gutter--large}); }
-        .g-laptop-offset-11 { margin-left: calc(((100% / 12) * 11) - #{$gutter--large}); }
-        .g-laptop-offset-10 { margin-left: calc(((100% / 12) * 10) - #{$gutter--large}); }
-        .g-laptop-offset-9 { margin-left: calc(((100% / 12) * 9) - #{$gutter--large}); }
-        .g-laptop-offset-8 { margin-left: calc(((100% / 12) * 8) - #{$gutter--large}); }
-        .g-laptop-offset-7 { margin-left: calc(((100% / 12) * 7) - #{$gutter--large}); }
-        .g-laptop-offset-6 { margin-left: calc(((100% / 12) * 6) - #{$gutter--large}); }
-        .g-laptop-offset-5 { margin-left: calc(((100% / 12) * 5) - #{$gutter--large}); }
-        .g-laptop-offset-4 { margin-left: calc(((100% / 12) * 4) - #{$gutter--large}); }
-        .g-laptop-offset-3 { margin-left: calc(((100% / 12) * 3) - #{$gutter--large}); }
-        .g-laptop-offset-2 { margin-left: calc(((100% / 12) * 2) - #{$gutter--large}); }
-        .g-laptop-offset-1 { margin-left: calc(((100% / 12) * 1) - #{$gutter--large}); }
+        .g-laptop-offset-12 { margin-left: calc(100% + #{$gutter--large}); }
+        .g-laptop-offset-11 { margin-left: calc(((100% / 12) * 11) + #{$gutter--large}); }
+        .g-laptop-offset-10 { margin-left: calc(((100% / 12) * 10) + #{$gutter--large}); }
+        .g-laptop-offset-9 { margin-left: calc(((100% / 12) * 9) + #{$gutter--large}); }
+        .g-laptop-offset-8 { margin-left: calc(((100% / 12) * 8) + #{$gutter--large}); }
+        .g-laptop-offset-7 { margin-left: calc(((100% / 12) * 7) + #{$gutter--large}); }
+        .g-laptop-offset-6 { margin-left: calc(((100% / 12) * 6) + #{$gutter--large}); }
+        .g-laptop-offset-5 { margin-left: calc(((100% / 12) * 5) + #{$gutter--large}); }
+        .g-laptop-offset-4 { margin-left: calc(((100% / 12) * 4) + #{$gutter--large}); }
+        .g-laptop-offset-3 { margin-left: calc(((100% / 12) * 3) + #{$gutter--large}); }
+        .g-laptop-offset-2 { margin-left: calc(((100% / 12) * 2) + #{$gutter--large}); }
+        .g-laptop-offset-1 { margin-left: calc(((100% / 12) * 1) + #{$gutter--large}); }
     }
 
     @include responsive(tablet) {
@@ -413,18 +415,18 @@
         .g-tablet-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter--large}); }
         .g-tablet-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter--large}); }
         .g-tablet-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter--large}); }
-        .g-tablet-offset-12 { margin-left: calc(100% - #{$gutter--large}); }
-        .g-tablet-offset-11 { margin-left: calc(((100% / 12) * 11) - #{$gutter--large}); }
-        .g-tablet-offset-10 { margin-left: calc(((100% / 12) * 10) - #{$gutter--large}); }
-        .g-tablet-offset-9 { margin-left: calc(((100% / 12) * 9) - #{$gutter--large}); }
-        .g-tablet-offset-8 { margin-left: calc(((100% / 12) * 8) - #{$gutter--large}); }
-        .g-tablet-offset-7 { margin-left: calc(((100% / 12) * 7) - #{$gutter--large}); }
-        .g-tablet-offset-6 { margin-left: calc(((100% / 12) * 6) - #{$gutter--large}); }
-        .g-tablet-offset-5 { margin-left: calc(((100% / 12) * 5) - #{$gutter--large}); }
-        .g-tablet-offset-4 { margin-left: calc(((100% / 12) * 4) - #{$gutter--large}); }
-        .g-tablet-offset-3 { margin-left: calc(((100% / 12) * 3) - #{$gutter--large}); }
-        .g-tablet-offset-2 { margin-left: calc(((100% / 12) * 2) - #{$gutter--large}); }
-        .g-tablet-offset-1 { margin-left: calc(((100% / 12) * 1) - #{$gutter--large}); }
+        .g-tablet-offset-12 { margin-left: calc(100% + #{$gutter--large}); }
+        .g-tablet-offset-11 { margin-left: calc(((100% / 12) * 11) + #{$gutter--large}); }
+        .g-tablet-offset-10 { margin-left: calc(((100% / 12) * 10) + #{$gutter--large}); }
+        .g-tablet-offset-9 { margin-left: calc(((100% / 12) * 9) + #{$gutter--large}); }
+        .g-tablet-offset-8 { margin-left: calc(((100% / 12) * 8) + #{$gutter--large}); }
+        .g-tablet-offset-7 { margin-left: calc(((100% / 12) * 7) + #{$gutter--large}); }
+        .g-tablet-offset-6 { margin-left: calc(((100% / 12) * 6) + #{$gutter--large}); }
+        .g-tablet-offset-5 { margin-left: calc(((100% / 12) * 5) + #{$gutter--large}); }
+        .g-tablet-offset-4 { margin-left: calc(((100% / 12) * 4) + #{$gutter--large}); }
+        .g-tablet-offset-3 { margin-left: calc(((100% / 12) * 3) + #{$gutter--large}); }
+        .g-tablet-offset-2 { margin-left: calc(((100% / 12) * 2) + #{$gutter--large}); }
+        .g-tablet-offset-1 { margin-left: calc(((100% / 12) * 1) + #{$gutter--large}); }
     }
 
     @include responsive(mobile) {
@@ -440,18 +442,18 @@
         .g-mobile-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter--large}); }
         .g-mobile-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter--large}); }
         .g-mobile-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter--large}); }
-        .g-mobile-offset-12 { margin-left: calc(100% - #{$gutter--large}); }
-        .g-mobile-offset-11 { margin-left: calc(((100% / 12) * 11) - #{$gutter--large}); }
-        .g-mobile-offset-10 { margin-left: calc(((100% / 12) * 10) - #{$gutter--large}); }
-        .g-mobile-offset-9 { margin-left: calc(((100% / 12) * 9) - #{$gutter--large}); }
-        .g-mobile-offset-8 { margin-left: calc(((100% / 12) * 8) - #{$gutter--large}); }
-        .g-mobile-offset-7 { margin-left: calc(((100% / 12) * 7) - #{$gutter--large}); }
-        .g-mobile-offset-6 { margin-left: calc(((100% / 12) * 6) - #{$gutter--large}); }
-        .g-mobile-offset-5 { margin-left: calc(((100% / 12) * 5) - #{$gutter--large}); }
-        .g-mobile-offset-4 { margin-left: calc(((100% / 12) * 4) - #{$gutter--large}); }
-        .g-mobile-offset-3 { margin-left: calc(((100% / 12) * 3) - #{$gutter--large}); }
-        .g-mobile-offset-2 { margin-left: calc(((100% / 12) * 2) - #{$gutter--large}); }
-        .g-mobile-offset-1 { margin-left: calc(((100% / 12) * 1) - #{$gutter--large}); }
+        .g-mobile-offset-12 { margin-left: calc(100% + #{$gutter--large}); }
+        .g-mobile-offset-11 { margin-left: calc(((100% / 12) * 11) + #{$gutter--large}); }
+        .g-mobile-offset-10 { margin-left: calc(((100% / 12) * 10) + #{$gutter--large}); }
+        .g-mobile-offset-9 { margin-left: calc(((100% / 12) * 9) + #{$gutter--large}); }
+        .g-mobile-offset-8 { margin-left: calc(((100% / 12) * 8) + #{$gutter--large}); }
+        .g-mobile-offset-7 { margin-left: calc(((100% / 12) * 7) + #{$gutter--large}); }
+        .g-mobile-offset-6 { margin-left: calc(((100% / 12) * 6) + #{$gutter--large}); }
+        .g-mobile-offset-5 { margin-left: calc(((100% / 12) * 5) + #{$gutter--large}); }
+        .g-mobile-offset-4 { margin-left: calc(((100% / 12) * 4) + #{$gutter--large}); }
+        .g-mobile-offset-3 { margin-left: calc(((100% / 12) * 3) + #{$gutter--large}); }
+        .g-mobile-offset-2 { margin-left: calc(((100% / 12) * 2) + #{$gutter--large}); }
+        .g-mobile-offset-1 { margin-left: calc(((100% / 12) * 1) + #{$gutter--large}); }
     }
 
 }
