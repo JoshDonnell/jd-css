@@ -14,14 +14,6 @@
   See the readme for more info.
 */
 
-/* ———————————————————————————————————————— */
-/* Foundation
-/* ———————————————————————————————————————— */
-
-@import 'bower_components/foundation-sites/scss/foundation';
-
-
-
 
 /* ———————————————————————————————————————— */
 /* Settings
@@ -92,4 +84,4 @@
 /* ———————————————————————————————————————— */
 /* Utilities
 /* ———————————————————————————————————————— */
-@include foundation-xy-grid-classes;
+@import 'utilities/grid.scss';

@@ -1,0 +1,363 @@
+/* ———————————————————————————————————————— */
+/* JD - GRID
+/* ———————————————————————————————————————— */
+  
+  // Overide Gutter
+  // $gutter: 20px;
+  // $gutter--large: 40px;
+
+
+/*
+  ------------
+  Introduction
+  ------------
+  This is a simple grid using flex that works great
+  with the rest of the framework, it makes responsive 
+  simple again. 
+  ------------
+  Example
+  ------------
+  // HTMl
+    <div class="g-init  g-init--wide">
+      <div class="g__item g-large-4  g-laptop-2  g-mobile-1">
+        <div class="post"></div>
+      </div>
+      <div class="g__item  g-6  g-large-4  g-laptop-2  g-mobile-1">
+        <div class="post"></div>
+      </div>
+    </div>
+  
+  // Initialize the grid
+    <div class="g-init  g-init--wide">
+    This is the first step to using the grid, to open a new grid
+    we use the g-init class this simply sets us up for a new 
+    grid layout
+    There is then the g-init--wide on there this is one of a 
+    few commands we can use to set up the grid.
+  
+    .g-init--wide - Uses a large gutter set in the site settings
+    .g-init--no-gutter - No spacing between items
+    .g-init--center - Centers items
+  // Sizing
+    <div class="g__item g-6  g-large-4  g-laptop-2  g-mobile-1">
+    Inside of the g-init div we have each of our elements, each
+    of these then have a class of g__item which means it is
+    a grid item, this means you can have an element inside
+    of the gird that is not a grid item which is useful.
+    We assign our widths here using classes, simply the 
+    class says the device size and a number of columns.
+    The example above will have 6 columns on all sizes above 
+    the container, next up on the window size between the container 
+    and a laptop size there will be 4. Then laptop to mobile 2,
+    finally on mobile it goes down to 1. This example is an 
+    unlikely scenario however it shows what is possible.
+*/
+
+/*--------------
+  Init Grid
+--------------*/
+
+.g-init {
+  list-style:none;
+  margin:0; 
+  padding:0;     
+  margin-left: -$gutter;
+  display: flex;
+  flex-wrap: wrap;
+
+  .g__item {
+    margin-left: $gutter;
+    box-sizing:border-box;
+  }
+
+}
+
+
+
+
+
+/*--------------
+  Gutter Size
+--------------*/
+
+.g-init--no-gutter {
+  margin-left: 0;
+  
+  .g__item {
+    margin-left: 0;
+  }
+
+    .g-12 { flex-basis: calc(100% - #{$gutter--large}); }
+  .g-11 { flex-basis: calc((100% / 12) * 11); }
+  .g-10 { flex-basis: calc((100% / 12) * 10); }
+  .g-9 { flex-basis: calc((100% / 12) * 9); }
+  .g-8 { flex-basis: calc((100% / 12) * 8); }
+  .g-7 { flex-basis: calc((100% / 12) * 7); }
+  .g-6 { flex-basis: calc((100% / 12) * 6); }
+  .g-5 { flex-basis: calc((100% / 12) * 5); }
+  .g-4 { flex-basis: calc((100% / 12) * 4); }
+  .g-3 { flex-basis: calc((100% / 12) * 3); }
+  .g-2 { flex-basis: calc((100% / 12) * 2); }
+  .g-1 { flex-basis: calc(100% / 12 * 1); }
+  @include responsive(large) {
+    .g-large-12 { flex-basis: calc(100%); }
+    .g-large-11 { flex-basis: calc((100% / 12) * 11); }
+    .g-large-10 { flex-basis: calc((100% / 12) * 10); }
+    .g-large-9 { flex-basis: calc((100% / 12) * 9); }
+    .g-large-8 { flex-basis: calc((100% / 12) * 8); }
+    .g-large-7 { flex-basis: calc((100% / 12) * 7); }
+    .g-large-6 { flex-basis: calc((100% / 12) * 6); }
+    .g-large-5 { flex-basis: calc((100% / 12) * 5); }
+    .g-large-4 { flex-basis: calc((100% / 12) * 4); }
+    .g-large-3 { flex-basis: calc((100% / 12) * 3); }
+    .g-large-2 { flex-basis: calc((100% / 12) * 2); }
+    .g-large-1 { flex-basis: calc(100% / 12 * 1); }
+  }
+  @include responsive(laptop) {
+    .g-laptop-12 { flex-basis: calc(100%); }
+    .g-laptop-11 { flex-basis: calc((100% / 12) * 11); }
+    .g-laptop-10 { flex-basis: calc((100% / 12) * 10); }
+    .g-laptop-9 { flex-basis: calc((100% / 12) * 9); }
+    .g-laptop-8 { flex-basis: calc((100% / 12) * 8); }
+    .g-laptop-7 { flex-basis: calc((100% / 12) * 7); }
+    .g-laptop-6 { flex-basis: calc((100% / 12) * 6); }
+    .g-laptop-5 { flex-basis: calc((100% / 12) * 5); }
+    .g-laptop-4 { flex-basis: calc((100% / 12) * 4); }
+    .g-laptop-3 { flex-basis: calc((100% / 12) * 3); }
+    .g-laptop-2 { flex-basis: calc((100% / 12) * 2); }
+    .g-laptop-1 { flex-basis: calc(100% / 12); }
+  }
+  @include responsive(tablet) {
+    .g-tablet-12 { flex-basis: calc(100%); }
+    .g-tablet-11 { flex-basis: calc((100% / 12) * 11); }
+    .g-tablet-10 { flex-basis: calc((100% / 12) * 10); }
+    .g-tablet-9 { flex-basis: calc((100% / 12) * 9); }
+    .g-tablet-8 { flex-basis: calc((100% / 12) * 8); }
+    .g-tablet-7 { flex-basis: calc((100% / 12) * 7); }
+    .g-tablet-6 { flex-basis: calc((100% / 12) * 6); }
+    .g-tablet-5 { flex-basis: calc((100% / 12) * 5); }
+    .g-tablet-4 { flex-basis: calc((100% / 12) * 4); }
+    .g-tablet-3 { flex-basis: calc((100% / 12) * 3); }
+    .g-tablet-2 { flex-basis: calc((100% / 12) * 2); }
+    .g-tablet-1 { flex-basis: calc(100% / 12); }
+  }
+  @include responsive(mobile) {
+    .g-mobile-12 { flex-basis: calc(100%); }
+    .g-mobile-11 { flex-basis: calc((100% / 12) * 11); }
+    .g-mobile-10 { flex-basis: calc((100% / 12) * 10); }
+    .g-mobile-9 { flex-basis: calc((100% / 12) * 9); }
+    .g-mobile-8 { flex-basis: calc((100% / 12) * 8); }
+    .g-mobile-7 { flex-basis: calc((100% / 12) * 7); }
+    .g-mobile-6 { flex-basis: calc((100% / 12) * 6); }
+    .g-mobile-5 { flex-basis: calc((100% / 12) * 5); }
+    .g-mobile-4 { flex-basis: calc((100% / 12) * 4); }
+    .g-mobile-3 { flex-basis: calc((100% / 12) * 3); }
+    .g-mobile-2 { flex-basis: calc((100% / 12) * 2); }
+    .g-mobile-1 { flex-basis: calc(100% / 12); }
+  }
+
+}
+
+
+.g-init--wide {
+  margin-left: -$gutter--large;
+
+  .g__item {
+    margin-left: $gutter--large;
+  }
+
+  .g-12 { flex-basis: calc(100% - #{$gutter--large}); }
+  .g-11 { flex-basis: calc(((100% / 12) * 11) - #{$gutter--large}); }
+  .g-10 { flex-basis: calc(((100% / 12) * 10) - #{$gutter--large}); }
+  .g-9 { flex-basis: calc(((100% / 12) * 9) - #{$gutter--large}); }
+  .g-8 { flex-basis: calc(((100% / 12) * 8) - #{$gutter--large}); }
+  .g-7 { flex-basis: calc(((100% / 12) * 7) - #{$gutter--large}); }
+  .g-6 { flex-basis: calc(((100% / 12) * 6) - #{$gutter--large}); }
+  .g-5 { flex-basis: calc(((100% / 12) * 5) - #{$gutter--large}); }
+  .g-4 { flex-basis: calc(((100% / 12) * 4) - #{$gutter--large}); }
+  .g-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter--large}); }
+  .g-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter--large}); }
+  .g-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter--large}); }
+  @include responsive(large) {
+    .g-large-12 { flex-basis: calc(100% - #{$gutter--large}); }
+    .g-large-11 { flex-basis: calc(((100% / 12) * 11) - #{$gutter--large}); }
+    .g-large-10 { flex-basis: calc(((100% / 12) * 10) - #{$gutter--large}); }
+    .g-large-9 { flex-basis: calc(((100% / 12) * 9) - #{$gutter--large}); }
+    .g-large-8 { flex-basis: calc(((100% / 12) * 8) - #{$gutter--large}); }
+    .g-large-7 { flex-basis: calc(((100% / 12) * 7) - #{$gutter--large}); }
+    .g-large-6 { flex-basis: calc(((100% / 12) * 6) - #{$gutter--large}); }
+    .g-large-5 { flex-basis: calc(((100% / 12) * 5) - #{$gutter--large}); }
+    .g-large-4 { flex-basis: calc(((100% / 12) * 4) - #{$gutter--large}); }
+    .g-large-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter--large}); }
+    .g-large-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter--large}); }
+    .g-large-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter--large}); }
+  }
+  @include responsive(laptop) {
+    .g-laptop-12 { flex-basis: calc(100% - #{$gutter--large}); }
+    .g-laptop-11 { flex-basis: calc(((100% / 12) * 11) - #{$gutter--large}); }
+    .g-laptop-10 { flex-basis: calc(((100% / 12) * 10) - #{$gutter--large}); }
+    .g-laptop-9 { flex-basis: calc(((100% / 12) * 9) - #{$gutter--large}); }
+    .g-laptop-8 { flex-basis: calc(((100% / 12) * 8) - #{$gutter--large}); }
+    .g-laptop-7 { flex-basis: calc(((100% / 12) * 7) - #{$gutter--large}); }
+    .g-laptop-6 { flex-basis: calc(((100% / 12) * 6) - #{$gutter--large}); }
+    .g-laptop-5 { flex-basis: calc(((100% / 12) * 5) - #{$gutter--large}); }
+    .g-laptop-4 { flex-basis: calc(((100% / 12) * 4) - #{$gutter--large}); }
+    .g-laptop-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter--large}); }
+    .g-laptop-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter--large}); }
+    .g-laptop-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter--large}); }
+  }
+  @include responsive(tablet) {
+    .g-tablet-12 { flex-basis: calc(100% - #{$gutter--large}); }
+    .g-tablet-11 { flex-basis: calc(((100% / 12) * 11) - #{$gutter--large}); }
+    .g-tablet-10 { flex-basis: calc(((100% / 12) * 10) - #{$gutter--large}); }
+    .g-tablet-9 { flex-basis: calc(((100% / 12) * 9) - #{$gutter--large}); }
+    .g-tablet-8 { flex-basis: calc(((100% / 12) * 8) - #{$gutter--large}); }
+    .g-tablet-7 { flex-basis: calc(((100% / 12) * 7) - #{$gutter--large}); }
+    .g-tablet-6 { flex-basis: calc(((100% / 12) * 6) - #{$gutter--large}); }
+    .g-tablet-5 { flex-basis: calc(((100% / 12) * 5) - #{$gutter--large}); }
+    .g-tablet-4 { flex-basis: calc(((100% / 12) * 4) - #{$gutter--large}); }
+    .g-tablet-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter--large}); }
+    .g-tablet-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter--large}); }
+    .g-tablet-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter--large}); }
+  }
+  @include responsive(mobile) {
+    .g-mobile-12 { flex-basis: calc(100% - #{$gutter--large}); }
+    .g-mobile-11 { flex-basis: calc(((100% / 12) * 11) - #{$gutter--large}); }
+    .g-mobile-10 { flex-basis: calc(((100% / 12) * 10) - #{$gutter--large}); }
+    .g-mobile-9 { flex-basis: calc(((100% / 12) * 9) - #{$gutter--large}); }
+    .g-mobile-8 { flex-basis: calc(((100% / 12) * 8) - #{$gutter--large}); }
+    .g-mobile-7 { flex-basis: calc(((100% / 12) * 7) - #{$gutter--large}); }
+    .g-mobile-6 { flex-basis: calc(((100% / 12) * 6) - #{$gutter--large}); }
+    .g-mobile-5 { flex-basis: calc(((100% / 12) * 5) - #{$gutter--large}); }
+    .g-mobile-4 { flex-basis: calc(((100% / 12) * 4) - #{$gutter--large}); }
+    .g-mobile-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter--large}); }
+    .g-mobile-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter--large}); }
+    .g-mobile-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter--large}); }
+  }
+
+}
+
+
+
+
+
+/*--------------
+ Item Position
+--------------*/
+
+.g-init--center {
+  justify-content: center;
+}
+
+
+
+
+
+/*--------------
+ Largest Widths
+--------------*/
+
+.g-12 { flex-basis: calc(100% - #{$gutter}); }
+.g-11 { flex-basis: calc(((100% / 12) * 11) - #{$gutter}); }
+.g-10 { flex-basis: calc(((100% / 12) * 10) - #{$gutter}); }
+.g-9 { flex-basis: calc(((100% / 12) * 9) - #{$gutter}); }
+.g-8 { flex-basis: calc(((100% / 12) * 8) - #{$gutter}); }
+.g-7 { flex-basis: calc(((100% / 12) * 7) - #{$gutter}); }
+.g-6 { flex-basis: calc(((100% / 12) * 6) - #{$gutter}); }
+.g-5 { flex-basis: calc(((100% / 12) * 5) - #{$gutter}); }
+.g-4 { flex-basis: calc(((100% / 12) * 4) - #{$gutter}); }
+.g-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter}); }
+.g-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter}); }
+.g-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter}); }
+
+
+
+
+
+/*--------------
+ Large Widths
+--------------*/
+
+@include responsive(large) {
+  .g-large-12 { flex-basis: calc(100% - #{$gutter}); }
+  .g-large-11 { flex-basis: calc(((100% / 12) * 11) - #{$gutter}); }
+  .g-large-10 { flex-basis: calc(((100% / 12) * 10) - #{$gutter}); }
+  .g-large-9 { flex-basis: calc(((100% / 12) * 9) - #{$gutter}); }
+  .g-large-8 { flex-basis: calc(((100% / 12) * 8) - #{$gutter}); }
+  .g-large-7 { flex-basis: calc(((100% / 12) * 7) - #{$gutter}); }
+  .g-large-6 { flex-basis: calc(((100% / 12) * 6) - #{$gutter}); }
+  .g-large-5 { flex-basis: calc(((100% / 12) * 5) - #{$gutter}); }
+  .g-large-4 { flex-basis: calc(((100% / 12) * 4) - #{$gutter}); }
+  .g-large-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter}); }
+  .g-large-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter}); }
+  .g-large-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter}); }
+}
+
+
+
+
+
+/*--------------
+ Laptop Widths
+--------------*/
+
+@include responsive(laptop) {
+  .g-laptop-12 { flex-basis: calc(100% - #{$gutter}); }
+  .g-laptop-11 { flex-basis: calc(((100% / 12) * 11) - #{$gutter}); }
+  .g-laptop-10 { flex-basis: calc(((100% / 12) * 10) - #{$gutter}); }
+  .g-laptop-9 { flex-basis: calc(((100% / 12) * 9) - #{$gutter}); }
+  .g-laptop-8 { flex-basis: calc(((100% / 12) * 8) - #{$gutter}); }
+  .g-laptop-7 { flex-basis: calc(((100% / 12) * 7) - #{$gutter}); }
+  .g-laptop-6 { flex-basis: calc(((100% / 12) * 6) - #{$gutter}); }
+  .g-laptop-5 { flex-basis: calc(((100% / 12) * 5) - #{$gutter}); }
+  .g-laptop-4 { flex-basis: calc(((100% / 12) * 4) - #{$gutter}); }
+  .g-laptop-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter}); }
+  .g-laptop-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter}); }
+  .g-laptop-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter}); }
+}
+
+
+
+
+
+/*--------------
+ Tablet Widths
+--------------*/
+
+@include responsive(tablet) {
+  .g-tablet-12 { flex-basis: calc(100% - #{$gutter}); }
+  .g-tablet-11 { flex-basis: calc(((100% / 12) * 11) - #{$gutter}); }
+  .g-tablet-10 { flex-basis: calc(((100% / 12) * 10) - #{$gutter}); }
+  .g-tablet-9 { flex-basis: calc(((100% / 12) * 9) - #{$gutter}); }
+  .g-tablet-8 { flex-basis: calc(((100% / 12) * 8) - #{$gutter}); }
+  .g-tablet-7 { flex-basis: calc(((100% / 12) * 7) - #{$gutter}); }
+  .g-tablet-6 { flex-basis: calc(((100% / 12) * 6) - #{$gutter}); }
+  .g-tablet-5 { flex-basis: calc(((100% / 12) * 5) - #{$gutter}); }
+  .g-tablet-4 { flex-basis: calc(((100% / 12) * 4) - #{$gutter}); }
+  .g-tablet-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter}); }
+  .g-tablet-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter}); }
+  .g-tablet-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter}); }
+}
+
+
+
+
+
+/*--------------
+ Mobile Widths
+--------------*/
+
+@include responsive(mobile) {
+  .g-mobile-12 { flex-basis: calc(100% - #{$gutter}); }
+  .g-mobile-11 { flex-basis: calc(((100% / 12) * 11) - #{$gutter}); }
+  .g-mobile-10 { flex-basis: calc(((100% / 12) * 10) - #{$gutter}); }
+  .g-mobile-9 { flex-basis: calc(((100% / 12) * 9) - #{$gutter}); }
+  .g-mobile-8 { flex-basis: calc(((100% / 12) * 8) - #{$gutter}); }
+  .g-mobile-7 { flex-basis: calc(((100% / 12) * 7) - #{$gutter}); }
+  .g-mobile-6 { flex-basis: calc(((100% / 12) * 6) - #{$gutter}); }
+  .g-mobile-5 { flex-basis: calc(((100% / 12) * 5) - #{$gutter}); }
+  .g-mobile-4 { flex-basis: calc(((100% / 12) * 4) - #{$gutter}); }
+  .g-mobile-3 { flex-basis: calc(((100% / 12) * 3) - #{$gutter}); }
+  .g-mobile-2 { flex-basis: calc(((100% / 12) * 2) - #{$gutter}); }
+  .g-mobile-1 { flex-basis: calc(((100% / 12) * 1) - #{$gutter}); }
+}

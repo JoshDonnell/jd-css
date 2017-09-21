@@ -57,13 +57,8 @@ $spacing-quad: round($spacing-base*4);
 Grid Settings
 ------------*/
 
-$xy-grid: true;
-$grid-columns: 12;
-$grid-column-gutter: (
-  small: 20px,
-  medium: 30px,
-);
-
+$gutter: 25px !default;		
+$gutter--large: 40px !default;
 
 
 
