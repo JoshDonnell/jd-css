@@ -1,10 +1,4 @@
 /*
-
---------------------
-  JD Sass Framwork
---------------------
-  
-
   ------------
   Introduction
   ------------
@@ -54,6 +48,7 @@
 @import "base/page";
 @import "base/text";
 @import "base/links";
+@import 'base/images';
 @import "base/inputs";
 @import "base/lists";
 
@@ -66,6 +61,7 @@
 @import 'objects/o-row';
 @import 'objects/o-container';
 @import 'objects/o-list';
+@import 'objects/o-editable';
 
 
 

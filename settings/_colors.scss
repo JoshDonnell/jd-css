@@ -15,19 +15,8 @@
  Global Brand Colors
 --------------*/
 
-$color-primary: #000;
-$color-secondary: #000;
-
-
-
-
-
-/*--------------
- Page
---------------*/
-
-$color-page-background: #fff;
-$color-page-color: $color-primary;
+$color-primary: #3aaf0c;
+$color-secondary: #ededed;
 
 
 
@@ -47,7 +36,19 @@ $color-links: $color-secondary;
  Text
 --------------*/
 
-$color-text: $color-primary;
+$color-text: #666666;
+$color-text--lgiht: #999999;
+
+
+
+
+
+/*--------------
+ Page
+--------------*/
+
+$color-page-background: #fff;
+$color-page-color: $color-text;
 
 
 
@@ -57,5 +58,5 @@ $color-text: $color-primary;
  Headings
 --------------*/
 
-$color-heading: $color-primary;
-$color-heading--alt: $color-secondary;
+$color-heading: $color-text;
+$color-heading--alt: $color-text--lgiht;
