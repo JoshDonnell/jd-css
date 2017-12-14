@@ -1,0 +1,51 @@
+/* ============================================================
+    * Tools - Media Query
+============================================================ */
+
+/** 
+    * Media-queries are really simple they are set
+    * up in the global settings and use device names
+    * which are the easiest way to remember them.
+    * Out of the box, this framework is not mobile
+    * first but with some simple settings changes,
+    * it can be very easily. Example: 
+    * @include media(mobile) {}
+*/
+
+@mixin responsive($breakpoint) {
+    
+    
+
+    @if $breakpoint == mobile {
+        @media (max-width: $min-w__mobile) {
+            @content;
+        }
+    }
+
+    
+
+    @else if $breakpoint == tablet {
+        @media (min-width: $min-w__tablet) {
+            @content;
+        }
+    }
+    
+
+
+    @else if $breakpoint == laptop {
+        @media (min-width: $min-w__laptop) {
+            @content;
+        }
+    }
+    
+
+
+    @else if $breakpoint == large {
+        @media (min-width: $min-w__large) {
+            @content;
+        }
+    }
+    
+
+
+}

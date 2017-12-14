@@ -1,0 +1,18 @@
+/* ============================================================
+    * Components - Example
+============================================================ */
+
+/**
+    * An example component file
+*/
+
+.c-example {
+    color: red;
+    padding: $spacing-base;
+}
+
+
+
+    .c-example__item {
+        background-color: blue;
+    }

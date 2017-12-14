@@ -1,0 +1,21 @@
+/* ============================================================
+    * Tools - Cover
+============================================================ */
+
+/**
+    * A mixin to make a selector cover a parent positioning over
+    * the top, a z-index can be based into the mixin when 
+    * calling it. This mixin is very useful for color overlays
+    * and image overlays. 
+    * Example:
+    * @include cover(11);
+*/
+
+@mixin cover($z-index: 1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: $z-index;
+}

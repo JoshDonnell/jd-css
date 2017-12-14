@@ -1,19 +1,24 @@
-/* ———————————————————————————————————————— */
-/* Components - Headings
-/* ———————————————————————————————————————— */
+/* ============================================================
+    * Components - Headings
+============================================================ */
+
+/**
+    * The styling for headings accros the site you can
+    * edit the sizing in the fonts config under settings.
+*/
 
 .c-heading {
     margin-bottom: $spacing-base;
     color: $color-heading;
+    font-weight: $font-normal;
 }
 
 
 
 
 
-/*--------------
- Sizing
---------------*/
+/* Heading Sizing
+============================================================ */
 
 .c-heading--largest {
     @include font-size($heading-largest, $line-height-largest);
@@ -47,16 +52,15 @@
 
 
 
-/*--------------
- Colours
---------------*/
+/* Heading Colors
+============================================================ */
 
 .c-heading--color-alt {
     color: $color-heading--alt;
 }
 
 
-.c-heading--priamary {
+.c-heading--primary {
     color: $color-primary;
 }
 
@@ -66,12 +70,23 @@
 }
 
 
+.c-heading--white {
+    color: #fff;
+}
 
 
 
-/*--------------
- Font Weights
---------------*/
+
+
+/* Heading weights
+============================================================ */
+
+.c-heading--light {
+    font-weight: $font-light;
+}
+
+
+
 .c-heading--bold {
     font-weight: $font-bold;
 }

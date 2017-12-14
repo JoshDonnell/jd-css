@@ -8,13 +8,14 @@
   See the readme for more info.
 */
 
-
 /* ———————————————————————————————————————— */
 /* Settings
 /* ———————————————————————————————————————— */
-@import 'settings/colors';
-@import 'settings/fonts';
-@import 'settings/settings';
+
+@import "settings/settings.config";
+@import "settings/settings.colors";
+@import "settings/settings.fonts";
+@import "settings/settings.global";
 
 
 
@@ -23,11 +24,14 @@
 /* ———————————————————————————————————————— */
 /* Tools
 /* ———————————————————————————————————————— */
-@import 'tools/media-query';
-@import 'tools/clearfix';
-@import 'tools/font-size';
-@import 'tools/images';
-@import 'tools/cover';
+
+@import "tools/tools.media-query";
+@import "tools/tools.clearfix";
+@import "tools/tools.font-size";
+@import "tools/tools.images";
+@import "tools/tools.cover";
+@import "tools/tools.nudge";
+
 
 
 
@@ -35,9 +39,10 @@
 /* ———————————————————————————————————————— */
 /* Generic
 /* ———————————————————————————————————————— */
-@import "generic/normalize";
-@import "generic/reset";
-@import "generic/box-sizing";
+
+@import "generic/generic.normalize";
+@import "generic/generic.reset";
+@import "generic/generic.box-sizing";
 
 
 
@@ -45,12 +50,13 @@
 /* ———————————————————————————————————————— */
 /* Base
 /* ———————————————————————————————————————— */
-@import "base/page";
-@import "base/text";
-@import "base/links";
-@import 'base/images';
-@import "base/inputs";
-@import "base/lists";
+
+@import "base/base.page";
+@import "base/base.text";
+@import "base/base.links";
+@import "base/base.images";
+@import "base/base.inputs";
+@import "base/base.lists";
 
 
 
@@ -58,10 +64,11 @@
 /* ———————————————————————————————————————— */
 /* Objects
 /* ———————————————————————————————————————— */
-@import 'objects/o-row';
-@import 'objects/o-container';
-@import 'objects/o-list';
-@import 'objects/o-editable';
+
+@import "objects/objects.row";
+@import "objects/objects.container";
+@import "objects/objects.list";
+@import "objects/objects.editable";
 
 
 
@@ -70,8 +77,9 @@
 /* ———————————————————————————————————————— */
 /* Components
 /* ———————————————————————————————————————— */
-@import 'components/c-headings';
-@import 'components/c-buttons';
+
+@import "components/components.headings";
+@import "components/components.example";
 
 
 
@@ -80,5 +88,16 @@
 /* ———————————————————————————————————————— */
 /* Utilities
 /* ———————————————————————————————————————— */
-@import 'utilities/grid.scss';
-@import 'utilities/flex.scss';
+
+@import "utilities/grid";
+
+
+
+
+
+/* ———————————————————————————————————————— */
+/* Trumps
+/* ———————————————————————————————————————— */
+
+@import "trumps/trumps.example";
+@import "trumps/trumps.nudge";

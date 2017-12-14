@@ -1,0 +1,42 @@
+/* ============================================================
+    * Base - Page
+============================================================ */
+
+/**
+    * Default link styling bassed of settings
+    * set in the main settings file.
+*/
+
+html {
+    font-size: $global-font-size;
+    line-height: $global-line-height / $global-font-size;;
+    background: $global-backgroiund;
+    font-weight: $global-font-weight;
+    font-family: $global-font-family;
+    color: $global-text-color;
+    -webkit-font-smoothing: antialiased;
+    overflow-y: scroll;
+    min-height: 100%;
+}
+
+
+
+
+
+/* Div Position
+============================================================ */
+
+div {
+    position: relative;
+}
+
+
+
+
+
+/* Strong Default
+============================================================ */
+
+strong {
+    font-weight: $font-bold;
+}

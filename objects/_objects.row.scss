@@ -1,0 +1,60 @@
+/* ============================================================
+    * Objects - Row
+============================================================ */
+
+/**
+    * The styling for rows(sections) accross the site,
+    * we apply the background colors to our blocks
+    * through this rows file.
+*/
+
+.o-row {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: $container-padding 0;
+}
+
+
+
+
+
+/* Background - Primary Color
+============================================================ */
+
+.o-row--primary {
+    background-color: $color-primary;
+}
+
+
+
+
+
+/* Background - Secondary Color
+============================================================ */
+
+.o-row--secondary {
+    background-color: $color-secondary;
+}
+
+
+
+
+
+/* Spacing - Large
+============================================================ */
+
+.o-row--large {
+    padding: $container-padding--large 0;
+}
+
+
+
+
+
+/* Spacing - Small
+============================================================ */
+
+.o-row--small {
+    padding: $container-padding--small 0;
+}

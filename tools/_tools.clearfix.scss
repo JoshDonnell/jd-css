@@ -1,0 +1,16 @@
+/* ============================================================
+    * Tools - Clearfix
+============================================================ */
+
+/**
+    * Simple mixin to clear floats just use: 
+    * @include clearfix;
+*/
+
+@mixin clearfix() {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+} 

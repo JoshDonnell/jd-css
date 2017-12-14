@@ -1,0 +1,58 @@
+/* ============================================================
+    * Setting - Global Colors
+============================================================ */
+
+/**
+  * Global color palette, set up project colors within this
+  * file then call the variables across the site. 
+  * Ideally, all the colors should be set in the global
+  * section at the top of the settings and then the
+  * global brand colors referenced for links and headings etc.
+*/
+
+
+/* Global Colors
+============================================================ */
+
+$color-primary: #EE771B;
+$color-secondary: #102E46;
+$color-grey: #E8E5E5;
+$color-grey--dark: #F1F1F1;
+
+
+
+
+
+/* Links
+============================================================ */
+
+$color-links: $color-secondary;
+
+
+
+
+
+/* Text
+============================================================ */
+
+$color-text: $color-secondary;
+
+
+
+
+
+/* Page
+============================================================ */
+
+$color-page-background: #fff;
+$color-page-color: $color-text;
+
+
+
+
+
+/* Headings
+============================================================ */
+
+$color-heading: $color-text;
+$color-heading--alt: $color-text;

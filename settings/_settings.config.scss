@@ -1,0 +1,43 @@
+/* ============================================================
+    * Setting - Global Config
+============================================================ */
+
+/**
+    * Global config for setting enviroments.
+    *
+    * 1. Set either to local or production,
+    *    this will enable certain tools for
+    *    local development.
+    *
+    * 2.  Set what grid the project will use.
+          The two options are either jd or 
+          custom. Choosing jd will use the 
+          inbuild grid. Selecting custom will
+          let you choose whichever grid you want.
+*/
+
+
+$global-env:    local; /*[1]*/
+
+$global-grid:   jd; /*[2]*/
+
+
+
+
+
+/* Nudge Settings
+============================================================ */
+
+$nudge-incorrect-nesting:     false;
+
+$nudge-no-ids:                true;
+
+$nudge-single-spaces:         true;
+
+$nudge-modifiers:             true;
+
+$nudge-underscores:           true;
+
+$nudge-camel-case:            true;
+
+$nudge-deprecated-selectors:  false;

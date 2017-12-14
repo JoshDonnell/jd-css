@@ -1,0 +1,87 @@
+/* ============================================================
+    * Objects - Editable ( wysiwyg sections )
+============================================================ */
+
+/**
+    * The styling for any editable contet on a CMS site, the idea
+    * being to wrap any wysiwyg content sections with the "o-editable"
+    * class then we can predefine styles this way we do not rely on 
+    * on a default for the whole site.
+*/
+
+.o-editable {
+
+
+    /* Font Styling
+    ============================================================ */
+
+    h1 {
+        @include font-size($heading-largest, $line-height-largest);
+    }
+
+
+    h2 {
+        @include font-size($heading-larger, $line-height-larger);
+    }
+
+
+    h3 {
+        @include font-size($heading-large, $line-height-large);
+    }
+
+
+    h4 {
+        @include font-size($heading-small, $line-height-small);
+    }
+
+
+    h5 {
+        @include font-size($heading-smaller, $line-height-smaller); 
+    }
+    
+    
+    h6 {
+        @include font-size($heading-smallest, $line-height-smallest);
+    }
+    
+
+
+    h1,h2,h3,h4,h5,h6 {
+        margin-bottom: $spacing-base;
+        font-weight: $font-semi;
+        color: $color-text;
+    }
+
+
+    strong {
+        font-weight: 600;
+    }
+    
+
+
+
+
+    /* Lists
+    ============================================================ */
+
+    ul {}
+
+        li {
+            margin-bottom: $spacing-half;
+        }
+    
+
+
+
+    
+     /* Images
+    ============================================================ */
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+
+}

@@ -1,0 +1,14 @@
+/* ============================================================
+    * Trumps - Example
+============================================================ */
+
+/**
+    * An example of a trump
+    *
+    * 1. Anything that uses !important is a trump !!
+*/
+
+
+.t-trump {
+    background-color: red !important; /*[1]*/
+}
