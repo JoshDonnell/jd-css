@@ -81,6 +81,9 @@ $transition-time: 300ms;
 $transition-time--slower: 500ms;
 
 
+$easing-type: ease-in-out;
+
+
 $border-radius: 5px;
 $border-radius--large: round($border-radius*2);
 $border-radius--huge: round($border-radius*4);

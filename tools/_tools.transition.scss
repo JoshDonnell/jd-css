@@ -1,0 +1,20 @@
+/* ============================================================
+    * Tools - Transition
+============================================================ */
+
+/** 
+    * A simple tool for quick and consistent transitions
+    * @include tranition(color) {}
+*/
+
+@mixin tranition($type) {
+
+
+    @if $global-easing == true {
+        transition: $type $transition-time $easing-type; 
+    } @else {
+        transition: $type $transition-time; 
+    }
+
+
+}
