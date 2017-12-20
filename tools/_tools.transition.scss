@@ -4,17 +4,19 @@
 
 /** 
     * A simple tool for quick and consistent transitions
-    * @include tranition(color) {}
+    * @include transition(color) {}
 */
 
-@mixin tranition($type) {
+@mixin transition($type...) {
+    $transitions: ();
 
-
-    @if $global-easing == true {
-        transition: $type $transition-time $easing-type; 
-    } @else {
-        transition: $type $transition-time; 
+    @each $item in $type {
+        @if $global-easing == true {
+            $transitions: append($transitions, ($item $transition-time $easing-type), comma);
+        } @else {
+            $transitions: append($transitions, ($item $transition-time), comma);
+        }
     }
-
-
+    
+    transition: $transitions;
 }

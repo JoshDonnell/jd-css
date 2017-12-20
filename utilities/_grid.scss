@@ -35,34 +35,34 @@
 /* Default Gutter */
 .grid.grid {
     @for $i from 1 through 12 {
-        .grid-#{$i} { flex-basis: calc(((100% / 12) * #{$i}) - #{$gutter}); }
+        .grid-#{$i} { width: calc(((100% / 12) * #{$i}) - #{$gutter}); }
         .grid-offset-#{$i} { margin-left: calc(((100% / 12) * #{$i}) + #{$gutter}); }
     }
     
     @for $i from 1 through 12 {
         @include responsive(mobile) {
-            .grid-mobile-#{$i} { flex-basis: calc(((100% / 12) * #{$i}) - #{$gutter}); }
+            .grid-mobile-#{$i} { width: calc(((100% / 12) * #{$i}) - #{$gutter}); }
             .grid-mobile-offset-#{$i} { margin-left: calc(((100% / 12) * #{$i}) + #{$gutter}); }
         }
     }
     
     @for $i from 1 through 12 {
         @include responsive(tablet) {
-            .grid-tablet-#{$i} { flex-basis: calc(((100% / 12) * #{$i}) - #{$gutter}); }
+            .grid-tablet-#{$i} { width: calc(((100% / 12) * #{$i}) - #{$gutter}); }
             .grid-tablet-offset-#{$i} { margin-left: calc(((100% / 12) * #{$i}) + #{$gutter}); }
         }
     }
     
     @for $i from 1 through 12 {
         @include responsive(laptop) {
-            .grid-laptop-#{$i} { flex-basis: calc(((100% / 12) * #{$i}) - #{$gutter}); }
+            .grid-laptop-#{$i} { width: calc(((100% / 12) * #{$i}) - #{$gutter}); }
             .grid-laptop-offset-#{$i} { margin-left: calc(((100% / 12) * #{$i}) + #{$gutter}); }
         }
     }
     
     @for $i from 1 through 12 {
         @include responsive(large) {
-            .grid-large-#{$i} { flex-basis: calc(((100% / 12) * #{$i}) - #{$gutter}); }
+            .grid-large-#{$i} { width: calc(((100% / 12) * #{$i}) - #{$gutter}); }
             .grid-large-offset-#{$i} { margin-left: calc(((100% / 12) * #{$i}) + #{$gutter}); }
         }
     }
@@ -79,39 +79,36 @@
     }
 
     @for $i from 1 through 12 {
-        .grid-#{$i} { flex-basis: calc((100% / 12) * #{$i}); }
+        .grid-#{$i} { width: calc((100% / 12) * #{$i}); }
         .grid-offset-#{$i} { margin-left: calc((100% / 12) * #{$i}); }
     }
 
     @include responsive(mobile) {
         @for $i from 1 through 12 {
-            .grid-mobile-#{$i} { flex-basis: calc((100% / 12) * #{$i}); }
+            .grid-mobile-#{$i} { width: calc((100% / 12) * #{$i}); }
             .grid-mobile-offset-#{$i} { margin-left: calc((100% / 12) * #{$i}); }
         }
-        .grid-mobile-offset-0: {margin-left: 0;}
     }
 
     @include responsive(tablet) {
         @for $i from 1 through 12 {
-            .grid-tablet-#{$i} { flex-basis: calc((100% / 12) * #{$i}); }
+            .grid-tablet-#{$i} { width: calc((100% / 12) * #{$i}); }
             .grid-tablet-offset-#{$i} { margin-left: calc((100% / 12) * #{$i}); }
         }
     }
 
     @include responsive(laptop) {
         @for $i from 1 through 12 {
-            .grid-laptop-#{$i} { flex-basis: calc((100% / 12) * #{$i}); }
+            .grid-laptop-#{$i} { width: calc((100% / 12) * #{$i}); }
             .grid-laptop-offset-#{$i} { margin-left: calc((100% / 12) * #{$i}); }
         }
-        .grid-laptop-offset-0: {margin-left: 0;}
     }
 
     @include responsive(large) {
         @for $i from 1 through 12 {
-            .grid-large-#{$i} { flex-basis: calc((100% / 12) * #{$i}); }
+            .grid-large-#{$i} { width: calc((100% / 12) * #{$i}); }
             .grid-large-offset-#{$i} { margin-left: calc((100% / 12) * #{$i}); }
         }
-        .grid-large-offset-0: {margin-left: 0;}
     }
 
 }
@@ -127,40 +124,36 @@
     }
     
     @for $i from 1 through 12 {
-        .grid-#{$i} { flex-basis: calc(((100% / 12) * #{$i}) - #{$gutter--large}); }
+        .grid-#{$i} { width: calc(((100% / 12) * #{$i}) - #{$gutter--large}); }
         .grid-offset-#{$i} { margin-left: calc(((100% / 12) * #{$i}) + #{$gutter--large}); }
     }
 
     @include responsive(mobile) {
         @for $i from 1 through 12 {
-            .grid-mobile-#{$i} { flex-basis: calc(((100% / 12) * #{$i}) - #{$gutter--large}); }
+            .grid-mobile-#{$i} { width: calc(((100% / 12) * #{$i}) - #{$gutter--large}); }
             .grid-mobile-offset-#{$i} { margin-left: calc(((100% / 12) * #{$i}) + #{$gutter--large}); }
         }
-        .grid-mobile-offset-0: {margin-left: $gutter--large;}
     }
 
     @include responsive(tablet) {
         @for $i from 1 through 12 {
-            .grid-tablet-#{$i} { flex-basis: calc(((100% / 12) * #{$i}) - #{$gutter--large}); }
+            .grid-tablet-#{$i} { width: calc(((100% / 12) * #{$i}) - #{$gutter--large}); }
             .grid-tablet-offset-#{$i} { margin-left: calc(((100% / 12) * #{$i}) + #{$gutter--large}); }
         }
-        .grid-tablet-offset-0: {margin-left: $gutter--large;}
     }
 
     @include responsive(laptop) {
         @for $i from 1 through 12 {
-            .grid-laptop-#{$i} { flex-basis: calc(((100% / 12) * #{$i}) - #{$gutter--large}); }
+            .grid-laptop-#{$i} { width: calc(((100% / 12) * #{$i}) - #{$gutter--large}); }
             .grid-laptop-offset-#{$i} { margin-left: calc(((100% / 12) * #{$i}) + #{$gutter--large}); }
         }
-        .grid-laptop-offset-0: {margin-left: $gutter--large;}
     }
 
     @include responsive(large) {
         @for $i from 1 through 12 {
-            .grid-large-#{$i} { flex-basis: calc(((100% / 12) * #{$i}) - #{$gutter--large}); }
+            .grid-large-#{$i} { width: calc(((100% / 12) * #{$i}) - #{$gutter--large}); }
             .grid-large-offset-#{$i} { margin-left: calc(((100% / 12) * #{$i}) + #{$gutter--large}); }
         }
-        .grid-large-offset-0: {margin-left: $gutter--large;}
     }
 
 }
