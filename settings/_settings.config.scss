@@ -9,12 +9,6 @@
     *    this will enable certain tools for
     *    local development.
     *
-    * 2.  Set what grid the project will use.
-    *     The two options are either jd or 
-    *     custom. Choosing jd will use the 
-    *     inbuild grid. Selecting custom will
-    *     let you choose whichever grid you want.
-    *
     * 3. Set either to true or false,
     *    this will enable easing on the transition
     *    tool.
@@ -22,9 +16,6 @@
 
 
 $global-env:    local; /*[1]*/
-
-$global-grid:   jd; /*[2]*/
-
 
 $global-easing: true; /*[3]*/
 

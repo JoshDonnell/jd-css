@@ -4,7 +4,7 @@
 
 /** 
     * A simple tool for quick and consistent transitions
-    * @include transition(color) {}
+    * @include transition(color, background) {}
 */
 
 @mixin transition($type...) {

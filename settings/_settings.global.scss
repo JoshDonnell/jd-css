@@ -41,11 +41,11 @@ $min-w__large: 1330px;
 
 $spacing-alt: 35px;
 $spacing-base: 25px;
-$spacing-half: calc($spacing-base/2);
-$spacing-quarter: calc($spacing-base/4);
-$spacing-double: calc($spacing-base*2);
-$spacing-triple: calc($spacing-base*3);
-$spacing-quad: calc($spacing-base*4);
+$spacing-half: ceil($spacing-base/2);
+$spacing-quarter: ceil($spacing-base/4);
+$spacing-double: ceil($spacing-base*2);
+$spacing-triple: ceil($spacing-base*3);
+$spacing-quad: ceil($spacing-base*4);
 
 
 
@@ -85,6 +85,6 @@ $easing-type: ease-in-out;
 
 
 $border-radius: 5px;
-$border-radius--large: round($border-radius*2);
-$border-radius--huge: round($border-radius*4);
+$border-radius--large: ceil($border-radius*2);
+$border-radius--huge: ceil($border-radius*4);
 
