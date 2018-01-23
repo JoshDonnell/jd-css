@@ -73,18 +73,8 @@ including BEM, ITCSS, OOCSS, CSS Namespacing and also flex.
       https://goo.gl/5L3BxV
     ------------------------------------------------------------------
 
-    5. Flex
-    ------------------------------------------------------------------
-      Flex is a great way to center, align and order items on our
-      page, that would otherwise be a lot more difficult to achieve.
-      It is important to note that you should use a fallback for
-      Nonsupported browser versions.  
-      
-      https://goo.gl/WySM2z
-    ------------------------------------------------------------------
 
-
-
+    
   -----------
   Namespacing
   -----------

@@ -8,14 +8,13 @@
   See the readme for more info.
 */
 
+@import "neat/neat";
+
 /* ———————————————————————————————————————— */
 /* Settings
 /* ———————————————————————————————————————— */
 
-@import "settings/settings.config";
-@import "settings/settings.colors";
-@import "settings/settings.fonts";
-@import "settings/settings.global";
+@import "settings";
 
 
 
@@ -28,10 +27,8 @@
 @import "tools/tools.media-query";
 @import "tools/tools.clearfix";
 @import "tools/tools.font-size";
-@import "tools/tools.images";
 @import "tools/tools.cover";
 @import "tools/tools.transition";
-@import "tools/tools.nudge";
 
 
 
@@ -41,9 +38,8 @@
 /* Generic
 /* ———————————————————————————————————————— */
 
-@import "generic/generic.normalize";
-@import "generic/generic.reset";
-@import "generic/generic.box-sizing";
+@import "sanitize";
+
 
 
 
@@ -58,6 +54,7 @@
 @import "base/base.images";
 @import "base/base.inputs";
 @import "base/base.lists";
+
 
 
 
@@ -81,14 +78,3 @@
 
 @import "components/components.headings";
 @import "components/components.example";
-
-
-
-
-
-/* ———————————————————————————————————————— */
-/* Trumps
-/* ———————————————————————————————————————— */
-
-@import "trumps/trumps.example";
-@import "trumps/trumps.nudge";
