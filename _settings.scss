@@ -177,7 +177,7 @@ $transition-time--slower: 500ms;
 
 
 $global-easing: true;
-$easing-type: ease-in-out;
+$easing-type: $ease-in-sine;
 
 
 $border-radius: 0;

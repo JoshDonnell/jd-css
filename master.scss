@@ -8,6 +8,9 @@
   See the readme for more info.
 */
 
+@import "tools/bourbon/bourbon";
+@import "tools/bourbon/neat/neat";
+
 /* ———————————————————————————————————————— */
 /* Settings
 /* ———————————————————————————————————————— */
@@ -23,13 +26,9 @@
 /* ———————————————————————————————————————— */
 
 @import "tools/tools.media-query";
-@import "tools/tools.clearfix";
 @import "tools/tools.font-size";
 @import "tools/tools.cover";
 @import "tools/tools.transition";
-@import "tools/bourbon/bourbon";
-@import "tools/bourbon/neat/neat";
-
 
 
 

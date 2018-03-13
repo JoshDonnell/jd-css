@@ -13,6 +13,7 @@
     width: 100%;
     margin: 0;
     padding: $container-padding 0;
+    position: relative;
 }
 
 
@@ -57,4 +58,15 @@
 
 .o-row--small {
     padding: $container-padding--small 0;
+}
+
+
+
+
+
+/* Spacing - None
+============================================================ */
+
+.o-row--none {
+    padding: 0;
 }
