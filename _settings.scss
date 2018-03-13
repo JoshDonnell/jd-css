@@ -2,16 +2,35 @@
     * Setting - Global Setting
 ============================================================ */
 
-
-/* Globals
+/* Global Colors
 ============================================================ */
 
-$global-font-size: 16px;
-$global-line-height: 26px;
-$global-backgroiund: $color-page-background;
-$global-font-weight: $font-light;
-$global-text-color: $color-page-color;
-$global-font-family: $primary-font;
+$color-primary: #009EE2;
+$color-secondary: #102E46;
+$color-grey: #9B9B9B;
+$color-grey--dark: #555555;
+
+
+/* Links*/
+
+$color-links: $color-primary;
+
+
+/* Text */
+
+$color-text: $color-grey--dark;
+
+
+/* Page */
+
+$color-page-background: #fff;
+$color-page-color: $color-text;
+
+
+/* Headings */
+
+$color-heading: $color-text;
+$color-heading--alt: $color-text;
 
 
 
@@ -45,6 +64,7 @@ $spacing-quarter: ceil($spacing-base/4);
 $spacing-double: ceil($spacing-base*2);
 $spacing-triple: ceil($spacing-base*3);
 $spacing-quad: ceil($spacing-base*4);
+$spacing-massive: ceil($spacing-base*5);
 
 
 
@@ -67,7 +87,7 @@ $neat-grid: (
 $container-width: 1330px;
 $container-padding: $spacing-base;
 $container-padding--small: $spacing-half;
-$container-padding--large: $spacing-double;
+$container-padding--large: $spacing-massive;
 
 
 
@@ -76,8 +96,8 @@ $container-padding--large: $spacing-double;
 /* Fonts
 ============================================================ */
 
-$primary-font: 'Hind', sans-serif;
-$secondary-font: 'Hind', sans-serif;
+$primary-font: 'Libre Franklin', sans-serif;
+$secondary-font: 'Oxygen', sans-serif;
 
   
 
@@ -124,51 +144,26 @@ $line-height-smallest: 24px;
 
 
 
-/* Global Colors
+/* Globals
 ============================================================ */
 
-$color-primary: #EE771B;
-$color-secondary: #102E46;
-$color-grey: #E8E5E5;
-$color-grey--dark: #F1F1F1;
+$global-font-size: 16px;
+$global-line-height: 26px;
+$global-backgroiund: $color-page-background;
+$global-font-weight: 400;
+$global-text-color: $color-page-color;
+$global-font-family: $primary-font;
 
 
 
 
 
-/* Links
+/* Buttons
 ============================================================ */
 
-$color-links: $color-secondary;
-
-
-
-
-
-/* Text
-============================================================ */
-
-$color-text: $color-secondary;
-
-
-
-
-
-/* Page
-============================================================ */
-
-$color-page-background: #fff;
-$color-page-color: $color-text;
-
-
-
-
-
-/* Headings
-============================================================ */
-
-$color-heading: $color-text;
-$color-heading--alt: $color-text;
+$button-font-family: $secondary-font;
+$button-font-size: 16px;
+$button-line-height: 24px;
 
 
 
@@ -185,7 +180,6 @@ $global-easing: true;
 $easing-type: ease-in-out;
 
 
-$border-radius: 5px;
+$border-radius: 0;
 $border-radius--large: ceil($border-radius*2);
 $border-radius--huge: ceil($border-radius*4);
-

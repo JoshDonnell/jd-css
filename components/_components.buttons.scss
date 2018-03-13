@@ -1,0 +1,25 @@
+/* ============================================================
+    * Components - Buttons
+============================================================ */
+
+/**
+    * An styling for buttons
+*/
+
+.c-btn {
+    color: #fff;
+    background-color: $color-primary;
+    padding: $spacing-half $spacing-base;
+    outline: 0;
+    font-family: $button-font-family;
+    border-radius: $border-radius;
+    @include font-size($button-font-size, $button-line-height);
+    @include transition(background);
+    
+
+    &:hover {
+        background-color: darken($color-primary, 15);
+    }
+
+
+}
