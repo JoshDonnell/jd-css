@@ -6,46 +6,31 @@
     * Media-queries are really simple they are set
     * up in the global settings and use device names
     * which are the easiest way to remember them.
-    * Out of the box, this framework is not mobile
-    * first but with some simple settings changes,
-    * it can be very easily. Example: 
+    * Out of the box, this framework is mobile
+    * first but there is media quires generated for both min 
+    * abd max widths,
+    * Example: 
     * @include media(mobile) {}
+    * @include media(mobile--max) {}
 */
 
 @mixin media($breakpoint) {
     
-    
-
-    @if $breakpoint == mobile {
-        @media (max-width: $min-w__mobile) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
             @content;
         }
     }
 
-    
-
-    @else if $breakpoint == tablet {
-        @media (min-width: $min-w__tablet) {
+    @elseif map-has-key($breakpoints, str-slice($breakpoint, 1, -6)) {
+        @media (max-width: #{map-get($breakpoints, str-slice($breakpoint, 1, -6)) - 1}) {
             @content;
         }
     }
-    
 
-
-    @else if $breakpoint == laptop {
-        @media (min-width: $min-w__laptop) {
-            @content;
-        }
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
     }
-    
-
-
-    @else if $breakpoint == large {
-        @media (min-width: $min-w__large) {
-            @content;
-        }
-    }
-    
-
 
 }

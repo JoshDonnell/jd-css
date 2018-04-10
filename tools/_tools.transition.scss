@@ -11,8 +11,8 @@
     $transitions: ();
 
     @each $item in $type {
-        @if $global-easing == true {
-            $transitions: append($transitions, ($item $transition-time $easing-type), comma);
+        @if $transition-easing == true {
+            $transitions: append($transitions, ($item $transition-time $transition-easing-type), comma);
         } @else {
             $transitions: append($transitions, ($item $transition-time), comma);
         }

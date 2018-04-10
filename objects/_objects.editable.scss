@@ -16,40 +16,58 @@
     ============================================================ */
 
     h1 {
-        @include font-size($heading-largest, $line-height-largest);
+        @include font-size($heading-largest--responsive, $line-height-largest--responsive);
+        @include media($font-breakpoint) {
+            @include font-size($heading-largest, $line-height-largest);
+        }
     }
 
 
     h2 {
-        @include font-size($heading-larger, $line-height-larger);
+        @include font-size($heading-larger--responsive, $line-height-larger--responsive);
+        @include media($font-breakpoint) {
+            @include font-size($heading-larger, $line-height-larger);
+        }
     }
 
 
     h3 {
-        @include font-size($heading-large, $line-height-large);
+        @include font-size($heading-large--responsive, $line-height-large--responsive);
+        @include media($font-breakpoint) {
+            @include font-size($heading-large, $line-height-large);
+        }
     }
 
 
     h4 {
-        @include font-size($heading-small, $line-height-small);
+        @include font-size($heading-small--responsive, $line-height-small--responsive);
+        @include media($font-breakpoint) {
+            @include font-size($heading-small, $line-height-small);
+        }
     }
 
 
     h5 {
-        @include font-size($heading-smaller, $line-height-smaller); 
+        @include font-size($heading-smaller--responsive, $line-height-smaller--responsive);
+        @include media($font-breakpoint) {
+            @include font-size($heading-smaller, $line-height-smaller);
+        } 
     }
     
     
     h6 {
-        @include font-size($heading-smallest, $line-height-smallest);
+        @include font-size($heading-smallest--responsive, $line-height-smallest--responsive);
+        @include media($font-breakpoint) {
+            @include font-size($heading-smallest, $line-height-smallest);
+        }
     }
     
 
 
     h1,h2,h3,h4,h5,h6 {
         margin-bottom: $spacing-base;
-        font-weight: $font-semi;
-        color: $color-text;
+        font-weight: $global-font-weight;
+        color: $colour-text;
     }
 
 

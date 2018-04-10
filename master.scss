@@ -12,10 +12,21 @@
 @import "tools/bourbon/neat/neat";
 
 /* ———————————————————————————————————————— */
-/* Settings
+/* Settings - Normalize, reset etc..
 /* ———————————————————————————————————————— */
 
-@import "settings";
+@import "settings/_settings.colours";
+@import "settings/_settings.breakpoints";
+@import "settings/_settings.spacing";
+@import "settings/_settings.grid";
+@import "settings/_settings.container";
+@import "settings/_settings.rows";
+@import "settings/_settings.fonts";
+@import "settings/_settings.globals";
+@import "settings/_settings.buttons";
+@import "settings/_settings.forms";
+@import "settings/_settings.transition";
+@import "settings/_settings.border-radius";
 
 
 
@@ -66,6 +77,7 @@
 @import "objects/objects.container";
 @import "objects/objects.list";
 @import "objects/objects.editable";
+@import "objects/objects.grid";
 
 
 
@@ -76,4 +88,13 @@
 /* ———————————————————————————————————————— */
 
 @import "components/components.headings";
-@import "components/components.buttons";
+
+
+
+
+
+/* ———————————————————————————————————————— */
+/* Elements
+/* ———————————————————————————————————————— */
+
+@import "elements/elements.buttons";

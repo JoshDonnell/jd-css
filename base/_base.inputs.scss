@@ -8,6 +8,14 @@
 
 input, textarea {
     outline: 0;
-    border: 0;
-    background-color: #fff;
+    border: $forms-element-border;
+    border-radius: $border-radius;
+    background-color: $forms-element-background;
+    color: $forms-element-color;
+    padding: $forms-element-padding;
+
+    &::placeholder {
+        color: $forms-element-placeholder;
+    }
+
 }

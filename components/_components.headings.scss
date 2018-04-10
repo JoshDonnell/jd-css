@@ -9,7 +9,7 @@
 
 .c-heading {
     margin-bottom: $spacing-base;
-    color: $color-heading;
+    color: $colour-heading;
     font-weight: $font-normal;
 }
 
@@ -21,32 +21,50 @@
 ============================================================ */
 
 .c-heading--largest {
-    @include font-size($heading-largest, $line-height-largest);
+    @include font-size($heading-largest--responsive, $line-height-largest--responsive);
+    @include media($font-breakpoint) {
+        @include font-size($heading-largest, $line-height-largest);
+    }
 }
 
 
 .c-heading--larger {
-    @include font-size($heading-larger, $line-height-larger);
+    @include font-size($heading-larger--responsive, $line-height-larger--responsive);
+    @include media($font-breakpoint) {
+        @include font-size($heading-larger, $line-height-larger);
+    }
 }
 
 
 .c-heading--large {
-    @include font-size($heading-large, $line-height-large);
+    @include font-size($heading-large--responsive, $line-height-large--responsive);
+    @include media($font-breakpoint) {
+        @include font-size($heading-large, $line-height-large);
+    }
 }
 
 
 .c-heading--small {
-    @include font-size($heading-small, $line-height-small);
+    @include font-size($heading-small--responsive, $line-height-small--responsive);
+    @include media($font-breakpoint) {
+        @include font-size($heading-small, $line-height-small);
+    }
 }
 
 
 .c-heading--smaller {
-    @include font-size($heading-smaller, $line-height-smaller);
+    @include font-size($heading-smaller--responsive, $line-height-smaller--responsive);
+    @include media($font-breakpoint) {
+        @include font-size($heading-smaller, $line-height-smaller);
+    }
 }
 
 
 .c-heading--smallest {
-    @include font-size($heading-smallest, $line-height-smallest);
+    @include font-size($heading-smallest--responsive, $line-height-smallest--responsive);
+    @include media($font-breakpoint) {
+        @include font-size($heading-smallest, $line-height-smallest);
+    }
 }
 
 
@@ -56,17 +74,17 @@
 ============================================================ */
 
 .c-heading--color-alt {
-    color: $color-heading--alt;
+    color: $colour-heading--alt;
 }
 
 
 .c-heading--primary {
-    color: $color-primary;
+    color: $colour-primary;
 }
 
 
 .c-heading--secondary {
-    color: $color-secondary;
+    color: $colour-secondary;
 }
 
 

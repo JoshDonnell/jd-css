@@ -6,19 +6,22 @@
     * An styling for buttons
 */
 
-.c-btn {
+.e-btn {
+    position: relative;
+    display: inline-block;
     color: #fff;
-    background-color: $color-primary;
+    background-color: $colour-primary;
     padding: $spacing-half $spacing-base;
     outline: 0;
     font-family: $button-font-family;
     border-radius: $border-radius;
+    z-index: 1;
     @include font-size($button-font-size, $button-line-height);
     @include transition(background);
     
 
     &:hover {
-        background-color: darken($color-primary, 15);
+        background-color: darken($colour-primary, 15);
     }
 
 

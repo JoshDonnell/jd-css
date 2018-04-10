@@ -12,7 +12,7 @@
     display: block;
     width: 100%;
     margin: 0;
-    padding: $container-padding 0;
+    padding: $row-padding 0;
     position: relative;
 }
 
@@ -24,7 +24,7 @@
 ============================================================ */
 
 .o-row--primary {
-    background-color: $color-primary;
+    background-color: $colour-primary;
 }
 
 
@@ -35,7 +35,7 @@
 ============================================================ */
 
 .o-row--secondary {
-    background-color: $color-secondary;
+    background-color: $colour-secondary;
 }
 
 
@@ -46,7 +46,7 @@
 ============================================================ */
 
 .o-row--large {
-    padding: $container-padding--large 0;
+    padding: $row-padding--large 0;
 }
 
 
@@ -57,7 +57,7 @@
 ============================================================ */
 
 .o-row--small {
-    padding: $container-padding--small 0;
+    padding: $row-padding--small 0;
 }
 
 
@@ -69,4 +69,23 @@
 
 .o-row--none {
     padding: 0;
+}
+
+
+
+
+
+/* Spacing - Conent
+============================================================ */
+
+.o-row--content {
+    padding-bottom: #{$row-padding - $spacing-base};
+
+    &.o-row--large {
+        padding-bottom: #{$row-padding--large - $spacing-base};
+    }
+
+    &.o-row--small {
+        padding-bottom: #{$row-padding--small - $spacing-base};
+    }
 }

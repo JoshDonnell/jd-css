@@ -1,0 +1,19 @@
+/* ============================================================
+    * Setting - Transition
+============================================================ */
+
+/**
+    * 1. Set to true or false, this then changes the transition 
+    *    mixin
+    *
+    * 2. Default is using a Bouron Transition
+*/
+
+$transition-time: 300ms;
+$transition-time--slower: 500ms;
+
+
+// Easing 
+
+$transition-easing: true; /*[1]*/
+$transition-easing-type: $ease-in-sine; /*[2]*/

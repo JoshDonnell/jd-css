@@ -1,0 +1,16 @@
+/* ============================================================
+    * Setting - Breakpoints
+============================================================ */
+
+/**
+    * Set all breakpoints as min width values this then
+    * generates min and max width mixins that can be used.
+*/
+
+$breakpoints: (
+    mobile: 600px,
+    tablet: 900px,
+    laptop: 1200px,
+    desktop: 1330px,
+    large: 1800px
+);
