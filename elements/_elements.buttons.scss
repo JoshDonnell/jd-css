@@ -10,7 +10,7 @@
     position: relative;
     display: inline-block;
     color: #fff;
-    background-color: $colour-primary;
+    background-color: $color-primary;
     padding: $spacing-half $spacing-base;
     outline: 0;
     font-family: $button-font-family;
@@ -21,7 +21,7 @@
     
 
     &:hover {
-        background-color: darken($colour-primary, 15);
+        background-color: darken($color-primary, 15);
     }
 
 
