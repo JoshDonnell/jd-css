@@ -30,6 +30,5 @@
 .o-grid--large {
     @include grid-media($double-gutter) {
         @include grid-collapse; /*2*/
-        @include grid-container; /*3*/
     }
 }
