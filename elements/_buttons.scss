@@ -1,28 +1,39 @@
 /* ============================================================
-    * Components - Buttons
+    * Element - Buttons
 ============================================================ */
 
 /**
-    * An styling for buttons
+    * Styling for buttons used within multiple components across
+    * the project. Includes modifing classes for sizing and colours.
 */
 
 .e-btn {
     position: relative;
     display: inline-block;
-    color: #fff;
-    background-color: $color-primary;
     padding: $spacing-half $spacing-base;
     outline: 0;
     font-family: $button-font-family;
     border-radius: $border-radius;
     z-index: 1;
     @include font-size($button-font-size, $button-line-height);
-    @include transition(background);
-    
+    @include transition(background, color);
+}
 
-    &:hover {
+
+
+
+
+/* Buttons Modifiers
+============================================================ */
+
+.e-btn--primary {
+    background-color: $color-primary;
+    color: #fff;
+
+    &:hover,
+    &:active,
+    &:focus {
         background-color: darken($color-primary, 15);
     }
-
 
 }

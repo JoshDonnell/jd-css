@@ -1,5 +1,5 @@
 /* ============================================================
-    * Components - Headings
+    * Element - Headings
 ============================================================ */
 
 /**
@@ -7,7 +7,7 @@
     * edit the sizing in the fonts config under settings.
 */
 
-.c-heading {
+.e-heading {
     margin-bottom: $spacing-base;
     color: $color-heading;
     font-weight: $font-normal;
@@ -20,7 +20,7 @@
 /* Heading Sizing
 ============================================================ */
 
-.c-heading--largest {
+.e-heading--largest {
     @include font-size($heading-largest--responsive, $line-height-largest--responsive);
     @include media($font-breakpoint) {
         @include font-size($heading-largest, $line-height-largest);
@@ -28,7 +28,7 @@
 }
 
 
-.c-heading--larger {
+.e-heading--larger {
     @include font-size($heading-larger--responsive, $line-height-larger--responsive);
     @include media($font-breakpoint) {
         @include font-size($heading-larger, $line-height-larger);
@@ -36,7 +36,7 @@
 }
 
 
-.c-heading--large {
+.e-heading--large {
     @include font-size($heading-large--responsive, $line-height-large--responsive);
     @include media($font-breakpoint) {
         @include font-size($heading-large, $line-height-large);
@@ -44,7 +44,7 @@
 }
 
 
-.c-heading--small {
+.e-heading--small {
     @include font-size($heading-small--responsive, $line-height-small--responsive);
     @include media($font-breakpoint) {
         @include font-size($heading-small, $line-height-small);
@@ -52,7 +52,7 @@
 }
 
 
-.c-heading--smaller {
+.e-heading--smaller {
     @include font-size($heading-smaller--responsive, $line-height-smaller--responsive);
     @include media($font-breakpoint) {
         @include font-size($heading-smaller, $line-height-smaller);
@@ -60,7 +60,7 @@
 }
 
 
-.c-heading--smallest {
+.e-heading--smallest {
     @include font-size($heading-smallest--responsive, $line-height-smallest--responsive);
     @include media($font-breakpoint) {
         @include font-size($heading-smallest, $line-height-smallest);
@@ -70,25 +70,26 @@
 
 
 
+
 /* Heading Colors
 ============================================================ */
 
-.c-heading--color-alt {
+.e-heading--color-alt {
     color: $color-heading--alt;
 }
 
 
-.c-heading--primary {
+.e-heading--primary {
     color: $color-primary;
 }
 
 
-.c-heading--secondary {
+.e-heading--secondary {
     color: $color-secondary;
 }
 
 
-.c-heading--white {
+.e-heading--white {
     color: #fff;
 }
 
@@ -99,12 +100,11 @@
 /* Heading weights
 ============================================================ */
 
-.c-heading--light {
+.e-heading--light {
     font-weight: $font-light;
 }
 
 
-
-.c-heading--bold {
+.e-heading--bold {
     font-weight: $font-bold;
 }

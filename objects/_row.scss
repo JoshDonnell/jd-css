@@ -20,19 +20,13 @@
 
 
 
-/* Background - Primary Color
+/* Colour Variants
 ============================================================ */
 
 .o-row--primary {
     background-color: $color-primary;
 }
 
-
-
-
-
-/* Background - Secondary Color
-============================================================ */
 
 .o-row--secondary {
     background-color: $color-secondary;
@@ -42,7 +36,7 @@
 
 
 
-/* Spacing - Large
+/* Spacing Variants
 ============================================================ */
 
 .o-row--large {
@@ -50,33 +44,15 @@
 }
 
 
-
-
-
-/* Spacing - Small
-============================================================ */
-
 .o-row--small {
     padding: $row-padding--small 0;
 }
 
 
-
-
-
-/* Spacing - None
-============================================================ */
-
 .o-row--none {
     padding: 0;
 }
 
-
-
-
-
-/* Spacing - Conent
-============================================================ */
 
 .o-row--content {
     padding-bottom: #{$row-padding - $spacing-base};
@@ -88,4 +64,5 @@
     &.o-row--small {
         padding-bottom: #{$row-padding--small - $spacing-base};
     }
+    
 }

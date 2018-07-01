@@ -36,15 +36,7 @@ including BEM, ITCSS, OOCSS, CSS Namespacing and also flex.
         this is illustrated with the simple cone, the area in between
         settings is by far the largest that means is the least specific. 
         Whereas the area between the Overrides is tiny meaning they have
-        a high specificity
-
-        Settings      ----                      ---- Site Vars and settings
-        Tools         ------                  ------ Mixins and functions
-        Generic       --------              -------- Reset etc..
-        Base          ----------          ---------- html, inputs ,tables etc..
-        Objects       ------------      ------------ Container, rows etc..
-        Components    --------------  -------------- Home search, product item. etc..
-        Overrides     ------------------------------ !importants and high specificity selectors
+        a high specificity.
       
       http://itcss.io/
       https://csswizardry.com/

@@ -14,18 +14,18 @@
 /* Settings - Normalize, reset etc..
 /* ———————————————————————————————————————— */
 
-@import "settings/_settings.colours";
-@import "settings/_settings.breakpoints";
-@import "settings/_settings.spacing";
-@import "settings/_settings.grid";
-@import "settings/_settings.container";
-@import "settings/_settings.rows";
-@import "settings/_settings.fonts";
-@import "settings/_settings.globals";
-@import "settings/_settings.buttons";
-@import "settings/_settings.forms";
-@import "settings/_settings.transition";
-@import "settings/_settings.border-radius";
+@import "settings/colors";
+@import "settings/breakpoints";
+@import "settings/spacing";
+@import "settings/grid";
+@import "settings/container";
+@import "settings/rows";
+@import "settings/fonts";
+@import "settings/globals";
+@import "settings/buttons";
+@import "settings/forms";
+@import "settings/transition";
+@import "settings/border-radius";
 
 
 
@@ -35,11 +35,11 @@
 /* Tools
 /* ———————————————————————————————————————— */
 
-@import "tools/tools.media-query";
-@import "tools/tools.font-size";
-@import "tools/tools.cover";
-@import "tools/tools.transition";
-@import "tools/tools.aspect-ratio";
+@import "tools/media-query";
+@import "tools/font-size";
+@import "tools/cover";
+@import "tools/transition";
+@import "tools/aspect-ratio";
 
 
 
@@ -59,12 +59,12 @@
 /* Base
 /* ———————————————————————————————————————— */
 
-@import "base/base.page";
-@import "base/base.text";
-@import "base/base.links";
-@import "base/base.images";
-@import "base/base.inputs";
-@import "base/base.lists";
+@import "base/page";
+@import "base/text";
+@import "base/links";
+@import "base/images";
+@import "base/inputs";
+@import "base/lists";
 
 
 
@@ -74,21 +74,10 @@
 /* Objects
 /* ———————————————————————————————————————— */
 
-@import "objects/objects.row";
-@import "objects/objects.container";
-@import "objects/objects.list";
-@import "objects/objects.editable";
-@import "objects/objects.grid";
-
-
-
-
-
-/* ———————————————————————————————————————— */
-/* Components
-/* ———————————————————————————————————————— */
-
-@import "components/components.headings";
+@import "objects/row";
+@import "objects/container";
+@import "objects/editable";
+@import "objects/grid";
 
 
 
@@ -98,4 +87,15 @@
 /* Elements
 /* ———————————————————————————————————————— */
 
-@import "elements/elements.buttons";
+@import "elements/buttons";
+@import "elements/headings";
+
+
+
+
+
+/* ———————————————————————————————————————— */
+/* Components
+/* ———————————————————————————————————————— */
+
+@import "components/example";
