@@ -3,31 +3,11 @@
 ============================================================ */
 
 /**
-    * $neat-grid is the settings for the deafualt grid, custom
-    * grids can also be set in this file.
-    * Example of custom grid:
-    * $other-custom-grid-for-print: (
-    *     columns: 12,
-    *     gutter: $spacing-double,
-    *     media: 1200px
-    * );
+    * The settings for JD Grid
 */
 
+$jd-gutter: $spacing-base;
+$jd-gutter--large: $spacing-double;
+$jd-colcount: 12;
 
-$neat-grid: (
-    columns: 12,
-    gutter: $spacing-base
-);
-
-
-
-
-
-/* Double Gutter
-============================================================ */
-
-$double-gutter: (
-    columns: 12,
-    gutter: $spacing-double,
-    media: 0
-);
+$jd-breakpoints: $breakpoints;

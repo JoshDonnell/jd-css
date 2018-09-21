@@ -1,0 +1,265 @@
+/* ============================================================
+    * JD Grid
+============================================================ */
+  
+$jd-gutter: 20px !default;
+$jd-gutter--large: 40px !default;
+$jd-colcount: 12 !default;
+
+$jd-breakpoints: (
+    mobile: 600px,
+    tablet: 900px,
+    laptop: 1200px,
+    desktop: 1330px,
+    large: 1800px
+) !default;
+
+/*--------------
+  Init Grid
+--------------*/
+
+.o-layout {
+    list-style:none;
+    margin:0; 
+    padding:0;     
+    margin-left: -$jd-gutter;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .o-layout__item {
+        box-sizing: border-box;
+        position: relative;
+        margin-left: $jd-gutter;
+    }
+
+
+
+
+
+/*--------------
+  Gutter Size
+--------------*/
+
+/* Default Gutter */
+.o-layout {
+    @for $i from 1 through $jd-colcount {
+        .u-#{$i} { 
+            flex-basis: calc(((100% / #{$jd-colcount}) * #{$i}) - #{$jd-gutter});
+            max-width: calc(((100% / #{$jd-colcount}) * #{$i}) - #{$jd-gutter});
+        }
+
+        .u-push-#{$i} {
+            margin-left: calc(((100% / #{$jd-colcount}) * #{$i}) + #{$jd-gutter});
+        }
+
+        .u-pull-#{$i} {
+            margin-left: calc(((-100% / #{$jd-colcount}) * #{$i}) + #{$jd-gutter}); 
+        }
+    }
+    
+
+    @each $device, $breakpoint in $jd-breakpoints {
+        @media (min-width: $breakpoint) {
+            @for $i from 1 through $jd-colcount {
+                .u-#{$i}\@#{$device} {
+                    flex-basis: calc(((100% / #{$jd-colcount}) * #{$i}) - #{$jd-gutter});
+                    max-width: calc(((100% / #{$jd-colcount}) * #{$i}) - #{$jd-gutter});
+                }
+                
+                .u-push-#{$i}\@#{$device} {
+                    margin-left: calc(((100% / #{$jd-colcount}) * #{$i}) + #{$jd-gutter});
+                }
+
+                .u-pull-#{$i}\@#{$device} {
+                    margin-left: calc(((-100% / #{$jd-colcount}) * #{$i}) + #{$jd-gutter});
+                }
+			}
+			
+			.u-push-0\@#{$device}, .u-pull-0\@#{$device} {
+				margin-left: $jd-gutter;
+			}
+        }
+    }
+}
+
+
+
+/* NO Gutter */
+.o-layout--no-gutter {
+    margin-left: 0;
+  
+    .o-layout__item {
+        margin-left: 0;
+	}
+	
+
+    @for $i from 1 through $jd-colcount {
+        .u-#{$i} { 
+            flex-basis: calc((100% / #{$jd-colcount}) * #{$i});
+            max-width: calc((100% / #{$jd-colcount}) * #{$i});
+        }
+
+        .u-push-#{$i} {
+			margin-left: calc((100% / #{$jd-colcount}) * #{$i});
+		}
+
+		.u-pull-#{$i} {
+			margin-left: calc((-100% / #{$jd-colcount}) * #{$i});
+		}
+    }
+
+
+    @each $device, $breakpoint in $jd-breakpoints {
+        @media (min-width: $breakpoint) {
+            @for $i from 1 through $jd-colcount {
+				.u-#{$i}\@#{$device} { 
+					flex-basis: calc((100% / #{$jd-colcount}) * #{$i});
+					max-width: calc((100% / #{$jd-colcount}) * #{$i});
+				}
+
+				.gruid-push-#{$i}\@#{$device} {
+					margin-left: calc((100% / #{$jd-colcount}) * #{$i});
+				}
+
+				.u-pull-#{$i}\@#{$device} {
+					margin-left: calc((-100% / #{$jd-colcount}) * #{$i});
+				}
+			}
+
+			.u-push-0\@#{$device}, .u-pull-0\@#{$device} {
+				margin-left: 0;
+			}
+        }
+    }
+
+}
+
+
+
+/* Wider Gutter */
+.o-layout--large {
+    margin-left: -$jd-gutter--large;
+
+    .o-layout__item {
+        margin-left: $jd-gutter--large;
+    }
+	
+	
+    @for $i from 1 through $jd-colcount {
+        .u-#{$i} {
+			flex-basis: calc(((100% / #{$jd-colcount}) * #{$i}) - #{$jd-gutter--large});
+			max-width: calc(((100% / #{$jd-colcount}) * #{$i}) - #{$jd-gutter--large});
+		}
+
+        .u-push-#{$i} {
+			margin-left: calc(((100% / #{$jd-colcount}) * #{$i}) + #{$jd-gutter--large});
+		}
+
+		.u-pull-#{$i} {
+			margin-left: calc(((-100% / #{$jd-colcount}) * #{$i}) + #{$jd-gutter--large});
+		}
+    }
+
+
+    @each $device, $breakpoint in $jd-breakpoints {
+        @media (min-width: $breakpoint) {
+            @for $i from 1 through $jd-colcount {
+				.u-#{$i}\@#{$device} {
+					flex-basis: calc(((100% / #{$jd-colcount}) * #{$i}) - #{$jd-gutter--large});
+					max-width: calc(((100% / #{$jd-colcount}) * #{$i}) - #{$jd-gutter--large});
+				}
+
+                .u-push-#{$i}\@#{$device} {
+					margin-left: calc(((100% / #{$jd-colcount}) * #{$i}) + #{$jd-gutter--large});
+				}
+
+				.u-pull-#{$i}\@#{$device} {
+					margin-left: calc(((-100% / #{$jd-colcount}) * #{$i}) + #{$jd-gutter--large});
+				}
+			}
+			
+			.u-push-0\@#{$device}, .u-pull-0\@#{$device} {
+				margin-left: $jd-gutter--large;
+			}
+        }
+    }
+
+}
+
+
+
+
+
+/*--------------
+ Modifiers
+--------------*/
+
+.o-layout--left {
+  justify-content: flex-start;
+}
+
+.o-layout--center {
+  justify-content: center;
+}
+
+.o-layout--right {
+  justify-content: flex-end;
+}
+
+.o-layout--top {
+    align-items: flex-start;
+}
+
+.o-layout--middle {
+    align-items: center;
+}
+
+.o-layout--bottom {
+    align-items: flex-end;
+}
+
+.o-layout--stretch {
+    align-items: stretch;
+}
+
+.o-layout--flip {
+    flex-direction: row-reverse;
+}
+
+
+@each $device, $breakpoint in $jd-breakpoints {
+    @media (min-width: $breakpoint) {
+        .o-layout--left\@#{$device} {
+        justify-content: flex-start;
+        }
+
+        .o-layout--center\@#{$device} {
+        justify-content: center;
+        }
+
+        .o-layout--right\@#{$device} {
+        justify-content: flex-end;
+        }
+
+        .o-layout--top\@#{$device} {
+            align-items: flex-start;
+        }
+
+        .o-layout--middle\@#{$device} {
+            align-items: center;
+        }
+
+        .o-layout--bottom\@#{$device} {
+            align-items: flex-end;
+        }
+
+        .o-layout--stretch\@#{$device} {
+            align-items: stretch
+		}
+		
+		.o-layout--flip\@#{$device} {
+			flex-direction: row-reverse;
+		}
+    }
+}

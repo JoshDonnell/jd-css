@@ -13,6 +13,7 @@ input, textarea {
     background-color: $forms-element-background;
     color: $forms-element-color;
     padding: $forms-element-padding;
+    font-family: $global-font-family;
 
     &::placeholder {
         color: $forms-element-placeholder;
