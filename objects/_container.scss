@@ -9,8 +9,6 @@
     *    file under the settings folder.
     * 
     * 2. To center the container in the center of the page
-    *
-    * 3. Clearfix mixin to clear any pesky floats!
 */
 
 .o-container {
@@ -18,5 +16,4 @@
     margin: 0 auto; /*[2]*/
     padding-left: $container-padding;
     padding-right: $container-padding;
-    @include grid-container; /*[3]*/
 }
