@@ -106,5 +106,6 @@
 /* Utilities
 /* ———————————————————————————————————————— */
 
-@import "./node_modules/jd-flex-grid/grid";
+@import "utilities/widths";
+@import "utilities/spacing";
 @import "utilities/example-trumps";

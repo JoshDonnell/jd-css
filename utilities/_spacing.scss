@@ -1,0 +1,52 @@
+/* ============================================================
+    * JD Spacing
+============================================================ */
+
+$spacing-base: 25px !default;
+
+$directions: ('top','bottom','left','right');
+
+$numbers: (1,2,3,4,5,6,7,8);
+
+
+.u-margin {
+    margin: $spacing-base;
+}
+
+
+.u-padding {
+    padding: $spacing-base;
+}
+
+
+@each $number in $numbers {
+    // @error $number;
+    .u-margin-#{$number} {
+        margin: #{$spacing-base * $number};
+    }
+
+    .u-padding-#{$number} {
+        padding: #{$spacing-base * $number};
+    }
+}
+
+
+@each $direction in $directions {
+    .u-margin-#{$direction} {
+        margin-#{$direction}: $spacing-base;
+    }
+
+    .u-padding-#{$direction} {
+        padding-#{$direction}: $spacing-base;
+    }
+
+    @each $number in $numbers {
+        .u-margin-#{$direction}-#{$number} {
+            margin-#{$direction}: #{$spacing-base * $number};
+        }
+    
+        .u-padding-#{$direction}-#{$number} {
+            padding-#{$direction}: #{$spacing-base * $number};
+        }
+    }
+}
