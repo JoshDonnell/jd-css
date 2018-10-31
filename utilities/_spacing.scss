@@ -6,7 +6,16 @@ $spacing-base: 25px !default;
 
 $directions: ('top','bottom','left','right');
 
-$numbers: (1,2,3,4,5,6,7,8);
+$spacing: (
+    quarter : 1/4,
+    half : 1/2,
+    base : 1,
+    alt : 1.4,
+    double : 2,
+    triple: 3,
+    quad: 4,
+    massive: 5
+);
 
 
 .u-margin {
@@ -19,14 +28,13 @@ $numbers: (1,2,3,4,5,6,7,8);
 }
 
 
-@each $number in $numbers {
-    // @error $number;
-    .u-margin-#{$number} {
-        margin: #{$spacing-base * $number};
+@each $key, $number in $spacing {
+    .u-margin-#{$key} {
+        margin: round($spacing-base * $number);
     }
 
-    .u-padding-#{$number} {
-        padding: #{$spacing-base * $number};
+    .u-padding-#{$key} {
+        padding: round($spacing-base * $number);
     }
 }
 
@@ -40,13 +48,13 @@ $numbers: (1,2,3,4,5,6,7,8);
         padding-#{$direction}: $spacing-base;
     }
 
-    @each $number in $numbers {
-        .u-margin-#{$direction}-#{$number} {
-            margin-#{$direction}: #{$spacing-base * $number};
+    @each $key, $number in $spacing {
+        .u-margin-#{$direction}-#{$key} {
+            margin-#{$direction}: round($spacing-base * $number);
         }
     
-        .u-padding-#{$direction}-#{$number} {
-            padding-#{$direction}: #{$spacing-base * $number};
+        .u-padding-#{$direction}-#{$key} {
+            padding-#{$direction}: round($spacing-base * $number);
         }
     }
 }
