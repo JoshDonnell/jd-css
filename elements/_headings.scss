@@ -74,11 +74,6 @@
 /* Heading Colors
 ============================================================ */
 
-.e-heading--color-alt {
-    color: $color-heading--alt;
-}
-
-
 .e-heading--primary {
     color: $color-primary;
 }
@@ -86,6 +81,11 @@
 
 .e-heading--secondary {
     color: $color-secondary;
+}
+
+
+.e-heading--grey {
+    color: $color-grey;
 }
 
 
@@ -104,6 +104,17 @@
     font-weight: $font-light;
 }
 
+.e-heading--normal {
+    font-weight: $font-normal;
+}
+
+.e-heading--medium {
+    font-weight: $font-medium;
+}
+
+.e-heading--semi {
+    font-weight: $font-semi;
+}
 
 .e-heading--bold {
     font-weight: $font-bold;

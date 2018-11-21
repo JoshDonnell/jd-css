@@ -4,11 +4,22 @@
 
 /**
     * The settings for JD Grid
+    *
+    * 1. Set to false to use max-width (desktop first) or keep
+    * as true to use min-widths (mobile first)
+    *
+    * 2. This is settings the breakpoints to be the same as what
+    * our media quiries will use.
 */
 
-$jd-gutter: $spacing-base;
-$jd-gutter--large: $spacing-double;
-$jd-colcount: 12;
-$jd-mobile-first: true;
+$gutters: (
+    null: $spacing-base,
+    large: $spacing-double,
+    no-gutter: 0px,
+    massive: $spacing-triple
+);
 
-$jd-breakpoints: $breakpoints;
+$jd-colcount: 12;
+$jd-mobile-first: true; /* 1. */
+
+$jd-breakpoints: $breakpoints; /* 2. */

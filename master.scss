@@ -13,7 +13,8 @@
 /* Settings - Normalize, reset etc..
 /* ———————————————————————————————————————— */
 
-@import "settings/colors";
+@import "settings";
+// @import "settings/colors";
 @import "settings/breakpoints";
 @import "settings/spacing";
 @import "settings/grid";
@@ -36,7 +37,6 @@
 
 @import "tools/media-query";
 @import "tools/font-size";
-@import "tools/cover";
 @import "tools/transition";
 @import "tools/aspect-ratio";
 

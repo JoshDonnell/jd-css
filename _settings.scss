@@ -1,0 +1,33 @@
+/* ============================================================
+    * Settings
+============================================================ */
+
+/**
+    * Set all varibles used accross the whole project includes
+    * colors, fonts, buttons and forms
+*/
+
+
+/* Colors
+*
+* 1. Default headings color accross the site
+============================================================ */
+
+/* Color Palette */
+$color-primary: #009EE2;
+$color-secondary: #102E46;
+$color-grey: #9B9B9B;
+$color-grey--dark: #555555;
+
+/* Links */
+$color-links: $color-primary;
+
+/* Text */
+$color-text: $color-grey--dark;
+
+/* Page */
+$color-page-background: #fff;
+$color-page-colour: $color-text;
+
+/* Headings */
+$color-heading: $color-text; /* 1. */

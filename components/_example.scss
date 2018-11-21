@@ -1,21 +1,15 @@
 /* ============================================================
-    * Components - Example
+    * Components - Card
 ============================================================ */
 
 /**
-    * An example component.
+    * The default card with moddifers to make it specefic to 
+    * type, ie: news post or case study
 */
 
-.c-example {
-    padding: $spacing-base;
-    margin: $spacing-base;
+.c-card {
+    background-color: #fff;
 }
-
-
-    .c-example__element {
-
-    }
-
 
 
 
@@ -23,6 +17,6 @@
 /* Example Modifiers
 ============================================================ */
 
-.c-example.c-example--modifier {
-
+.c-card--post {
+    background-color: $color-primary;
 }
