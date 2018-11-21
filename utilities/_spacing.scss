@@ -4,7 +4,7 @@
 
 $spacing-base: 25px !default;
 
-$directions: ('top','bottom','left','right');
+$directions: ('t':'top','b':'bottom','l':'left','r':'right');
 
 $spacing: (
     none: 0,
@@ -24,65 +24,81 @@ $spacing: (
     $jd-mq: 'max-width';
 }
 
+.u-m {
+	margin: $spacing-base;
+}
+
+.u-p {
+	padding: $spacing-base;
+}
+
 @each $key, $number in $spacing {
-    .u-margin-#{$key} {
+    .u-m-#{$key} {
         margin: round($spacing-base * $number);
     }
 
-    .u-padding-#{$key} {
+    .u-p-#{$key} {
         padding: round($spacing-base * $number);
     }
 }
 
 
-@each $direction in $directions {
-    .u-margin-#{$direction} {
+@each $short, $direction in $directions {
+    .u-m#{$short} {
         margin-#{$direction}: $spacing-base;
     }
 
-    .u-padding-#{$direction} {
+    .u-p#{$short} {
         padding-#{$direction}: $spacing-base;
     }
 
     @each $key, $number in $spacing {
-        .u-margin-#{$direction}-#{$key} {
+        .u-m#{$short}-#{$key} {
             margin-#{$direction}: round($spacing-base * $number);
         }
     
-        .u-padding-#{$direction}-#{$key} {
+        .u-p#{$short}-#{$key} {
             padding-#{$direction}: round($spacing-base * $number);
         }
     }
 }
 
 @each $device, $breakpoint in $jd-breakpoints {
+	.u-m {
+		margin: $spacing-base;
+	}
+	
+	.u-p {
+		padding: $spacing-base;
+	}
+	
     @media ($jd-mq: $breakpoint) {
         @each $key, $number in $spacing {
-            .u-margin-#{$key}\@#{$device} {
+            .u-m-#{$key}\@#{$device} {
                 margin: round($spacing-base * $number);
             }
 
-            .u-padding-#{$key}\@#{$device} {
+            .u-p-#{$key}\@#{$device} {
                 padding: round($spacing-base * $number);
             }
         }
 
 
-        @each $direction in $directions {
-            .u-margin-#{$direction}\@#{$device} {
+        @each $short, $direction in $directions {
+            .u-m#{$short}\@#{$device} {
                 margin-#{$direction}: $spacing-base;
             }
 
-            .u-padding-#{$direction}\@#{$device} {
+            .u-p#{$short}\@#{$device} {
                 padding-#{$direction}: $spacing-base;
             }
 
             @each $key, $number in $spacing {
-                .u-margin-#{$direction}-#{$key}\@#{$device} {
+                .u-m#{$short}-#{$key}\@#{$device} {
                     margin-#{$direction}: round($spacing-base * $number);
                 }
             
-                .u-padding-#{$direction}-#{$key}\@#{$device} {
+                .u-p#{$short}-#{$key}\@#{$device} {
                     padding-#{$direction}: round($spacing-base * $number);
                 }
             }

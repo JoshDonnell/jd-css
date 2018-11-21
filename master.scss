@@ -14,18 +14,6 @@
 /* ———————————————————————————————————————— */
 
 @import "settings";
-// @import "settings/colors";
-@import "settings/breakpoints";
-@import "settings/spacing";
-@import "settings/grid";
-@import "settings/container";
-@import "settings/rows";
-@import "settings/fonts";
-@import "settings/globals";
-@import "settings/buttons";
-@import "settings/forms";
-@import "settings/transition";
-@import "settings/border-radius";
 
 
 
@@ -48,7 +36,7 @@
 /* Generic
 /* ———————————————————————————————————————— */
 
-@import "sanitize";
+@import "normalize";
 
 
 
@@ -96,7 +84,7 @@
 /* Components
 /* ———————————————————————————————————————— */
 
-@import "components/example";
+@import "components/card";
 
 
 
