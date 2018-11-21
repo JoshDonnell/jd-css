@@ -7,6 +7,7 @@ $spacing-base: 25px !default;
 $directions: ('top','bottom','left','right');
 
 $spacing: (
+    none: 0,
     quarter : 1/4,
     half : 1/2,
     base : 1,
@@ -17,16 +18,11 @@ $spacing: (
     massive: 5
 );
 
-
-.u-margin {
-    margin: $spacing-base;
+@if ($jd-mobile-first) {
+    $jd-mq: 'min-width';
+} @else {
+    $jd-mq: 'max-width';
 }
-
-
-.u-padding {
-    padding: $spacing-base;
-}
-
 
 @each $key, $number in $spacing {
     .u-margin-#{$key} {
@@ -55,6 +51,41 @@ $spacing: (
     
         .u-padding-#{$direction}-#{$key} {
             padding-#{$direction}: round($spacing-base * $number);
+        }
+    }
+}
+
+@each $device, $breakpoint in $jd-breakpoints {
+    @media ($jd-mq: $breakpoint) {
+        @each $key, $number in $spacing {
+            .u-margin-#{$key}\@#{$device} {
+                margin: round($spacing-base * $number);
+            }
+
+            .u-padding-#{$key}\@#{$device} {
+                padding: round($spacing-base * $number);
+            }
+        }
+
+
+        @each $direction in $directions {
+            .u-margin-#{$direction}\@#{$device} {
+                margin-#{$direction}: $spacing-base;
+            }
+
+            .u-padding-#{$direction}\@#{$device} {
+                padding-#{$direction}: $spacing-base;
+            }
+
+            @each $key, $number in $spacing {
+                .u-margin-#{$direction}-#{$key}\@#{$device} {
+                    margin-#{$direction}: round($spacing-base * $number);
+                }
+            
+                .u-padding-#{$direction}-#{$key}\@#{$device} {
+                    padding-#{$direction}: round($spacing-base * $number);
+                }
+            }
         }
     }
 }
