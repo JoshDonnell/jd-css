@@ -34,6 +34,7 @@ $jd-mq: null;
 
     .o-layout#{$sufix} {
         margin-left: -$gutter;
+        width: calc(100% + #{$gutter});
 
         .o-layout__item {
             margin-left: $gutter;
@@ -92,6 +93,7 @@ $jd-mq: null;
 
             .o-layout#{$sufix}\@#{$device} {
                 margin-left: -$gutter;
+                width: calc(100% + #{$gutter});;
 
                 .o-layout__item {
                     margin-left: $gutter;
