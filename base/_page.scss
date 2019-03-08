@@ -8,7 +8,7 @@
 */
 
 html {
-    font-size: 62.5%;
+    font-size: $global-font-size;
     line-height: $global-line-height / $global-font-size;
     background: $global-background;
     font-weight: $global-font-weight;
