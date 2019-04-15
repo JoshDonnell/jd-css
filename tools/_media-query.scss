@@ -22,7 +22,7 @@
         }
     }
 
-    @elseif map-has-key($breakpoints, str-slice($breakpoint, 1, -6)) {
+    @else if map-has-key($breakpoints, str-slice($breakpoint, 1, -6)) {
         @media (max-width: #{map-get($breakpoints, str-slice($breakpoint, 1, -6)) - 1}) {
             @content;
         }
