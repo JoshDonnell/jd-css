@@ -82,10 +82,9 @@ $spacing-massive: ceil($spacing-base*5);
 ============================================================ */
 
 $gutters: (
-	null: $spacing-base,
-	large: $spacing-double,
-	no-gutter: 0px,
-	massive: $spacing-triple
+	gutter: $spacing-base,
+	gutter-large: $spacing-double,
+	gutter-massive: $spacing-triple
 );
 
 $jd-mobile-first: true; /* 1. */

@@ -4,8 +4,28 @@
 
 $spacing-base: 25px !default;
 
-$directions: ('t':'top','b':'bottom','l':'left','r':'right');
-$fractions: 0 0.25 0.5 1 2 3 4;
+$directions: (
+    null: null, 
+    't':'top',
+    'b':'bottom',
+    'l':'left',
+    'r':'right'
+);
+
+$properties: (
+  "p": "padding",
+  "m": "margin",
+);
+
+$sizes: (
+    null: $spacing-base,
+    '-quarter': $spacing-quarter,
+    '-half': $spacing-half,
+    '-double': $spacing-double,
+    '-triple': $spacing-triple,
+    '-quad': $spacing-quad,
+    '-0': 0
+);
 
 @if ($jd-mobile-first) {
     $jd-mq: 'min-width';
@@ -13,84 +33,36 @@ $fractions: 0 0.25 0.5 1 2 3 4;
     $jd-mq: 'max-width';
 }
 
-.u-m {
-	margin: $spacing-base;
-}
 
-.u-p {
-	padding: $spacing-base;
-}
+@each $property-namespace, $property in $properties {
+    @each $direction-namespace, $direction in $directions {
+        @each $size-namespace, $size in $sizes {
+            .u-#{$property-namespace}#{$direction-namespace}#{$size-namespace} {
 
-@each $key, $number in $spacing {
-    .u-m-#{$key} {
-        margin: round($spacing-base * $number);
-    }
-
-    .u-p-#{$key} {
-        padding: round($spacing-base * $number);
-    }
-}
-
-
-@each $short, $direction in $directions {
-    .u-m#{$short} {
-        margin-#{$direction}: $spacing-base;
-    }
-
-    .u-p#{$short} {
-        padding-#{$direction}: $spacing-base;
-    }
-
-    @each $key, $number in $spacing {
-        .u-m#{$short}-#{$key} {
-            margin-#{$direction}: round($spacing-base * $number);
-        }
-    
-        .u-p#{$short}-#{$key} {
-            padding-#{$direction}: round($spacing-base * $number);
+                @each $name in $direction {
+                    #{$property}#{$name}: $size;
+                }
+            }
         }
     }
 }
 
-@each $device, $breakpoint in $jd-breakpoints {
-	.u-m {
-		margin: $spacing-base;
-	}
-	
-	.u-p {
-		padding: $spacing-base;
-	}
-	
+
+@each $device, $breakpoint in $jd-breakpoints {	
     @media ($jd-mq: $breakpoint) {
-        @each $key, $number in $spacing {
-            .u-m-#{$key}\@#{$device} {
-                margin: round($spacing-base * $number);
-            }
+       @each $property-namespace, $property in $properties {
+            @each $direction-namespace, $direction in $directions {
+                @each $size-namespace, $size in $sizes {
+                    .u-#{$property-namespace}#{$direction-namespace}#{$size-namespace}\@#{$device} {
+                        @each $name in $direction {
+                            #{$property}#{$name}: $size;
+                        }
+                    }
 
-            .u-p-#{$key}\@#{$device} {
-                padding: round($spacing-base * $number);
-            }
-        }
-
-
-        @each $short, $direction in $directions {
-            .u-m#{$short}\@#{$device} {
-                margin-#{$direction}: $spacing-base;
-            }
-
-            .u-p#{$short}\@#{$device} {
-                padding-#{$direction}: $spacing-base;
-            }
-
-            @each $key, $number in $spacing {
-                .u-m#{$short}-#{$key}\@#{$device} {
-                    margin-#{$direction}: round($spacing-base * $number);
                 }
-            
-                .u-p#{$short}-#{$key}\@#{$device} {
-                    padding-#{$direction}: round($spacing-base * $number);
-                }
+
             }
+
         }
     }
 }

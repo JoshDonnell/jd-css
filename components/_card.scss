@@ -7,7 +7,7 @@
     * type, ie: news post or case study
 */
 
-.o-card {
+.c-card {
     background-color: #fff;
 }
 
@@ -17,6 +17,6 @@
 /* Example Modifiers
 ============================================================ */
 
-.o-card--post {
-    background-color: $color-primary;
+.c-card--post {
+    height: 200px;
 }
