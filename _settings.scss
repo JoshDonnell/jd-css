@@ -1,10 +1,10 @@
 /* ============================================================
-    * Settings
+	* Settings
 ============================================================ */
 
 /**
-    * Set all varibles used accross the whole project includes
-    * colors, fonts, buttons and forms
+	* Set all varibles used accross the whole project includes
+	* colors, fonts, buttons and forms
 */
 
 
@@ -42,12 +42,11 @@ $color-heading: $color-text; /* 1. */
 * generates min and max width mixins that can be used.
 ============================================================ */
 
-$breakpoints: (
-    mobile: 480px,
-    tablet: 768px,
-    laptop: 960px,
-    desktop: 1330px,
-    large: 1680px
+$breakpoints: (		 
+	mobile: 480px,
+	tablet: 768px,
+	laptop: 960px,
+	desktop: 1330px,
 );
 
 
@@ -83,15 +82,15 @@ $spacing-massive: ceil($spacing-base*5);
 ============================================================ */
 
 $gutters: (
-    null: $spacing-base,
-    large: $spacing-double,
-    no-gutter: 0px,
-    massive: $spacing-triple
+	null: $spacing-base,
+	large: $spacing-double,
+	no-gutter: 0px,
+	massive: $spacing-triple
 );
 
 $jd-mobile-first: true; /* 1. */
 $jd-breakpoints: $breakpoints; /* 2. */
-$jd-max-fracton: 6; /* 3. */
+$jd-max-fracton: 5; /* 3. */
 
 
 
@@ -119,18 +118,15 @@ $rows: (
 		mobile: 25px,
 		tablet: 50px,
 		laptop: 75px,
-		large: 100px
 	),
 	large: (
 		mobile: 35px,
 		tablet: 75px,
 		laptop: 100px,
-		large: 125px
 	),
 	small: (
 		mobile: 25px,
 		laptop: 35px,
-		large: 50px
 	)
 );
 

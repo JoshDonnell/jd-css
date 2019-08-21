@@ -7,7 +7,7 @@
     * the project. Includes modifing classes for sizing and colours.
 */
 
-.e-btn {
+.c-btn {
     position: relative;
     display: inline-block;
     padding: $spacing-half $spacing-base;
@@ -26,7 +26,7 @@
 /* Buttons Modifiers
 ============================================================ */
 
-.e-btn--primary {
+.c-btn--primary {
     background-color: $color-primary;
     color: #fff;
 

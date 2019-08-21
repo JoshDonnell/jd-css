@@ -9,3 +9,4 @@ node_modules/
 webpack.mix.js
 dist/
 yarn.lock
+mix-manifest.json

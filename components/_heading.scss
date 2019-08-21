@@ -7,7 +7,7 @@
     * edit the sizing in the fonts config under settings.
 */
 
-.e-title {
+.c-heading {
     margin-bottom: $spacing-base;
     color: $color-heading;
     font-weight: $font-normal;
@@ -20,7 +20,7 @@
 /* Heading Sizing
 ============================================================ */
 
-.e-title--largest {
+.c-heading--largest {
     @include font-size($heading-largest--responsive, $line-height-largest--responsive);
     @include media($font-breakpoint) {
         @include font-size($heading-largest, $line-height-largest);
@@ -28,7 +28,7 @@
 }
 
 
-.e-title--larger {
+.c-heading--larger {
     @include font-size($heading-larger--responsive, $line-height-larger--responsive);
     @include media($font-breakpoint) {
         @include font-size($heading-larger, $line-height-larger);
@@ -36,7 +36,7 @@
 }
 
 
-.e-title--large {
+.c-heading--large {
     @include font-size($heading-large--responsive, $line-height-large--responsive);
     @include media($font-breakpoint) {
         @include font-size($heading-large, $line-height-large);
@@ -44,7 +44,7 @@
 }
 
 
-.e-title--small {
+.c-heading--small {
     @include font-size($heading-small--responsive, $line-height-small--responsive);
     @include media($font-breakpoint) {
         @include font-size($heading-small, $line-height-small);
@@ -52,7 +52,7 @@
 }
 
 
-.e-title--smaller {
+.c-heading--smaller {
     @include font-size($heading-smaller--responsive, $line-height-smaller--responsive);
     @include media($font-breakpoint) {
         @include font-size($heading-smaller, $line-height-smaller);
@@ -60,7 +60,7 @@
 }
 
 
-.e-title--smallest {
+.c-heading--smallest {
     @include font-size($heading-smallest--responsive, $line-height-smallest--responsive);
     @include media($font-breakpoint) {
         @include font-size($heading-smallest, $line-height-smallest);
@@ -74,22 +74,22 @@
 /* Heading Colors
 ============================================================ */
 
-.e-title--primary {
+.c-heading--primary {
     color: $color-primary;
 }
 
 
-.e-title--secondary {
+.c-heading--secondary {
     color: $color-secondary;
 }
 
 
-.e-title--grey {
+.c-heading--grey {
     color: $color-grey;
 }
 
 
-.e-title--white {
+.c-heading--white {
     color: #fff;
 }
 
@@ -100,22 +100,22 @@
 /* Heading weights
 ============================================================ */
 
-.e-title--light {
+.c-heading--light {
     font-weight: $font-light;
 }
 
-.e-title--normal {
+.c-heading--normal {
     font-weight: $font-normal;
 }
 
-.e-title--medium {
+.c-heading--medium {
     font-weight: $font-medium;
 }
 
-.e-title--semi {
+.c-heading--semi {
     font-weight: $font-semi;
 }
 
-.e-title--bold {
+.c-heading--bold {
     font-weight: $font-bold;
 }

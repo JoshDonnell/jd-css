@@ -10,135 +10,48 @@ $jd-mq: null;
 	$jd-mq: 'max-width';
 }
 
+@mixin generateWidths($num1, $num2, $device:null) {
+	$breakpoint: '';
+
+    @if ($device) {
+        $breakpoint: unquote(\@)+$device;
+    }
+
+	.u-width-#{$num1}\/#{$num2}#{$breakpoint} {
+		flex-basis:	calc(#{(($num1 / $num2) * 100%)});
+		max-width: calc(#{(($num1 / $num2) * 100%)});
+	}
 	
-.o-layout {
-	list-style:none;
-	display: flex;
-	flex-wrap: wrap;
-	min-width: 100%;
-
-	.o-layout__item {
-		box-sizing: border-box;
-		position: relative;
+	.u-push-#{$num1}\/#{$num2}#{$breakpoint} {
+		margin-left: calc(#{(($num1 / $num2) * 100%)});
 	}
 
-	@for $number1 from 1 through $jd-max-fracton {
-		@for $number2 from 1 through $jd-max-fracton {
-			.u-#{$number1}\/#{$number2} { 
-				flex-basis:	calc(#{(($number1 / $number2) * 100%)});
-				max-width: calc(#{(($number1 / $number2) * 100%)});
-			}
-
-			.u-push-#{$number1}\/#{$number2} {
-				margin-left: calc(#{(($number1 / $number2) * 100%)});
-			}
-
-			.u-pull-#{$number1}\/#{$number2} {
-				margin-left: calc(#{(($number1 / $number2) * -100%)});
-			}
-		}
-	}
-
-
-	@each $device, $breakpoint in $jd-breakpoints {
-		@media ($jd-mq: $breakpoint) {
-			@for $number1 from 1 through $jd-max-fracton {
-				@for $number2 from 1 through $jd-max-fracton {
-					.u-#{$number1}\/#{$number2}\@#{$device} {
-						flex-basis:	calc(#{(($number1 / $number2) * 100%)});
-						max-width: calc(#{(($number1 / $number2) * 100%)});
-					}
-					
-					.u-push-#{$number1}\/#{$number2}\@#{$device} {
-						margin-left: calc(#{(($number1 / $number2) * 100%)});
-					}
-
-					.u-pull-#{$number1}\/#{$number2}\@#{$device} {
-						margin-left: calc(#{(($number1 / $number2) * -100%)});
-					}
-				}
-				
-				.u-push-0\@#{$device}, .u-pull-0\@#{$device} {
-					margin-left: 0;
-				}
-			}
-		}
+	.u-pull-#{$num1}\/#{$num2}#{$breakpoint} {
+		margin-left: calc(#{(($num1 / $num2) * -100%)});
 	}
 }
 
+@for $number1 from 1 through $jd-max-fracton {
+	@for $number2 from 1 through $jd-max-fracton {
+		@include generateWidths($number1, $number2);
+	}
 
-
-
-
-// /*--------------
-//  Modifiers
-// --------------*/
-
-.o-layout--left {
-  justify-content: flex-start;
-}
-
-.o-layout--center {
-  justify-content: center;
-}
-
-.o-layout--right {
-  justify-content: flex-end;
-}
-
-.o-layout--top {
-	align-items: flex-start;
-}
-
-.o-layout--middle {
-	align-items: center;
-}
-
-.o-layout--bottom {
-	align-items: flex-end;
-}
-
-.o-layout--stretch {
-	align-items: stretch;
-}
-
-.o-layout--flip {
-	flex-direction: row-reverse;
+	.u-push-0, .u-pull-0 {
+		margin-left: 0;
+	}
 }
 
 
 @each $device, $breakpoint in $jd-breakpoints {
 	@media ($jd-mq: $breakpoint) {
-		.o-layout--left\@#{$device} {
-		justify-content: flex-start;
-		}
-
-		.o-layout--center\@#{$device} {
-		justify-content: center;
-		}
-
-		.o-layout--right\@#{$device} {
-		justify-content: flex-end;
-		}
-
-		.o-layout--top\@#{$device} {
-			align-items: flex-start;
-		}
-
-		.o-layout--middle\@#{$device} {
-			align-items: center;
-		}
-
-		.o-layout--bottom\@#{$device} {
-			align-items: flex-end;
-		}
-
-		.o-layout--stretch\@#{$device} {
-			align-items: stretch
-		}
-		
-		.o-layout--flip\@#{$device} {
-			flex-direction: row-reverse;
+		@for $number1 from 1 through $jd-max-fracton {
+			@for $number2 from 1 through $jd-max-fracton {
+				@include generateWidths($number1, $number2, $device);
+			}
+			
+			.u-push-0\@#{$device}, .u-pull-0\@#{$device} {
+				margin-left: 0;
+			}
 		}
 	}
 }

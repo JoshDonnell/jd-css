@@ -1,0 +1,11 @@
+.o-layout {
+	list-style:none;
+	display: flex;
+	flex-wrap: wrap;
+	min-width: 100%;
+}
+
+	.o-layout__item {
+		box-sizing: border-box;
+		position: relative;
+	}
