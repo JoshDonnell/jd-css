@@ -14,26 +14,26 @@
 ============================================================ */
 
 /* Color Palette */
-$color-primary: #009EE2;
-$color-secondary: #102E46;
-$color-grey: #9B9B9B;
-$color-grey--dark: #555555;
+$color-primary: #333266;
+$color-secondary: #1E1D3E;
+$color-grey: #EBEBEB;
+// $color-grey--dark: #555555;
 
 /* Links */
 $color-links: $color-primary;
 
 /* Text */
-$color-text: $color-grey--dark;
+$color-text: $color-primary;
 
 /* Page */
 $color-page-background: #fff;
 $color-page-colour: $color-text;
 
 /* Headings */
-$color-heading: $color-text; /* 1. */
+$color-heading: $color-primary; /* 1. */
 
-
-
+/* Gradient */
+$color-grad: linear-gradient(180deg, #333266 0%, #1E1D3E 100%);
 
 
 /* Breakpoints
@@ -56,15 +56,23 @@ $breakpoints: (
 /* Spacing
 ============================================================ */
 
-$spacing-base: 25px;
-$spacing-half: ceil($spacing-base/2);
-$spacing-quarter: ceil($spacing-base/4);
-$spacing-double: ceil($spacing-base*2);
-$spacing-triple: ceil($spacing-base*3);
-$spacing-quad: ceil($spacing-base*4);
-$spacing-massive: ceil($spacing-base*5);
+$spacing-base: 20px;
+$spacing-half: round($spacing-base/2);
+$spacing-quarter: round($spacing-base/4);
+$spacing-double: round($spacing-base*2);
+$spacing-triple: round($spacing-base*3);
+$spacing-quad: round($spacing-base*4);
+$spacing-massive: round($spacing-base*5);
 
-
+$sizes: (
+    null: $spacing-base,
+    '-quarter': $spacing-quarter,
+    '-half': $spacing-half,
+    '-double': $spacing-double,
+    '-triple': $spacing-triple,
+    '-quad': $spacing-quad,
+    '-0': 0
+);
 
 
 
@@ -72,24 +80,19 @@ $spacing-massive: ceil($spacing-base*5);
 *
 * The settings for JD Grid
 *
-* 1. Set to false to use max-width (desktop first) or keep
-* as true to use min-widths (mobile first)
-*
-* 2. This is settings the breakpoints to be the same as what
+* 1. This is settings the breakpoints to be the same as what
 * our media quiries will use.
 *
-* 3. The largest value that can be used in a fraction
+* 2. The largest value that can be used in a fraction in 
+* the grid
 ============================================================ */
 
 $gutters: (
-	gutter: $spacing-base,
-	gutter-large: $spacing-double,
-	gutter-massive: $spacing-triple
+	gutter: $spacing-base
 );
 
-$jd-mobile-first: true; /* 1. */
-$jd-breakpoints: $breakpoints; /* 2. */
-$jd-max-fracton: 5; /* 3. */
+$jd-breakpoints: $breakpoints; /* [1] */
+$jd-max-fracton: 5; /* [2]. */
 
 
 
@@ -101,7 +104,7 @@ $jd-max-fracton: 5; /* 3. */
 ============================================================ */
 
 $container-width: 1330px;
-$container-padding: $spacing-base; /*1*/
+$container-padding: $spacing-base; /* [1] */
 
 
 
@@ -116,17 +119,11 @@ $rows: (
 	default: (
 		mobile: 25px,
 		tablet: 50px,
-		laptop: 75px,
-	),
-	large: (
-		mobile: 35px,
-		tablet: 75px,
 		laptop: 100px,
 	),
-	small: (
-		mobile: 25px,
-		laptop: 35px,
-	)
+    none: (
+        mobile: 0px
+    )
 );
 
 
@@ -139,23 +136,22 @@ $rows: (
 $font-breakpoint: 'tablet';
 
 /* Font Family */
-$font-primary: 'Libre Franklin', sans-serif;
-$font-secondary: 'Oxygen', sans-serif;
+$font-primary: 'Barlow Condensed', sans-serif;
 
 
 /* Font Weights */
-$font-light: 300;
+$font-light: 400;
 $font-normal: 400;
-$font-medium: 500;
+$font-medium: 600;
 $font-semi: 600;
-$font-bold: 700;
+$font-bold: 600;
 
 
 /* Font Size */
-$heading-largest: 64px;
+$heading-largest: 60px;
 $heading-largest--responsive: 36px;
 
-$heading-larger: 36px;
+$heading-larger: 40px;
 $heading-larger--responsive: 30px;
 
 $heading-large: 30px;
@@ -172,20 +168,20 @@ $heading-smallest--responsive: 14px;
 
 
 /* Line Height */
-$line-height-largest: 74px;
+$line-height-largest: 70px;
 $line-height-largest--responsive: 46px;
 
-$line-height-larger: 46px;
-$line-height-larger--responsive: 40px;
+$line-height-larger: 50px;
+$line-height-larger--responsive: 36px;
 
 $line-height-large: 40px;
-$line-height-large--responsive: 34px;
+$line-height-large--responsive: 30px;
 
-$line-height-small: 30px;
-$line-height-small--responsive: 30px;
+$line-height-small: 26px;
+$line-height-small--responsive: 24px;
 
-$line-height-smaller: 28px;
-$line-height-smaller--responsive: 28px;
+$line-height-smaller: 24px;
+$line-height-smaller--responsive: 22px;
 
 $line-height-smallest: 24px;
 $line-height-smallest--responsive: 24px;
@@ -196,25 +192,29 @@ $line-height-smallest--responsive: 24px;
 
 /* Globals
 *
-* 1. Set to true or false, this then changes the transition 
+* 1.Set to false to use max-width (desktop first) or keep
+* as true to use min-widths (mobile first)
+*
+* 2. Set to true or false, this then changes the transition 
 *    mixin
 *
-* 2. Default transition type
+* 3. Default transition type
 ============================================================ */
 
-$global-font-size: 16px;
+$global-font-size: 18px;
 $global-line-height: 26px;
 $global-background: $color-page-background;
 $global-font-weight: $font-normal;
 $global-text-color: $color-page-colour;
 $global-font-family: $font-primary;
+$jd-mobile-first: true; /*[1]*/
 
 
 /* Transition */
 $transition-time: 300ms;
 $transition-time--slower: 500ms;
-$transition-easing: true; /*[1]*/
-$transition-easing-type: ease-in-out; /*[2]*/
+$transition-easing: true; /*[2]*/
+$transition-easing-type: ease-in-out; /*[3]*/
 
 
 /* Border Radius */
@@ -230,10 +230,10 @@ $border-radius--huge: ceil($border-radius*4);
 ============================================================ */
 
 $forms-element-background: #fff;
-$forms-element-border: 1px solid $color-text;
+$forms-element-border: 3px solid $color-primary;
 $forms-element-color: $color-text;
-$forms-element-placeholder: rgba($color-text, 0.75);
-$forms-element-padding: $spacing-half $spacing-base;
+$forms-element-placeholder: rgba($color-text, 0.5);
+$forms-element-padding: 6px $spacing-base;
 
 
 
@@ -242,6 +242,6 @@ $forms-element-padding: $spacing-half $spacing-base;
 /* Buttons
 ============================================================ */
 
-$button-font-family: $font-secondary;
-$button-font-size: 16px;
-$button-line-height: 24px;
+$button-font-family: $font-primary;
+$button-font-size: 20px;
+$button-line-height: 25px;

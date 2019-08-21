@@ -17,16 +17,6 @@ $properties: (
   "m": "margin",
 );
 
-$sizes: (
-    null: $spacing-base,
-    '-quarter': $spacing-quarter,
-    '-half': $spacing-half,
-    '-double': $spacing-double,
-    '-triple': $spacing-triple,
-    '-quad': $spacing-quad,
-    '-0': 0
-);
-
 @if ($jd-mobile-first) {
     $jd-mq: 'min-width';
 } @else {

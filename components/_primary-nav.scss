@@ -1,0 +1,22 @@
+/* ============================================================
+    * Components - Primary Nav
+============================================================ */
+
+/**
+    * The main navigation styling
+*/
+
+.c-primary-nav {
+}
+
+    .c-primary-nav__list {
+        display: flex;
+        align-items: center;
+    }  
+
+        .c-primary-nav__item {}
+
+            .c-primary-nav__link {
+                color: #fff;
+                text-transform: uppercase;
+            }

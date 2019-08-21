@@ -27,6 +27,7 @@
 @import "tools/font-size";
 @import "tools/transition";
 @import "tools/aspect-ratio";
+@import "tools/cover";
 
 
 
@@ -65,6 +66,7 @@
 @import "objects/container";
 @import "objects/layout";
 @import "objects/editable";
+@import "objects/list-bare";
 
 
 
@@ -76,6 +78,9 @@
 
 @import "components/buttons";
 @import "components/heading";
+@import "components/page-header";
+@import "components/page-footer";
+@import "components/primary-nav";
 @import "components/card";
 
 
@@ -86,6 +91,7 @@
 /* Utilities
 /* ———————————————————————————————————————— */
 
+@import "utilities/uppercase";
 @import "utilities/widths";
 @import "utilities/spacing";
 @import "utilities/trumps";
