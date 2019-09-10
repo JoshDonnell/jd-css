@@ -1,44 +1,16 @@
 /* ============================================================
-    * Components - Page Header
+	* Components - Page Header
 ============================================================ */
 
 /**
-    * The main page header used across the whole site.
-    *
-    * 1. Reset all styles
+	* The main page header used across the whole site.
+	*
+	* 1. Reset all styles
 */
 
 .c-page-header {
-    padding: 0; /* [1] */
-    margin: 0; /* [1] */
-    left: 0; /* [1] */
-    width: 100%; /* [1] */
+	padding: 0; /* [1] */
+	margin: 0; /* [1] */
+	left: 0; /* [1] */
+	width: 100%; /* [1] */
 }
-    
-    .c-page-header__section {
-        max-height: 100px;
-        display: block;
-    }
-        
-        .c-page-header__inner {
-            display: flex;
-            align-items: center;
-        }
-        
-        .c-page-header__inner--right {
-            justify-content: flex-end;
-        }
-
-        .c-page-header__inner--between {
-            justify-content: space-between;
-        }
-               
-            .c-page-header__logo {
-                width: 120px;
-                display: block;
-            }
-     
-                .c-page-header__media {
-                    width: 100%;
-                    height: auto;
-                }

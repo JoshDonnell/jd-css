@@ -1,24 +1,28 @@
 /* ============================================================
-	* JD Widths
+	* Utilities - Widths
 ============================================================ */
-  
-$jd-mq: null;
 
-@if ($jd-mobile-first) {
-	$jd-mq: 'min-width';
-} @else {
-	$jd-mq: 'max-width';
-}
+/**
+	* Widths, generates classes for you to use through out
+	* the project. A width, push and pull are all created 
+	* from this, they can all be used across any device size. 
+	* An example would be:
+	* u-with-1/2
+	*
+	* Widths are also generated for responsive sizes
+	* An exmple would be:
+	* u-width-1/4@ipad
+*/
 
 @mixin generateWidths($num1, $num2, $device:null) {
 	$breakpoint: '';
 
-    @if ($device) {
-        $breakpoint: unquote(\@)+$device;
-    }
+	@if ($device) {
+		$breakpoint: unquote(\@)+$device;
+	}
 
 	.u-width-#{$num1}\/#{$num2}#{$breakpoint} {
-		flex-basis:	calc(#{(($num1 / $num2) * 100%)});
+		width: calc(#{(($num1 / $num2) * 100%)});
 		max-width: calc(#{(($num1 / $num2) * 100%)});
 	}
 	
@@ -31,8 +35,8 @@ $jd-mq: null;
 	}
 }
 
-@for $number1 from 1 through $jd-max-fracton {
-	@for $number2 from 1 through $jd-max-fracton {
+@each $number1 in $grid-widths {
+	@each $number2 in $grid-widths {
 		@include generateWidths($number1, $number2);
 	}
 
@@ -42,10 +46,10 @@ $jd-mq: null;
 }
 
 
-@each $device, $breakpoint in $jd-breakpoints {
-	@media ($jd-mq: $breakpoint) {
-		@for $number1 from 1 through $jd-max-fracton {
-			@for $number2 from 1 through $jd-max-fracton {
+@each $device, $breakpoint in $breakpoints {
+	@media (min-width: $breakpoint) {
+		@each $number1 in $grid-widths {
+			@each $number2 in $grid-widths {
 				@include generateWidths($number1, $number2, $device);
 			}
 			

@@ -1,22 +1,25 @@
 /* ============================================================
-    * Components - Buttons
+	* Components - Buttons
 ============================================================ */
 
 /**
-    * Styling for buttons used within multiple components across
-    * the project. Includes modifing classes for sizing and colours.
+	* Styling for buttons used within multiple components across
+	* the project. Includes modifing classes for sizing and colours.
 */
 
 .c-btn {
-    position: relative;
-    display: inline-block;
-    padding: $spacing-half $spacing-base;
-    outline: 0;
-    font-family: $button-font-family;
-    border-radius: $border-radius;
-    z-index: 1;
-    @include font-size($button-font-size, $button-line-height);
-    @include transition(background, color);
+	padding: ($spacing-half + $spacing-quarter) $spacing-3x;
+	font-weight: $font-bold;
+	display: inline-block;
+	cursor: pointer;
+	width: 100%;
+	text-align: center;
+	border-radius: $border-radius;
+	@include transition(background-color, color);
+
+	@include media(ipad) {
+		width: auto;
+	}
 }
 
 
@@ -26,14 +29,15 @@
 /* Buttons Modifiers
 ============================================================ */
 
-.c-btn--primary {
-    background-color: $color-primary;
-    color: #fff;
+.c-btn--white {
+	background-color: $white;
+	color: $black;
 
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: darken($color-primary, 15);
-    }
+	@include media(ipad-pro) {
+		&:hover {
+			background-color: $black;
+			color: $white;
+		}
+	}
 
 }

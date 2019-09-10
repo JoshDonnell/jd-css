@@ -1,0 +1,13 @@
+/* ============================================================
+	* Settings - Transition
+============================================================ */
+
+/**
+	* Some simple settings that are used for a transtion mixin
+	* that will be used accross the project to keep 
+	* transitions all consistant.
+*/
+
+$transition-time: 300ms;
+$transition-ease: ease-in-out;
+$transition-ease-fast: cubic-bezier(0.19, 1, 0.22, 1);

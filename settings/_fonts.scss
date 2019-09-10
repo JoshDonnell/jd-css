@@ -1,0 +1,72 @@
+/* ============================================================
+	* Settings - Fonts
+============================================================ */
+
+/**
+	* Here is where fonts are set, we set font family,
+	* font weights and font sizings
+*/
+
+
+/* Font Families
+* 
+* Set font families here, the primary one must always exist,
+* just create a new variable for new font families.
+*
+* 2. This is just an example name for a new font family
+============================================================ */
+
+$font-family-primary: azo-sans-web,sans-serif;
+// $font-family-secondary: azo-sans-web,sans-serif; /* [2] */
+
+
+
+
+
+/* Font Weights
+* 
+* Set font weights here, the names should stay the same,
+* however more may be addded and there values can be
+* changed.
+============================================================ */
+
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-semi: 600;
+$font-bold: 700;
+
+
+
+
+
+/* Font Weights
+* 
+* Set font weights here, the names should stay the same,
+* however more may be addded and there values can be
+* changed.
+============================================================ */
+
+$font-size-heading-one: 60px;
+$font-size-heading-two: 40px;
+$font-size-heading-three: 34px;
+$font-size-heading-four: 28px;
+$font-size-heading-five: 20px;
+$font-size-heading-six: 18px;
+
+$font-size-body: 16px;
+$font-size-small: 13px;
+
+
+
+
+
+/* Font Line Height
+* 
+* This is a global amount that is added to a font size to
+* get its line height. For example if we have a font size of
+* 30px then our line height var is 10px our line height would
+* be 40px.
+============================================================ */
+
+$font-line-height: 10px;

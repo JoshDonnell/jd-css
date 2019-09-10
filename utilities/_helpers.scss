@@ -1,0 +1,40 @@
+/* ============================================================
+	* Utilities - Helpers
+============================================================ */
+
+/**
+	* The helpers file is a simple place to add commenly used 
+	* helpers to maintain a DRY code base.
+*/
+
+
+/* Text Align Center
+* 
+* Basic helper to center content or an image to be used 
+* on the parent of what you wish to center.
+============================================================ */
+
+.u-tac { text-align: center; }
+
+
+
+
+
+/* Text Align Right
+* 
+* Basic helper to right align content or an image to be used 
+* on the parent of what you wish to align to the right.
+============================================================ */
+
+.u-tar { text-align: right; }
+
+
+
+
+
+/* Text Uppercase
+* 
+* A helper to make text uppercase.
+============================================================ */
+
+.u-uppercase { text-transform: uppercase; }

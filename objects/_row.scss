@@ -1,18 +1,23 @@
 /* ============================================================
-    * Objects - Row
+	* Objects - Row
 ============================================================ */
 
 /**
-    * The styling for rows(sections) accross the site,
-    * we apply the background colors to our blocks
-    * through this rows file.
+	* The styling for rows(sections) accross the site,
+	* we apply the background colors to our blocks
+	* through this rows file. We can call our rows
+	* sizing set in the settings/rows file like:
+	* <div class="o-row  o-row--large"></div>
+	*
+	* 1. Reset spacing.
 */
 
 .o-row {
-    display: block;
-    width: 100%;
-    margin: 0;
-    position: relative;
+	display: block;
+	width: 100%;
+	margin: 0 /* [1] */;
+	padding: 0 /* [1] */;
+	position: relative;
 }
 
 
@@ -20,17 +25,20 @@
 
 
 /* Spacing Variants
+*
+* This is all auto generated from the settings/rows to make
+* our row spacing simple throughtout the device range.
 ============================================================ */
 
 @each $name, $sizes in $rows {
 	$sufix: '';
-    @if ($name != 'default') {
+	@if ($name != 'default') {
 		$sufix: unquote("--")+$name;
 	}
 	
 	.o-row#{$sufix} {
 		@each $breakpoint, $size in $sizes {
-			@if ($breakpoint == 'mobile') {
+			@if ($breakpoint == 'iphone-small') {
 				padding: $size 0;
 
 				&.o-row--content {
@@ -56,16 +64,16 @@
 /* Colour Variants
 ============================================================ */
 
-.o-row--primary {
-    background-color: $color-primary;
-}
+// .o-row--primary {
+//     background-color: $colour-primary;
+// }
 
 
-.o-row--secondary {
-    background-color: $color-secondary;
-}
+// .o-row--secondary {
+//     background-color: $colour-secondary;
+// }
 
 
-.o-row--grey {
-    background-color: $color-grey;
-}
+// .o-row--grey {
+//     background-color: $grey;
+// }

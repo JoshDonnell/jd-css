@@ -1,0 +1,57 @@
+/* ============================================================
+	* Settings - Spacing
+============================================================ */
+
+/**
+	* Here we set all our spacing vars to be used accross our
+	* project also here we set inforamtion to be used on 
+	* our helper classes that out generated.
+	*
+	* 1. This is out base spacing, all other modifiers should
+	* 	 be based from this.
+	*
+	* 2. Here we are setting what spacing options we want for
+	* 	 our helper classes.
+	*
+	* 3. Here we are building up our helper classes, here we 
+	*	 are referencing all the directions used on our 
+	*	 spacing helpers and we are using a short hand version.
+	*
+	* 4. Here we are shorthanding padding and margin to make
+	*	 our classes shorter.
+*/
+
+$spacing-base: 20px; /* [1] */
+$spacing-quarter: $spacing-base / 4;
+$spacing-half: $spacing-base / 2;
+$spacing-2x: $spacing-base * 2;
+$spacing-3x: $spacing-base * 3;
+$spacing-4x: $spacing-base * 4;
+$spacing-5x: $spacing-base * 5;
+
+
+$sizes: (
+	null: $spacing-base,
+	'-quarter': $spacing-quarter,
+	'-half': $spacing-half,
+	'-2x': $spacing-2x,
+	'-3x': $spacing-3x,
+	'-4x': $spacing-4x,
+	'-5x': $spacing-5x,
+	'-0': 0
+); /* [2] */
+
+
+$directions: (
+	null: null,
+	't':'-top',
+	'b':'-bottom',
+	'l':'-left',
+	'r':'-right'
+); /* [3] */
+
+
+$properties: (
+  "p": "padding",
+  "m": "margin",
+); /* [4] */

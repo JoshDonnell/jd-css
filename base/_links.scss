@@ -1,14 +1,14 @@
 /* ============================================================
-    * Base - Links
+	* Base - Links
 ============================================================ */
 
 /**
-    * Default link styling bassed of settings
-    * set in the main settings file.
+	* Default link styling bassed of settings
+	* set in the main settings file.
 */
 
 a {
-    color: $color-links;
-    text-decoration: none;
-    @include transition(color);
+	color: $colour-primary;
+	text-decoration: none;
+	@include transition(color);
 }

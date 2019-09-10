@@ -1,16 +1,17 @@
 /* ============================================================
-    * Components - Headings
+	* Components - Headings
 ============================================================ */
 
 /**
-    * The styling for headings accros the site you can
-    * edit the sizing in the fonts config under settings.
+	* The styling for headings accros the site you can
+	* edit the sizing in the fonts config under settings.
 */
 
 .c-heading {
-    margin-bottom: $spacing-base;
-    color: $color-heading;
-    font-weight: $font-normal;
+	margin-bottom: $spacing-base;
+	color: $black;
+	font-weight: $font-regular;
+	font-family: $font-family-primary;
 }
 
 
@@ -20,51 +21,72 @@
 /* Heading Sizing
 ============================================================ */
 
-.c-heading--largest {
-    @include font-size($heading-largest--responsive, $line-height-largest--responsive);
-    @include media($font-breakpoint) {
-        @include font-size($heading-largest, $line-height-largest);
-    }
+.c-heading--one {
+	font-size: $font-size-heading-three;
+	line-height: $font-size-heading-three + $font-line-height;
+
+	@include media(ipad) {
+		font-size: $font-size-heading-two;
+		line-height: $font-size-heading-two + $font-line-height;
+	}
+
+	@include media(ipad-pro) {
+		font-size: $font-size-heading-one;
+		line-height: $font-size-heading-one + $font-line-height;
+	}
+
 }
 
 
-.c-heading--larger {
-    @include font-size($heading-larger--responsive, $line-height-larger--responsive);
-    @include media($font-breakpoint) {
-        @include font-size($heading-larger, $line-height-larger);
-    }
+.c-heading--two {
+	font-size: $font-size-heading-four;
+	line-height: $font-size-heading-four + $font-line-height;
+
+	@include media(ipad) {
+		font-size: $font-size-heading-three;
+		line-height: $font-size-heading-three + $font-line-height;
+	}
+
+	@include media(ipad-pro) {
+		font-size: $font-size-heading-two;
+		line-height: $font-size-heading-two + $font-line-height;
+	}
+
 }
 
 
-.c-heading--large {
-    @include font-size($heading-large--responsive, $line-height-large--responsive);
-    @include media($font-breakpoint) {
-        @include font-size($heading-large, $line-height-large);
-    }
+.c-heading--three {
+	font-size: $font-size-heading-five;
+	line-height: $font-size-heading-five + $font-line-height;
+	
+	@include media(ipad) {
+		font-size: $font-size-heading-four;
+		line-height: $font-size-heading-four + $font-line-height;
+	}
+	
+	@include media(ipad-pro) {
+		font-size: $font-size-heading-three;
+		line-height: $font-size-heading-three + $font-line-height;
+	}
+
 }
 
 
-.c-heading--small {
-    @include font-size($heading-small--responsive, $line-height-small--responsive);
-    @include media($font-breakpoint) {
-        @include font-size($heading-small, $line-height-small);
-    }
+.c-heading--four {
+	font-size: $font-size-heading-four;
+	line-height: $font-size-heading-four + $font-line-height;
 }
 
 
-.c-heading--smaller {
-    @include font-size($heading-smaller--responsive, $line-height-smaller--responsive);
-    @include media($font-breakpoint) {
-        @include font-size($heading-smaller, $line-height-smaller);
-    }
+.c-heading--five {
+	font-size: $font-size-heading-five;
+	line-height: $font-size-heading-five + $font-line-height;
 }
 
 
-.c-heading--smallest {
-    @include font-size($heading-smallest--responsive, $line-height-smallest--responsive);
-    @include media($font-breakpoint) {
-        @include font-size($heading-smallest, $line-height-smallest);
-    }
+.c-heading--six {
+	font-size: $font-size-heading-six;
+	line-height: $font-size-heading-six + $font-line-height;
 }
 
 
@@ -75,22 +97,12 @@
 ============================================================ */
 
 .c-heading--primary {
-    color: $color-primary;
-}
-
-
-.c-heading--secondary {
-    color: $color-secondary;
-}
-
-
-.c-heading--grey {
-    color: $color-grey;
+	color: $colour-primary;
 }
 
 
 .c-heading--white {
-    color: #fff;
+	color: #fff;
 }
 
 
@@ -101,21 +113,21 @@
 ============================================================ */
 
 .c-heading--light {
-    font-weight: $font-light;
+	font-weight: $font-light;
 }
 
 .c-heading--normal {
-    font-weight: $font-normal;
+	font-weight: $font-regular;
 }
 
 .c-heading--medium {
-    font-weight: $font-medium;
+	font-weight: $font-medium;
 }
 
 .c-heading--semi {
-    font-weight: $font-semi;
+	font-weight: $font-semi;
 }
 
 .c-heading--bold {
-    font-weight: $font-bold;
+	font-weight: $font-bold;
 }

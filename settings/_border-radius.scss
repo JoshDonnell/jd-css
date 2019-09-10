@@ -1,0 +1,13 @@
+/* ============================================================
+	* Settings - Border Radius
+============================================================ */
+
+/**
+	* Set a default border radius, this is used for buttons
+	* and form inputs but can also be called accross the
+	* project to maintian a standerd border radius.
+*/
+
+$border-radius: 3px;
+$border-radius-2x: $border-radius * 2;
+$border-radius-3x: $border-radius * 3;

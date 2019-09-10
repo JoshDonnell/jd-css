@@ -1,19 +1,26 @@
-/*
-  ------------
-  Introduction
-  ------------
+/* ============================================================
+	* JD SCSS
+============================================================ */
 
-  This is a lightweight SASS framework, following multiple methodologies
-  including BEM, ITCSS, OOCSS, CSS Namespacing and also flex.
-  See the readme for more info.
+/**
+  * This is a lightweight SASS framework, following multiple 
+  * methodologies including BEM, ITCSS, OOCSS, CSS Namespacing 
+  * and also flex. To see more take a look in the read me.
 */
 
 
 /* ———————————————————————————————————————— */
-/* Settings - Normalize, reset etc..
+/* Settings
 /* ———————————————————————————————————————— */
 
-@import "settings";
+@import 'settings/colours';
+@import 'settings/fonts';
+@import 'settings/breakpoints';
+@import 'settings/spacing';
+@import 'settings/rows';
+@import 'settings/grid';
+@import 'settings/border-radius';
+@import 'settings/transition';
 
 
 
@@ -24,7 +31,6 @@
 /* ———————————————————————————————————————— */
 
 @import "tools/media-query";
-@import "tools/font-size";
 @import "tools/transition";
 @import "tools/aspect-ratio";
 @import "tools/cover";
@@ -34,7 +40,7 @@
 
 
 /* ———————————————————————————————————————— */
-/* Generic
+/* Generic - Normalize, reset etc..
 /* ———————————————————————————————————————— */
 
 @import "normalize";
@@ -91,7 +97,7 @@
 /* Utilities
 /* ———————————————————————————————————————— */
 
-@import "utilities/uppercase";
+@import "utilities/helpers";
 @import "utilities/widths";
 @import "utilities/spacing";
 @import "utilities/trumps";

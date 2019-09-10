@@ -1,58 +1,61 @@
-// /* ============================================================
-//     * JD Spacing
-// ============================================================ */
+/* ============================================================
+	* Utilities - Widths
+============================================================ */
 
-$spacing-base: 25px !default;
+/**
+	* Widths, generates classes for you to use through out
+	* the project. A width, push and pull are all created 
+	* from this, they can all be used across any device size. 
+	* An example would be:
+	* u-with-1/2
+	*
+	* Widths are also generated for responsive sizes
+	* An exmple would be:
+	* u-width-1/4@ipad
+*/
 
-$directions: (
-    null: null, 
-    't':'top',
-    'b':'bottom',
-    'l':'left',
-    'r':'right'
-);
+@mixin generateWidths($num1, $num2, $device:null) {
+	$breakpoint: '';
 
-$properties: (
-  "p": "padding",
-  "m": "margin",
-);
+	@if ($device) {
+		$breakpoint: unquote(\@)+$device;
+	}
 
-@if ($jd-mobile-first) {
-    $jd-mq: 'min-width';
-} @else {
-    $jd-mq: 'max-width';
+	.u-width-#{$num1}\/#{$num2}#{$breakpoint} {
+		width: calc(#{(($num1 / $num2) * 100%)});
+		max-width: calc(#{(($num1 / $num2) * 100%)});
+	}
+	
+	.u-push-#{$num1}\/#{$num2}#{$breakpoint} {
+		margin-left: calc(#{(($num1 / $num2) * 100%)});
+	}
+
+	.u-pull-#{$num1}\/#{$num2}#{$breakpoint} {
+		margin-left: calc(#{(($num1 / $num2) * -100%)});
+	}
+}
+
+@each $number1 in $grid-widths {
+	@each $number2 in $grid-widths {
+		@include generateWidths($number1, $number2);
+	}
+
+	.u-push-0, .u-pull-0 {
+		margin-left: 0;
+	}
 }
 
 
-@each $property-namespace, $property in $properties {
-    @each $direction-namespace, $direction in $directions {
-        @each $size-namespace, $size in $sizes {
-            .u-#{$property-namespace}#{$direction-namespace}#{$size-namespace} {
-
-                @each $name in $direction {
-                    #{$property}#{$name}: $size;
-                }
-            }
-        }
-    }
-}
-
-
-@each $device, $breakpoint in $jd-breakpoints {	
-    @media ($jd-mq: $breakpoint) {
-       @each $property-namespace, $property in $properties {
-            @each $direction-namespace, $direction in $directions {
-                @each $size-namespace, $size in $sizes {
-                    .u-#{$property-namespace}#{$direction-namespace}#{$size-namespace}\@#{$device} {
-                        @each $name in $direction {
-                            #{$property}#{$name}: $size;
-                        }
-                    }
-
-                }
-
-            }
-
-        }
-    }
+@each $device, $breakpoint in $breakpoints {
+	@media (min-width: $breakpoint) {
+		@each $number1 in $grid-widths {
+			@each $number2 in $grid-widths {
+				@include generateWidths($number1, $number2, $device);
+			}
+			
+			.u-push-0\@#{$device}, .u-pull-0\@#{$device} {
+				margin-left: 0;
+			}
+		}
+	}
 }

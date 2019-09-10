@@ -1,22 +1,21 @@
 /* ============================================================
-    * Base - Inputs
+	* Base - Inputs
 ============================================================ */
 
 /**
-    * Default input styling
+	* Default input styling
 */
 
 input, textarea {
-    outline: 0;
-    border: $forms-element-border;
-    border-radius: $border-radius;
-    background-color: $forms-element-background;
-    color: $forms-element-color;
-    padding: $forms-element-padding;
-    font-family: $global-font-family;
+	outline: 0;
+	border: 1px solid $black;
+	border-radius: $border-radius;
+	background-color: $white;
+	color: $black;
+	padding: ($spacing-half + $spacing-quarter) $spacing-base;
+	font-family: $font-family-primary;
+	-webkit-appearance: none;
 
-    &::placeholder {
-        color: $forms-element-placeholder;
-    }
+	&::placeholder { color: rgba($black, 0.8); }
 
 }

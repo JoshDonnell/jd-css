@@ -1,13 +1,14 @@
 /* ============================================================
-    * Base - Text
+	* Base - Text
 ============================================================ */
 
 /**
-    * Default paragpraph text
+	* Default paragpraph text
 */
 
 p {
-    color: $color-text;
-    margin-bottom: $spacing-base;
-    font-size: $global-font-size;
+	color: $black;
+	margin-bottom: $spacing-base;
+	font-size: $font-size-body;
+	line-height: $font-size-body + $font-line-height;
 }

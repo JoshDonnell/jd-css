@@ -8,16 +8,89 @@
 	.o-layout__item {
 		box-sizing: border-box;
 		position: relative;
+		max-width: 100%;
+		flex-basis: 100%;
 	}
 
 
 
 @each $name, $size in $gutters {
-    .o-layout--#{$name} {
-        margin-left: -$size;
+	.o-layout--#{$name} {
+		margin-left: -$size;
 
-        .o-layout__item {
-            padding-left: $size;
-        }
-    }
+		.o-layout__item {
+			padding-left: $size;
+		}
+	}
+}
+
+
+
+.o-layout--left {
+  justify-content: flex-start;
+}
+
+.o-layout--center {
+  justify-content: center;
+}
+
+.o-layout--right {
+  justify-content: flex-end;
+}
+
+.o-layout--top {
+	align-items: flex-start;
+}
+
+.o-layout--middle {
+	align-items: center;
+}
+
+.o-layout--bottom {
+	align-items: flex-end;
+}
+
+.o-layout--stretch {
+	align-items: stretch;
+}
+
+.o-layout--flip {
+	flex-direction: row-reverse;
+}
+
+
+@each $device, $breakpoint in $breakpoints {
+	@media (min-width: $breakpoint) {
+		.o-layout--left\@#{$device} {
+		justify-content: flex-start;
+		}
+
+		.o-layout--center\@#{$device} {
+		justify-content: center;
+		}
+
+		.o-layout--right\@#{$device} {
+		justify-content: flex-end;
+		}
+
+		.o-layout--top\@#{$device} {
+			align-items: flex-start;
+		}
+
+		.o-layout--middle\@#{$device} {
+			align-items: center;
+		}
+
+		.o-layout--bottom\@#{$device} {
+			align-items: flex-end;
+		}
+
+		.o-layout--stretch\@#{$device} {
+			align-items: stretch
+		}
+		
+		.o-layout--flip\@#{$device} {
+			flex-direction: row-reverse;
+		}
+	}
 }

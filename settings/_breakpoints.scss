@@ -1,0 +1,24 @@
+/* ============================================================
+	* Settings - Breakpoints
+============================================================ */
+
+/**
+	* Here we will set our project breakpoints, these should 
+	* not really need to change at all, these will be used 
+	* for our media quiries and also to make up our spacing
+	* and widths helpers.
+	* An example media query is:
+	* @include media(ipad) {}
+	* @include media(macbook) {}
+*/
+
+$breakpoints: (		 
+	iphone-small: 320px,
+	iphone: 375px,
+	iphone-max: 414px,
+	ipad: 768px,
+	ipad-pro: 1024px,
+	laptop: 1280px,
+	macbook: 1440px,
+	desktop: 1920px
+);

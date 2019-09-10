@@ -1,20 +1,23 @@
 /* ============================================================
-    * Base - Page
+	* Base - Page
 ============================================================ */
 
 /**
-    * Default link styling bassed of settings
-    * set in the main settings file.
+	* Default link styling bassed of settings
+	* set in the main settings file.
 */
 
 html {
-    font-size: $global-font-size;
-    line-height: $global-line-height / $global-font-size;
-    background: $global-background;
-    font-weight: $global-font-weight;
-    font-family: $global-font-family;
-    color: $global-text-color;
-    -webkit-font-smoothing: antialiased;
-    overflow-y: scroll;
-    min-height: 100%;
+	font-size: $font-size-body;
+	line-height: $font-size-body + $font-line-height;
+	background: $white;
+	font-weight: $font-regular;
+	font-family: $font-family-primary;
+	color: $black;
+	-webkit-font-smoothing: antialiased;
+	overflow-y: scroll;
+	min-height: 100%;
 }
+
+
+* { box-sizing: border-box; }

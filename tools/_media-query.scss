@@ -1,36 +1,36 @@
 /* ============================================================
-    * Tools - Media Query
+	* Tools - Media Query
 ============================================================ */
 
 /** 
-    * Media-queries are really simple they are set
-    * up in the global settings and use device names
-    * which are the easiest way to remember them.
-    * Out of the box, this framework is mobile
-    * first but there is media quires generated for both min 
-    * abd max widths,
-    * Example: 
-    * @include media(mobile) {}
-    * @include media(mobile--max) {}
+	* Media-queries are really simple they are set
+	* up in the global settings and use device names
+	* which are the easiest way to remember them.
+	* Out of the box, this framework is mobile
+	* first but there is media quires generated for both min 
+	* abd max widths,
+	* Example: 
+	* @include media(ipad) {}
+	* @include media(ipad--max) {}
 */
 
 @mixin media($breakpoint) {
-    
-    @if map-has-key($breakpoints, $breakpoint) {
-        @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
-            @content;
-        }
-    }
+	
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+			@content;
+		}
+	}
 
-    @else if map-has-key($breakpoints, str-slice($breakpoint, 1, -6)) {
-        @media (max-width: #{map-get($breakpoints, str-slice($breakpoint, 1, -6)) - 1}) {
-            @content;
-        }
-    }
+	@else if map-has-key($breakpoints, str-slice($breakpoint, 1, -6)) {
+		@media (max-width: #{map-get($breakpoints, str-slice($breakpoint, 1, -6)) - 1}) {
+			@content;
+		}
+	}
 
-    @else {
-        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-        + "Please make sure it is defined in `$breakpoints` map.";
-    }
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+		+ "Please make sure it is defined in `$breakpoints` map.";
+	}
 
 }

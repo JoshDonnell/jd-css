@@ -1,0 +1,23 @@
+/* ============================================================
+	* Settings - Grid
+============================================================ */
+
+/**
+*
+* Here we add the settings for the in build grid system,
+* the grid system is class based and is generated for us.
+* For more infomation on the grid please see the read me 
+* or the utilities/grid file.
+*
+* 1. This is where are gutters are set for the grid, these
+*	 will then be generated in the objects/layout file to allow
+*	 our grid to have gutters.
+*
+* 2. Here we are setting our fractions to be used in the grid.
+============================================================ */
+
+$gutters: (
+	gutter: $spacing-base
+); /* [1] */
+
+$grid-widths: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10; /* [2]. */
