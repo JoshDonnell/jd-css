@@ -7,28 +7,44 @@
 	* helpers to maintain a DRY code base.
 */
 
-
-/* Text Align Center
+/* Position relative
 * 
-* Basic helper to center content or an image to be used 
-* on the parent of what you wish to center.
+============================================================ */
+
+.u-pos-rel { position: relative; }
+
+
+
+/* No click events
+* 
+============================================================ */
+
+.u-no-clicky { 
+    pointer-events: none;
+
+    @each $device, $breakpoint in $breakpoints {
+        @media (min-width: $breakpoint) {
+            .u-no-clicky\@#{$device} { pointer-events: none; }
+        }
+    }
+}
+
+
+/* Text Alignment
+* 
 ============================================================ */
 
 .u-tac { text-align: center; }
-
-
-
-
-
-/* Text Align Right
-* 
-* Basic helper to right align content or an image to be used 
-* on the parent of what you wish to align to the right.
-============================================================ */
-
 .u-tar { text-align: right; }
+.u-tal { text-align: left; }
 
-
+@each $device, $breakpoint in $breakpoints {
+    @media (min-width: $breakpoint) {
+        .u-tac\@#{$device} { text-align: center; }
+        .u-tar\@#{$device} { text-align: right; }
+        .u-tal\@#{$device} { text-align: left; }
+    }
+}
 
 
 
@@ -38,3 +54,266 @@
 ============================================================ */
 
 .u-uppercase { text-transform: uppercase; }
+
+
+
+/* Max Widths
+* 
+* Basic max width options
+============================================================ */
+
+.u-no-max { max-width: 100%; }
+
+
+
+
+
+/* Font Colour
+*
+* Colouring text that isn't a heading
+============================================================= */
+.u-font-colour-white { color: $white; }
+.u-font-colour-black { color: $black; }
+.u-font-colour-primary { color: $colour-primary; }
+.u-font-colour-secondary { color: $colour-secondary; }
+
+
+
+
+/* Font Options
+*
+* Setting font options by class
+============================================================= */
+
+.u-font-light { font-weight: $font-light; }
+.u-font-regular { font-weight: $font-regular; }
+.u-font-medium { font-weight: $font-medium; }
+.u-font-semi { font-weight: $font-semi; }
+.u-font-bold { font-weight: $font-bold; }
+
+.u-font-heading-one { font-size: $font-size-heading-one; line-height: $line-height-heading-one; }
+.u-font-heading-two { font-size: $font-size-heading-two; line-height: $line-height-heading-two; }
+.u-font-heading-three { font-size: $font-size-heading-three; line-height: $line-height-heading-three; }
+.u-font-heading-four { font-size: $font-size-heading-four; line-height: $line-height-heading-four; }
+.u-font-heading-five { font-size: $font-size-heading-five; line-height: $line-height-heading-five; }
+.u-font-heading-six { font-size: $font-size-heading-six; line-height: $line-height-heading-six; }
+
+
+@each $device, $breakpoint in $breakpoints {
+    @media (min-width: $breakpoint) {
+        .u-font-heading-one\@#{$device} { font-size: $font-size-heading-one; line-height: $line-height-heading-one; }
+		.u-font-heading-two\@#{$device} { font-size: $font-size-heading-two; line-height: $line-height-heading-two; }
+		.u-font-heading-three\@#{$device} { font-size: $font-size-heading-three; line-height: $line-height-heading-three; }
+		.u-font-heading-four\@#{$device}{ font-size: $font-size-heading-four; line-height: $line-height-heading-four; }
+		.u-font-heading-five\@#{$device} { font-size: $font-size-heading-five; line-height: $line-height-heading-five; }
+		.u-font-heading-six\@#{$device} { font-size: $font-size-heading-six; line-height: $line-height-heading-six; }
+    }
+}
+
+
+
+
+/* Hide/Show Elements
+*
+* A quick helper to hide or show elements responsively
+============================================================= */
+
+.u-hide { display: none; }
+.u-show { display: inline-block; }
+.u-show-flex { display: inline-flex; }
+
+@each $device, $breakpoint in $breakpoints {
+    @media (min-width: $breakpoint) {
+        .u-hide\@#{$device} { display: none; }
+        .u-show\@#{$device} { display: inline-block; }
+        .u-show-flex\@#{$device} { display: inline-flex; }
+    }
+}
+
+
+
+/* Generic
+*
+* Stuff that needs no explaining
+============================================================= */
+
+.u-above { 
+    z-index: 99;
+}
+
+
+
+/* Cover
+* 
+* Helper to cover a parent.
+============================================================ */
+
+.u-cover { 
+	@include cover(); 
+}
+
+
+
+
+/* No overflow 
+* 
+* Hide all overflow
+============================================================ */
+
+.u-no-overflow { overflow: hidden; }
+
+
+
+
+
+/* Height 100%
+* 
+============================================================ */
+
+.u-h-100 { height: 100%; }
+
+
+
+
+
+/* Margin Padding Tools 
+* 
+* Helper to remove margin / padding from first or last of
+* type, helpful with menus or lists
+============================================================ */
+
+.u-remove-first {
+    &:first-of-type {
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+
+
+.u-remove-last {
+    &:last-of-type {
+        margin-right: 0;
+        padding-right: 0;
+    }
+}
+
+
+
+
+
+/* Image Helpers 
+* 
+* Simple image helper
+============================================================ */
+
+.u-image-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        min-width: 100%;
+        max-width: none;
+        height: auto;
+        min-height: 100%;
+    }
+}
+
+
+
+
+/* Flex Helpers 
+* 
+* Simple flex helpers to change a flex layout throughout
+* device sizes.
+* Example:
+* u-flex  u-flex-wrap  u-flex-no-wrap@ipad
+============================================================ */
+
+.u-flex { display: flex; }
+.u-space-between { justify-content: space-between; }
+.u-space-around { justify-content: space-around; }
+.u-space-evenly { justify-content: space-evenly; }
+.u-v-top { align-items: flex-start; }
+.u-v-bottom { align-items: flex-end; }
+.u-v-center { align-items: center; }
+.u-h-left { justify-content: flex-start; }
+.u-h-right { justify-content: flex-end; }
+.u-h-center { justify-content: center; }
+.u-no-wrap { flex-wrap: nowrap; }
+.u-wrap { flex-wrap: wrap; }
+.u-block { display: block; }
+.u-js-right { justify-self: right; }
+.u-js-left { justify-self: left; }
+.u-as-top { align-self: flex-start; }
+.u-as-center { align-self: center; }
+.u-as-bottom { align-self: flex-end; }
+
+@each $device, $breakpoint in $breakpoints {
+    @media (min-width: $breakpoint) {
+        .u-flex\@#{$device} { display: flex; }
+        .u-space-between\@#{$device} { justify-content: space-between; }
+        .u-space-around\@#{$device} { justify-content: space-around; }
+        .u-space-evenly\@#{$device} { justify-content: space-evenly; }
+        .u-v-top\@#{$device} { align-items: flex-start; }
+        .u-v-bottom\@#{$device} { align-items: flex-end; }
+        .u-v-center\@#{$device} { align-items: center; }
+        .u-h-left\@#{$device} { justify-content: flex-start; }
+        .u-h-right\@#{$device} { justify-content: flex-end; }
+        .u-h-center\@#{$device} { justify-content: center; }
+        .u-no-wrap\@#{$device} { flex-wrap: nowrap; }
+        .u-wrap\@#{$device} { flex-wrap: wrap; }
+        .u-block\@#{$device} { display: block; }
+        .u-js-right\@#{$device} { justify-self: right; }
+        .u-js-left\@#{$device} { justify-self: left; }
+        .u-as-top\@#{$device} { align-self: flex-start; }
+        .u-as-center\@#{$device} { align-self: center; }
+        .u-as-bottom\@#{$device} { align-self: flex-end; }
+    }
+}
+
+
+
+
+
+/* Margin Top Remover 
+* 
+* A helpers to remove margin from the top of blocks
+* Example:
+* u-rm-2@ipad
+============================================================ */
+
+.u-rm-1 { &:first-of-type { margin-top: 0; } }
+.u-rm-2 { &:nth-of-type(-n+2) { margin-top: 0; } }
+.u-rm-3 { &:nth-of-type(-n+3) { margin-top: 0; } }
+.u-rm-4 { &:nth-of-type(-n+4) { margin-top: 0; } }
+.u-rm-5 { &:nth-of-type(-n+5) { margin-top: 0; } }
+.u-rm-6 { &:nth-of-type(-n+6) { margin-top: 0; } }
+
+@each $device, $breakpoint in $breakpoints {
+    @media (min-width: $breakpoint) {
+		.u-rm-1\@#{$device} { &:first-of-type { margin-top: 0; } }
+		.u-rm-2\@#{$device} { &:nth-of-type(-n+2) { margin-top: 0; } }
+		.u-rm-3\@#{$device} { &:nth-of-type(-n+3) { margin-top: 0; } }
+		.u-rm-4\@#{$device} { &:nth-of-type(-n+4) { margin-top: 0; } }
+		.u-rm-5\@#{$device} { &:nth-of-type(-n+5) { margin-top: 0; } }
+		.u-rm-6\@#{$device} { &:nth-of-type(-n+6) { margin-top: 0; } }
+	}
+}
+
+
+
+
+
+
+/* Extras
+============================================================ */
+.u-no-scroll { overflow-y: scroll; }
+.xdebug-var-dump { white-space: break-spaces; }

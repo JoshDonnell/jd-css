@@ -1,60 +1,50 @@
 /* ============================================================
-	* Utilities - Widths
+	* Utilities - Spacing
 ============================================================ */
 
 /**
-	* Widths, generates classes for you to use through out
-	* the project. A width, push and pull are all created 
-	* from this, they can all be used across any device size. 
-	* An example would be:
-	* u-with-1/2
+	* Spacing, generates multiple padding and margin helper 
+	* classes to be used to DRY your code. There are two 
+	* selectors, padding and margin, for these we will use
+	* the prefixes m or p to clean up our HTML. Also we can
+	* be specfic to apply padding to either the top, left,
+	* right or bottom. For these we will use the prefixes
+	* t, l, r, b. Finaly we can use spacing moddifiers to 
+	* get different spacing sizes, these are set in the
+	* spacing settins file.
+	* An example of margin top with 2x spacing is:
+	* u-mt-2x
 	*
-	* Widths are also generated for responsive sizes
-	* An exmple would be:
-	* u-width-1/4@ipad
+	* Spacing can be changed responsively as well,
+	* for this it will use our projects breakpoints.
+	* An exmpal would be:
+	* u-mt-3x@desktop
 */
 
-@mixin generateWidths($num1, $num2, $device:null) {
-	$breakpoint: '';
 
-	@if ($device) {
-		$breakpoint: unquote(\@)+$device;
-	}
-
-	.u-width-#{$num1}\/#{$num2}#{$breakpoint} {
-		width: calc(#{(($num1 / $num2) * 100%)});
-		max-width: calc(#{(($num1 / $num2) * 100%)});
-	}
-	
-	.u-push-#{$num1}\/#{$num2}#{$breakpoint} {
-		margin-left: calc(#{(($num1 / $num2) * 100%)});
-	}
-
-	.u-pull-#{$num1}\/#{$num2}#{$breakpoint} {
-		margin-left: calc(#{(($num1 / $num2) * -100%)});
-	}
-}
-
-@each $number1 in $grid-widths {
-	@each $number2 in $grid-widths {
-		@include generateWidths($number1, $number2);
-	}
-
-	.u-push-0, .u-pull-0 {
-		margin-left: 0;
-	}
-}
-
-
-@each $device, $breakpoint in $breakpoints {
-	@media (min-width: $breakpoint) {
-		@each $number1 in $grid-widths {
-			@each $number2 in $grid-widths {
-				@include generateWidths($number1, $number2, $device);
+@each $property-namespace, $property in $properties {
+	@each $direction-namespace, $direction in $directions {
+		@each $size-namespace, $size in $sizes {
+			.u-#{$property-namespace}#{$direction-namespace}#{$size-namespace} {
+				@each $name in $direction {
+					#{$property}#{$name}: $size;
+				}
 			}
-			
-			.u-push-0\@#{$device}, .u-pull-0\@#{$device} {
-				margin-left: 0;
+		}
+	}
+}
+
+@each $device, $breakpoint in $breakpoints {	
+	@media (min-width: $breakpoint) {
+		@each $property-namespace, $property in $properties {
+			@each $direction-namespace, $direction in $directions {
+				@each $size-namespace, $size in $sizes {
+					.u-#{$property-namespace}#{$direction-namespace}#{$size-namespace}\@#{$device} {
+						@each $name in $direction {
+							#{$property}#{$name}: $size;
+						}
+					}
+				}
 			}
 		}
 	}
